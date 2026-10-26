@@ -1,122 +1,92 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { Icon } from "@iconify/react";
+import { useState } from "react";
+import { type Question, questions } from "./questions";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const getRandomQuestion = (currentId?: number): Question => {
+    let filtered = questions;
+    if (currentId !== undefined && questions.length > 1) {
+      filtered = questions.filter((q) => q.id !== currentId);
+    }
+    const randomIndex = Math.floor(Math.random() * filtered.length);
+    return filtered[randomIndex];
+  };
+
+  const [currentQuestion, setCurrentQuestion] = useState<Question>(() =>
+    getRandomQuestion(),
+  );
+
+  const handleNextCard = () => {
+    const next = getRandomQuestion(currentQuestion.id);
+    setCurrentQuestion(next);
+  };
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div className="min-h-screen bg-stone-50 text-stone-900 flex flex-col justify-between p-6 select-none">
+      {/* ヘッダー */}
+      <header className="max-w-xl mx-auto w-full flex justify-between items-center py-4">
+        <div className="flex items-center gap-2">
+          <Icon icon="lucide:sparkles" className="w-5 h-5 text-stone-700" />
+          <h1 className="text-xl font-bold tracking-wider text-stone-900">
+            Tois
+          </h1>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+        <span className="text-xs text-stone-500 font-mono">
+          #{currentQuestion.id}
+        </span>
+      </header>
 
-      <div className="ticks"></div>
+      {/* メインカードエリア */}
+      <main className="max-w-xl mx-auto w-full my-auto flex flex-col items-center">
+        <div className="w-full bg-white border border-stone-200 rounded-2xl p-8 md:p-12 shadow-sm flex flex-col justify-between min-h-65 md:min-h-75 transition-all duration-300">
+          <div className="my-auto">
+            <p className="text-xl md:text-2xl font-medium leading-relaxed text-stone-900 text-center">
+              {currentQuestion.text}
+            </p>
+          </div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
+          <div className="flex justify-between items-center pt-6 border-t border-stone-100">
+            {currentQuestion.source.reference ? (
+              <a
+                href={currentQuestion.source.reference.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={`出典: ${currentQuestion.source.reference.title}`}
+                className="text-xs text-stone-600 hover:text-stone-900 underline-offset-4 hover:underline font-mono transition-colors flex items-center gap-1 cursor-pointer"
+              >
+                <span>#{currentQuestion.source.theory}</span>
+                <Icon
+                  icon="lucide:external-link"
+                  className="w-3 h-3 opacity-70"
+                />
               </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+            ) : (
+              <span className="text-xs text-stone-600 font-mono">
+                #{currentQuestion.source.theory}
+              </span>
+            )}
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+            <span className="text-xs text-stone-400 font-mono">Tois</span>
+          </div>
+        </div>
+
+        {/* 次の問いを引くボタン（全幅でシンプルに配置） */}
+        <div className="mt-8 w-full">
+          <button
+            type="button"
+            onClick={handleNextCard}
+            className="w-full bg-stone-900 hover:bg-stone-800 text-white font-medium py-4 px-6 rounded-xl transition-all shadow-sm active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2"
+          >
+            <Icon icon="lucide:refresh-cw" className="w-4 h-4" />
+            <span>次の問いを引く</span>
+          </button>
+        </div>
+      </main>
+
+      {/* フッター */}
+      <footer className="max-w-xl mx-auto w-full text-center py-4 text-xs text-stone-500">
+        Tois — A minimal tool for reflection and dialogue.
+      </footer>
+    </div>
+  );
 }
-
-export default App
