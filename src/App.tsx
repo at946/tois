@@ -46,12 +46,12 @@ export default function App() {
           </div>
 
           <div className="flex justify-between items-center pt-6 border-t border-stone-100">
-            {currentQuestion.source.reference ? (
+            {currentQuestion.source.url ? (
               <a
-                href={currentQuestion.source.reference.url}
+                href={currentQuestion.source.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                title={`出典: ${currentQuestion.source.reference.title}`}
+                title={currentQuestion.source.description}
                 className="text-xs text-stone-600 hover:text-stone-900 underline-offset-4 hover:underline font-mono transition-colors flex items-center gap-1 cursor-pointer"
               >
                 <span>#{currentQuestion.source.theory}</span>
@@ -61,7 +61,10 @@ export default function App() {
                 />
               </a>
             ) : (
-              <span className="text-xs text-stone-600 font-mono">
+              <span
+                className="text-xs text-stone-600 font-mono"
+                title={currentQuestion.source.description}
+              >
                 #{currentQuestion.source.theory}
               </span>
             )}
