@@ -26,14 +26,10 @@ export default function App() {
       {/* ヘッダー */}
       <header className="max-w-xl mx-auto w-full flex justify-between items-center py-4">
         <div className="flex items-center gap-2">
-          <Icon icon="lucide:sparkles" className="w-5 h-5 text-stone-700" />
           <h1 className="text-xl font-bold tracking-wider text-stone-900">
             Tois
           </h1>
         </div>
-        <span className="text-xs text-stone-500 font-mono">
-          #{currentQuestion.id}
-        </span>
       </header>
 
       {/* メインカードエリア */}
@@ -45,7 +41,7 @@ export default function App() {
             </p>
           </div>
 
-          <div className="flex justify-between items-center pt-6 border-t border-stone-100">
+          <div className="pt-6 border-t border-stone-100 text-center">
             {currentQuestion.source.url ? (
               <a
                 href={currentQuestion.source.url}
@@ -54,7 +50,7 @@ export default function App() {
                 title={currentQuestion.source.description}
                 className="text-xs text-stone-600 hover:text-stone-900 underline-offset-4 hover:underline font-mono transition-colors flex items-center gap-1 cursor-pointer"
               >
-                <span>#{currentQuestion.source.theory}</span>
+                <span>{currentQuestion.source.theory}</span>
                 <Icon
                   icon="lucide:external-link"
                   className="w-3 h-3 opacity-70"
@@ -65,11 +61,9 @@ export default function App() {
                 className="text-xs text-stone-600 font-mono"
                 title={currentQuestion.source.description}
               >
-                #{currentQuestion.source.theory}
+                {currentQuestion.source.theory}
               </span>
             )}
-
-            <span className="text-xs text-stone-400 font-mono">Tois</span>
           </div>
         </div>
 
