@@ -1,5 +1,5 @@
+/// <reference types="@cloudflare/workers-types" />
 import { ImageResponse } from "@cloudflare/pages-plugin-vercel-og/api";
-// ※質問データをインポート
 import { questions } from "./data/questions";
 
 export interface Env {
@@ -22,7 +22,6 @@ export default {
       // qパラメータがない場合のデフォルトOGP
       if (!idStr) {
         return new ImageResponse(
-          // @ts-expect-error
           <div
             style={{
               height: "100%",
@@ -106,11 +105,13 @@ export default {
 
       // 個別の問いのOGP
       const questionId = parseInt(idStr, 10);
-      const _target =
-        questions.find((q) => q.id === questionId) || questions[0];
+      const target =
+        questions.find(
+          (q: { id: number; text: string; source: { theory: string } }) =>
+            q.id === questionId,
+        ) || questions[0];
 
       return new ImageResponse(
-        // @ts-expect-error
         <div
           style={{
             height: "100%",
@@ -210,7 +211,9 @@ export default {
       assetResponse.headers.get("content-type")?.includes("text/html")
     ) {
       const questionId = parseInt(qId, 10);
-      const target = questions.find((q) => q.id === questionId);
+      const target = questions.find(
+        (q: { id: number; text: string }) => q.id === questionId,
+      );
 
       if (target) {
         const ogImageUrl = `${url.origin}/api/og?q=${target.id}`;
@@ -218,22 +221,22 @@ export default {
 
         return new HTMLRewriter()
           .on("meta[property='og:title']", {
-            element(el) {
+            element(el: Element) {
               el.setAttribute("content", pageTitle);
             },
           })
           .on("meta[property='og:image']", {
-            element(el) {
+            element(el: Element) {
               el.setAttribute("content", ogImageUrl);
             },
           })
           .on("meta[name='twitter:title']", {
-            element(el) {
+            element(el: Element) {
               el.setAttribute("content", pageTitle);
             },
           })
           .on("meta[name='twitter:image']", {
-            element(el) {
+            element(el: Element) {
               el.setAttribute("content", ogImageUrl);
             },
           })
