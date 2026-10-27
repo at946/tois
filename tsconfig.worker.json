@@ -9,11 +9,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "skipLibCheck": true,
-    "allowImportingTsExtensions": true,
-
-    /* Workers側では未使用変数のエラーを厳密に扱わない */
-    "noUnusedLocals": false,
-    "noUnusedParameters": false
+    "allowImportingTsExtensions": true
   },
   "include": ["src/worker.tsx", "src/questions.ts"]
 }

@@ -1,8 +1,9 @@
 /// <reference types="@cloudflare/workers-types" />
 import { ImageResponse } from "@cloudflare/pages-plugin-vercel-og/api";
-// biome-ignore lint/correctness/noUnusedImports: React is required for JSX
 import React from "react";
 import { questions } from "./questions";
+
+void React;
 
 export interface Env {
   ASSETS: Fetcher;
@@ -232,7 +233,7 @@ export default {
             ],
           },
         );
-      } catch (e: any) {
+      } catch (e) {
         return new Response(
           `OGP Generation Error: ${e?.message || e}\n${e?.stack}`,
           {
