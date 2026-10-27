@@ -28,7 +28,7 @@ export default function App() {
       text: text,
       url: shareUrl,
     });
-    window.open(`https://x.com/intent/post?${params.toString()}`, "_blank");
+    window.open(`https://twitter.com/intent/tweet?${params.toString()}`, "_blank");
   };
 
   return (
