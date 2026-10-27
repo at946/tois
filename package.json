@@ -12,6 +12,7 @@
     "format": "biome write --write src/"
   },
   "dependencies": {
+    "@cloudflare/pages-plugin-vercel-og": "^0.1.2",
     "@iconify/react": "^6.0.3",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"

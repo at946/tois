@@ -166,6 +166,9 @@ importers:
 
   .:
     dependencies:
+      '@cloudflare/pages-plugin-vercel-og':
+        specifier: ^0.1.2
+        version: 0.1.2
       '@iconify/react':
         specifier: ^6.0.3
         version: 6.0.3(react@19.3.1)
@@ -283,6 +286,9 @@ packages:
     engines: {node: '>=14.21.3'}
     cpu: [x64]
     os: [win32]
+
+  '@cloudflare/pages-plugin-vercel-og@0.1.2':
+    resolution: {integrity: sha512-aWA2pHu1R2UbOJIcSASCuViyYVEhYkZ3tWTrTnr+yLosBfksOzjecHQkCkPv/jy75hGPrn1BbtsQR+oWVFkp1g==}
 
   '@iconify/react@6.0.3':
     resolution: {integrity: sha512-2x7gVs+tpUG75aXYo/0c5wPOqrFy75YSGKmuJZyuHyrHMydzXpI/+i9/USIzWXJL9WWc2BCgPVnGY2FhbeiiDQ==}
@@ -959,6 +965,8 @@ snapshots:
 
   '@biomejs/cli-win32-x64@2.6.3':
     optional: true
+
+  '@cloudflare/pages-plugin-vercel-og@0.1.2': {}
 
   '@iconify/react@6.0.3(react@19.3.1)':
     dependencies:

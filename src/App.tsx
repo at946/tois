@@ -21,6 +21,17 @@ export default function App() {
     setCurrentQuestion(next);
   };
 
+  // App.tsx のカード部分やボタン部分に組み込む関数
+  const handleShareX = () => {
+    const shareUrl = `${window.location.origin}/?q=${currentQuestion.id}`;
+    const text = `${currentQuestion.text} #tois\n\n`;
+    const params = new URLSearchParams({
+      text: text,
+      url: shareUrl,
+    });
+    window.open(`https://x.com/intent/post?${params.toString()}`, "_blank");
+  };
+
   return (
     <div className="min-h-screen bg-stone-50 text-stone-900 flex flex-col justify-between p-6 select-none">
       {/* ヘッダー */}
@@ -66,6 +77,19 @@ export default function App() {
             )}
           </div>
         </div>
+
+        <button
+          type="button"
+          onClick={handleShareX}
+          className="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-stone-200 bg-white hover:bg-stone-900 hover:text-white hover:border-stone-900 text-stone-600 text-xs font-medium transition-all duration-200 shadow-2xs active:scale-95 cursor-pointer mt-6"
+          title="Xでこの問いをシェア"
+        >
+          <Icon
+            icon="ri:twitter-x-fill"
+            className="w-3.5 h-3.5 transition-transform duration-200 group-hover:scale-110"
+          />
+          <span className="font-mono tracking-tight">Share</span>
+        </button>
 
         {/* 次の問いを引くボタン（全幅でシンプルに配置） */}
         <div className="mt-8 w-full">
