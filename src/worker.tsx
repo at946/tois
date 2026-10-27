@@ -233,7 +233,8 @@ export default {
             ],
           },
         );
-      } catch (e) {
+      } catch (err: unknown) {
+        const e = err as Error; // ← 型を Error にキャスト
         return new Response(
           `OGP Generation Error: ${e?.message || e}\n${e?.stack}`,
           {
