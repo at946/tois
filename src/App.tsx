@@ -21,7 +21,6 @@ export default function App() {
     setCurrentQuestion(next);
   };
 
-  // App.tsx のカード部分やボタン部分に組み込む関数
   const handleShareX = () => {
     const shareUrl = `${window.location.origin}/?q=${currentQuestion.id}`;
     const text = `${currentQuestion.text} #tois\n\n`;
