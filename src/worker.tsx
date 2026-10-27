@@ -1,6 +1,6 @@
 /// <reference types="@cloudflare/workers-types" />
 import { ImageResponse } from "@cloudflare/pages-plugin-vercel-og/api";
-import { questions } from "./data/questions";
+import { questions } from "./questions";
 
 export interface Env {
   ASSETS: Fetcher;
