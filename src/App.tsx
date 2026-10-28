@@ -86,7 +86,10 @@ export default function App() {
           <>
             <div className="w-full bg-white border border-stone-200 rounded-2xl p-8 md:p-12 shadow-sm flex flex-col justify-between min-h-65 md:min-h-75 transition-all duration-300">
               <div className="my-auto">
-                <p className="text-xl md:text-2xl font-medium leading-relaxed text-stone-900 text-center">
+                <p
+                  className="text-xl md:text-2xl font-medium leading-relaxed text-stone-900 text-center"
+                  style={{ wordBreak: "auto-phrase" }}
+                >
                   {currentQuestion.text}
                 </p>
               </div>
