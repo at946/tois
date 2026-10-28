@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import { useEffect, useState } from "react";
 import { type Question, questions } from "./questions";
 
-const GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+const GA_MEASUREMENT_ID = "G-47SEHKC1BC";
 
 // --- Helpers ---
 
