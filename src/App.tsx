@@ -72,7 +72,7 @@ export default function App() {
   const handleShareX = () => {
     if (!currentQuestion) return;
     const shareUrl = `${window.location.origin}/?q=${currentQuestion.id}`;
-    const text = `${currentQuestion.text} #tois\n\n`;
+    const text = `"${currentQuestion.text}" #tois\n\n`;
     const params = new URLSearchParams({ text, url: shareUrl });
     window.open(
       `https://twitter.com/intent/tweet?${params.toString()}`,
