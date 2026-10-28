@@ -1,6 +1,8 @@
 import { Icon } from "@iconify/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { type Question, questions } from "./questions";
+
+const GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
 
 // --- Helpers ---
 
@@ -19,6 +21,32 @@ function getQueryId(): number | null {
 // --- Component ---
 
 export default function App() {
+  // GA4の動的ロード（本番環境のみ）
+  useEffect(() => {
+    if (!import.meta.env.PROD) {
+      console.log("[GA4] Development mode: Tracking disabled.");
+      return;
+    }
+
+    // 1. gtag.js のスクリプトタグを作成して追加
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+    document.head.appendChild(script);
+
+    // 2. dataLayer の初期化スクリプトを追加
+    const inlineScript = document.createElement("script");
+    inlineScript.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${GA_MEASUREMENT_ID}');
+    `;
+    document.head.appendChild(inlineScript);
+
+    console.log("[GA4] Production mode: Tracking enabled.");
+  }, []);
+
   // 1. 初期化時に ?q が無ければその場でランダム生成してURLも書き換える
   const [questionId, setQuestionId] = useState<number>(() => {
     const qId = getQueryId();
