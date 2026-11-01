@@ -7,10 +7,10 @@ import { QuestionCardContent } from "./components/QuestionCard/QuestionCardConte
 import { ShareButton } from "./components/ShareButton";
 import { useGA4 } from "./hooks/useGA4";
 import { questions } from "./questions";
-import type { Question, Scene } from "./types";
+import type { Question, Scene, SceneOption } from "./types";
 
 // 指定されたシーンからランダムに1つの問いを選ぶ
-function getRandomFilteredQuestionId(scene: Scene | "all"): number | null {
+function getRandomFilteredQuestionId(scene: SceneOption): number | null {
   const filtered = questions.filter((q) => {
     return scene === "all" || q.scene === scene;
   });
@@ -31,7 +31,7 @@ function getInitialUrlParams() {
   };
 }
 
-function updateUrl(qId: number | null, scene: Scene | "all") {
+function updateUrl(qId: number | null, scene: SceneOption) {
   const params = new URLSearchParams();
   if (qId !== null) params.set("q", qId.toString());
   if (scene !== "all") params.set("scene", scene);
@@ -47,7 +47,7 @@ export default function App() {
   useGA4();
 
   // URL初期値の読み込み
-  const [selectedScene, setSelectedScene] = useState<Scene | "all">(
+  const [selectedScene, setSelectedScene] = useState<SceneOption>(
     () => getInitialUrlParams().scene,
   );
 
@@ -75,7 +75,7 @@ export default function App() {
   };
 
   // 場面フィルター変更
-  const handleSceneChange = (newScene: Scene | "all") => {
+  const handleSceneChange = (newScene: SceneOption) => {
     setSelectedScene(newScene);
     const nextId = getRandomFilteredQuestionId(newScene);
     setQuestionId(nextId);

@@ -1,9 +1,9 @@
 import { SCENE_LABELS } from "../constants";
-import type { Scene } from "../types";
+import type { SceneOption } from "../types";
 
 interface Props {
-  selectedScene: Scene | "all";
-  onSceneChange: () => void;
+  selectedScene: SceneOption;
+  onSceneChange: (newScene: SceneOption) => void;
 }
 
 export function Header({ selectedScene, onSceneChange }: Props) {
@@ -15,7 +15,7 @@ export function Header({ selectedScene, onSceneChange }: Props) {
       <div className="flex items-center gap-2 text-xs font-medium text-stone-600">
         <select
           value={selectedScene}
-          onChange={(e) => onSceneChange(e.target.value as Scene | "all")}
+          onChange={(e) => onSceneChange(e.target.value as SceneOption)}
           className="bg-white border border-stone-200 px-2.5 py-1.5 rounded-lg focus:outline-none focus:border-stone-400 transition-colors cursor-pointer"
         >
           {Object.entries(SCENE_LABELS).map(([value, label]) => (

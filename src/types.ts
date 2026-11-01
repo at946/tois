@@ -1,4 +1,5 @@
 export type Scene = "checkin" | "self" | "team";
+export type SceneOption = Scene | "all";
 
 export interface Question {
   id: number;
