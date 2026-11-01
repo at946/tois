@@ -6,4 +6,4 @@ pre-commit:
       stage_fixed: true
 
     typecheck:
-      run: pnpm tsc --noEmit
+      run: pnpm tsc -b

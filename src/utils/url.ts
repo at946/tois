@@ -1,3 +1,5 @@
+import type { Scene, SceneOption } from "../types";
+
 export function getUrlParams() {
   const params = new URLSearchParams(window.location.search);
   const q = params.get("q");
