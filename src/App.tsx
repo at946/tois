@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 import { useEffect, useState } from "react";
-import { type Question, questions, type Scene } from "./questions";
+import { questions } from "./questions";
+import type { Question, Scene } from "./types";
 
 const GA_MEASUREMENT_ID = "G-47SEHKC1BC";
 
