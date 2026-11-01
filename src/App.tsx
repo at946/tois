@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { NextQuestionButton } from "./components/NextQuestionButton";
 import { EmptyContent } from "./components/QuestionCard/EmptyContent";
@@ -100,10 +101,7 @@ export default function App() {
         <NextQuestionButton onClick={handleNextCard} />
       </main>
 
-      {/* フッター */}
-      <footer className="max-w-xl mx-auto w-full text-center py-4 text-xs text-stone-500">
-        Tois — A minimal tool for reflection and dialogue.
-      </footer>
+      <Footer />
     </div>
   );
 }
