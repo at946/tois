@@ -1,7 +1,7 @@
 /// <reference types="@cloudflare/workers-types" />
 import { ImageResponse } from "@cloudflare/pages-plugin-vercel-og/api";
 import React from "react";
-import { questions } from "./questions";
+import { questions } from "./data/questions";
 
 void React;
 
