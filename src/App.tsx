@@ -1,14 +1,13 @@
 import { Icon } from "@iconify/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { EmptyContent } from "./components/QuestionCard/EmptyContent";
 import { QuestionCardBase } from "./components/QuestionCard/QuestionCardBase";
 import { QuestionCardContent } from "./components/QuestionCard/QuestionCardContent";
 import { ShareButton } from "./components/ShareButton";
 import { SCENE_LABELS } from "./constants";
+import { useGA4 } from "./hooks/useGA4";
 import { questions } from "./questions";
 import type { Question, Scene } from "./types";
-
-const GA_MEASUREMENT_ID = "G-47SEHKC1BC";
 
 // 指定されたシーンからランダムに1つの問いを選ぶ
 function getRandomFilteredQuestionId(scene: Scene | "all"): number | null {
@@ -45,29 +44,7 @@ function updateUrl(qId: number | null, scene: Scene | "all") {
 // --- Component ---
 
 export default function App() {
-  // GA4の動的ロード（本番環境のみ）
-  useEffect(() => {
-    if (!import.meta.env.PROD) {
-      console.log("[GA4] Development mode: Tracking disabled.");
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-    document.head.appendChild(script);
-
-    const inlineScript = document.createElement("script");
-    inlineScript.innerHTML = `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '${GA_MEASUREMENT_ID}');
-    `;
-    document.head.appendChild(inlineScript);
-
-    console.log("[GA4] Production mode: Tracking enabled.");
-  }, []);
+  useGA4();
 
   // URL初期値の読み込み
   const [selectedScene, setSelectedScene] = useState<Scene | "all">(
