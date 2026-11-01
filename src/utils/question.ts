@@ -1,4 +1,4 @@
-import { questions } from "../questions";
+import { questions } from "../data/questions";
 import type { SceneOption } from "../types";
 
 export function getRandomFilteredQuestionId(scene: SceneOption): number | null {
