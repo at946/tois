@@ -1,6 +1,8 @@
 import { Icon } from "@iconify/react";
 import { useEffect, useState } from "react";
-import { QuestionCard } from "./components/QuestionCard";
+import { EmptyContent } from "./components/QuestionCard/EmptyContent";
+import { QuestionCardBase } from "./components/QuestionCard/QuestionCardBase";
+import { QuestionCardContent } from "./components/QuestionCard/QuestionCardContent";
 import { ShareButton } from "./components/ShareButton";
 import { SCENE_LABELS } from "./constants";
 import { questions } from "./questions";
@@ -129,44 +131,26 @@ export default function App() {
 
       {/* メインコンテンツエリア */}
       <main className="max-w-xl mx-auto w-full my-auto flex flex-col items-center">
-        {!currentQuestion ? (
-          /* 不正なIDまたは該当する問いがないときのエラー画面 */
-          <div className="w-full bg-white border border-stone-200 rounded-2xl p-8 md:p-12 shadow-sm flex flex-col items-center justify-center text-center min-h-65 md:min-h-75">
-            <p className="text-lg font-medium text-stone-600 mb-2">
-              問いが見つかりませんでした
-            </p>
-            <p className="text-xs text-stone-400 mb-6">
-              選択した場面に合致する問いが存在しないか、不正なIDです。
-            </p>
-            <button
-              type="button"
-              onClick={handleNextCard}
-              className="bg-stone-900 text-white text-xs font-medium px-4 py-2 rounded-lg hover:bg-stone-800 transition-colors cursor-pointer"
-            >
-              条件をリセットして問いを引く
-            </button>
-          </div>
-        ) : (
-          /* 正常に問いが表示されるカード */
-          <>
-            <QuestionCard question={currentQuestion} />
-            <ShareButton question={currentQuestion} />
-          </>
-        )}
+        <QuestionCardBase>
+          {!currentQuestion ? (
+            <EmptyContent />
+          ) : (
+            <QuestionCardContent question={currentQuestion} />
+          )}
+        </QuestionCardBase>
+        {currentQuestion && <ShareButton question={currentQuestion} />}
 
         {/* 次の問いを引くボタン */}
-        {currentQuestion && (
-          <div className="mt-8 w-full">
-            <button
-              type="button"
-              onClick={handleNextCard}
-              className="w-full bg-stone-900 hover:bg-stone-800 text-white font-medium py-4 px-6 rounded-xl transition-all shadow-sm active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2"
-            >
-              <Icon icon="lucide:refresh-cw" className="w-4 h-4" />
-              <span>次の問いを引く</span>
-            </button>
-          </div>
-        )}
+        <div className="mt-8 w-full">
+          <button
+            type="button"
+            onClick={handleNextCard}
+            className="w-full bg-stone-900 hover:bg-stone-800 text-white font-medium py-4 px-6 rounded-xl transition-all shadow-sm active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2"
+          >
+            <Icon icon="lucide:refresh-cw" className="w-4 h-4" />
+            <span>次の問いを引く</span>
+          </button>
+        </div>
       </main>
 
       {/* フッター */}
