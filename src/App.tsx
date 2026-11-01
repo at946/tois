@@ -1,6 +1,8 @@
 import { Icon } from "@iconify/react";
 import { useEffect, useState } from "react";
-import { QuestionCard } from "./components/QuestionCard/QuestionCard";
+import { EmptyContent } from "./components/QuestionCard/EmptyContent";
+import { QuestionCardBase } from "./components/QuestionCard/QuestionCardBase";
+import { QuestionCardContent } from "./components/QuestionCard/QuestionCardContent";
 import { ShareButton } from "./components/ShareButton";
 import { SCENE_LABELS } from "./constants";
 import { questions } from "./questions";
@@ -129,7 +131,13 @@ export default function App() {
 
       {/* メインコンテンツエリア */}
       <main className="max-w-xl mx-auto w-full my-auto flex flex-col items-center">
-        <QuestionCard question={currentQuestion} />
+        <QuestionCardBase>
+          {!currentQuestion ? (
+            <EmptyContent />
+          ) : (
+            <QuestionCardContent question={currentQuestion} />
+          )}
+        </QuestionCardBase>
         {currentQuestion && <ShareButton question={currentQuestion} />}
 
         {/* 次の問いを引くボタン */}
