@@ -1,7 +1,7 @@
-import { Icon } from "@iconify/react";
 import { useState } from "react";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import { NextQuestionButton } from "./components/NextQuestionButton";
 import { EmptyContent } from "./components/QuestionCard/EmptyContent";
 import { QuestionCardBase } from "./components/QuestionCard/QuestionCardBase";
 import { QuestionCardContent } from "./components/QuestionCard/QuestionCardContent";
@@ -95,19 +95,10 @@ export default function App() {
             <QuestionCardContent question={currentQuestion} />
           )}
         </QuestionCardBase>
+
         {currentQuestion && <ShareButton question={currentQuestion} />}
 
-        {/* 次の問いを引くボタン */}
-        <div className="mt-8 w-full">
-          <button
-            type="button"
-            onClick={handleNextCard}
-            className="w-full bg-stone-900 hover:bg-stone-800 text-white font-medium py-4 px-6 rounded-xl transition-all shadow-sm active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2"
-          >
-            <Icon icon="lucide:refresh-cw" className="w-4 h-4" />
-            <span>次の問いを引く</span>
-          </button>
-        </div>
+        <NextQuestionButton onClick={handleNextCard} />
       </main>
 
       <Footer />
