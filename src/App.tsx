@@ -9,20 +9,8 @@ import { ShareButton } from "./components/ShareButton";
 import { useGA4 } from "./hooks/useGA4";
 import { questions } from "./questions";
 import type { Question, SceneOption } from "./types";
+import { getRandomFilteredQuestionId } from "./utils/question";
 import { getUrlParams, updateUrl } from "./utils/url";
-
-// 指定されたシーンからランダムに1つの問いを選ぶ
-function getRandomFilteredQuestionId(scene: SceneOption): number | null {
-  const filtered = questions.filter((q) => {
-    return scene === "all" || q.scene === scene;
-  });
-
-  if (filtered.length === 0) return null;
-  const randomIndex = Math.floor(Math.random() * filtered.length);
-  return filtered[randomIndex].id;
-}
-
-// --- Component ---
 
 export default function App() {
   useGA4();
