@@ -1,16 +1,16 @@
 import { Icon } from "@iconify/react";
 import { useState } from "react";
+import { Header } from "./components/Header";
 import { EmptyContent } from "./components/QuestionCard/EmptyContent";
 import { QuestionCardBase } from "./components/QuestionCard/QuestionCardBase";
 import { QuestionCardContent } from "./components/QuestionCard/QuestionCardContent";
 import { ShareButton } from "./components/ShareButton";
-import { SCENE_LABELS } from "./constants";
 import { useGA4 } from "./hooks/useGA4";
 import { questions } from "./questions";
-import type { Question, Scene } from "./types";
+import type { Question, Scene, SceneOption } from "./types";
 
 // 指定されたシーンからランダムに1つの問いを選ぶ
-function getRandomFilteredQuestionId(scene: Scene | "all"): number | null {
+function getRandomFilteredQuestionId(scene: SceneOption): number | null {
   const filtered = questions.filter((q) => {
     return scene === "all" || q.scene === scene;
   });
@@ -31,7 +31,7 @@ function getInitialUrlParams() {
   };
 }
 
-function updateUrl(qId: number | null, scene: Scene | "all") {
+function updateUrl(qId: number | null, scene: SceneOption) {
   const params = new URLSearchParams();
   if (qId !== null) params.set("q", qId.toString());
   if (scene !== "all") params.set("scene", scene);
@@ -47,7 +47,7 @@ export default function App() {
   useGA4();
 
   // URL初期値の読み込み
-  const [selectedScene, setSelectedScene] = useState<Scene | "all">(
+  const [selectedScene, setSelectedScene] = useState<SceneOption>(
     () => getInitialUrlParams().scene,
   );
 
@@ -75,7 +75,7 @@ export default function App() {
   };
 
   // 場面フィルター変更
-  const handleSceneChange = (newScene: Scene | "all") => {
+  const handleSceneChange = (newScene: SceneOption) => {
     setSelectedScene(newScene);
     const nextId = getRandomFilteredQuestionId(newScene);
     setQuestionId(nextId);
@@ -84,29 +84,8 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-stone-50 text-stone-900 flex flex-col justify-between p-6 select-none">
-      {/* ヘッダー & フィルター */}
-      <header className="max-w-xl mx-auto w-full flex justify-between items-center py-4">
-        <h1 className="text-xl font-bold tracking-wider text-stone-900">
-          Tois
-        </h1>
+      <Header selectedScene={selectedScene} onSceneChange={handleSceneChange} />
 
-        {/* シーンセレクター */}
-        <div className="flex items-center gap-2 text-xs font-medium text-stone-600">
-          <select
-            value={selectedScene}
-            onChange={(e) => handleSceneChange(e.target.value as Scene | "all")}
-            className="bg-white border border-stone-200 px-2.5 py-1.5 rounded-lg focus:outline-none focus:border-stone-400 transition-colors cursor-pointer"
-          >
-            {Object.entries(SCENE_LABELS).map(([value, label]) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </select>
-        </div>
-      </header>
-
-      {/* メインコンテンツエリア */}
       <main className="max-w-xl mx-auto w-full my-auto flex flex-col items-center">
         <QuestionCardBase>
           {!currentQuestion ? (
