@@ -8,7 +8,8 @@ import { QuestionCardContent } from "./components/QuestionCard/QuestionCardConte
 import { ShareButton } from "./components/ShareButton";
 import { useGA4 } from "./hooks/useGA4";
 import { questions } from "./questions";
-import type { Question, Scene, SceneOption } from "./types";
+import type { Question, SceneOption } from "./types";
+import { getUrlParams, updateUrl } from "./utils/url";
 
 // 指定されたシーンからランダムに1つの問いを選ぶ
 function getRandomFilteredQuestionId(scene: SceneOption): number | null {
@@ -21,27 +22,6 @@ function getRandomFilteredQuestionId(scene: SceneOption): number | null {
   return filtered[randomIndex].id;
 }
 
-function getInitialUrlParams() {
-  const params = new URLSearchParams(window.location.search);
-  const q = params.get("q");
-  const scene = (params.get("scene") as Scene) || "all";
-
-  return {
-    qId: q ? parseInt(q, 10) : null,
-    scene,
-  };
-}
-
-function updateUrl(qId: number | null, scene: SceneOption) {
-  const params = new URLSearchParams();
-  if (qId !== null) params.set("q", qId.toString());
-  if (scene !== "all") params.set("scene", scene);
-
-  const newSearch = params.toString();
-  const newUrl = newSearch ? `/?${newSearch}` : "/";
-  window.history.replaceState({}, "", newUrl);
-}
-
 // --- Component ---
 
 export default function App() {
@@ -49,11 +29,11 @@ export default function App() {
 
   // URL初期値の読み込み
   const [selectedScene, setSelectedScene] = useState<SceneOption>(
-    () => getInitialUrlParams().scene,
+    () => getUrlParams().scene,
   );
 
   const [questionId, setQuestionId] = useState<number | null>(() => {
-    const { qId, scene } = getInitialUrlParams();
+    const { qId, scene } = getUrlParams();
     if (qId !== null) return qId;
 
     const initialId = getRandomFilteredQuestionId(scene);
