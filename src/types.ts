@@ -7,6 +7,5 @@ export interface Question {
   source: {
     theory: string;
     description: string;
-    url?: string;
   };
 }

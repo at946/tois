@@ -186,28 +186,12 @@ export default function App() {
               </div>
 
               <div className="pt-6 border-t border-stone-100 text-center">
-                {currentQuestion.source.url ? (
-                  <a
-                    href={currentQuestion.source.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={currentQuestion.source.description}
-                    className="text-xs text-stone-600 hover:text-stone-900 underline-offset-4 hover:underline font-mono transition-colors flex items-center gap-1 cursor-pointer justify-center"
-                  >
-                    <span>{currentQuestion.source.theory}</span>
-                    <Icon
-                      icon="lucide:external-link"
-                      className="w-3 h-3 opacity-70"
-                    />
-                  </a>
-                ) : (
-                  <span
-                    className="text-xs text-stone-600 font-mono"
-                    title={currentQuestion.source.description}
-                  >
-                    {currentQuestion.source.theory}
-                  </span>
-                )}
+                <span
+                  className="text-xs text-stone-600 font-mono"
+                  title={currentQuestion.source.description}
+                >
+                  {currentQuestion.source.theory}
+                </span>
               </div>
             </div>
 
