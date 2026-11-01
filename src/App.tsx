@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { NextQuestionButton } from "./components/NextQuestionButton";
@@ -15,7 +15,6 @@ import { getUrlParams, updateUrl } from "./utils/url";
 export default function App() {
   useGA4();
 
-  // URL初期値の読み込み
   const [selectedScene, setSelectedScene] = useState<SceneOption>(
     () => getUrlParams().scene,
   );
@@ -23,27 +22,23 @@ export default function App() {
   const [questionId, setQuestionId] = useState<number | null>(() => {
     const { qId, scene } = getUrlParams();
     if (qId !== null) return qId;
-
-    const initialId = getRandomFilteredQuestionId(scene);
-    if (initialId !== null) {
-      updateUrl(initialId, scene);
-    }
-    return initialId;
+    return getRandomFilteredQuestionId(scene);
   });
 
-  // IDに該当する問いを取得
+  useEffect(() => {
+    updateUrl(questionId, selectedScene);
+  }, [questionId, selectedScene]);
+
   const currentQuestion: Question | undefined = questions.find(
     (q) => q.id === questionId,
   );
 
-  // 次の問いを引く
   const handleNextCard = () => {
     const nextId = getRandomFilteredQuestionId(selectedScene);
     setQuestionId(nextId);
     updateUrl(nextId, selectedScene);
   };
 
-  // 場面フィルター変更
   const handleSceneChange = (newScene: SceneOption) => {
     setSelectedScene(newScene);
     const nextId = getRandomFilteredQuestionId(newScene);
