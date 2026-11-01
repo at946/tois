@@ -1,20 +1,12 @@
 import { Icon } from "@iconify/react";
 import { useEffect, useState } from "react";
+import { QuestionCard } from "./components/QuestionCard";
+import { ShareButton } from "./components/ShareButton";
+import { SCENE_LABELS } from "./constants";
 import { questions } from "./questions";
 import type { Question, Scene } from "./types";
 
 const GA_MEASUREMENT_ID = "G-47SEHKC1BC";
-
-// --- Label Mappings ---
-
-const SCENE_LABELS: Record<Scene | "all", string> = {
-  all: "場面: すべて",
-  checkin: "チェックイン",
-  self: "内省",
-  team: "チーム",
-};
-
-// --- Helpers ---
 
 // 指定されたシーンからランダムに1つの問いを選ぶ
 function getRandomFilteredQuestionId(scene: Scene | "all"): number | null {
@@ -111,17 +103,6 @@ export default function App() {
     updateUrl(nextId, newScene);
   };
 
-  const handleShareX = () => {
-    if (!currentQuestion) return;
-    const shareUrl = window.location.href; // 場面・IDが入ったフルURLをシェア
-    const text = `"${currentQuestion.text}" #tois\n\n`;
-    const params = new URLSearchParams({ text, url: shareUrl });
-    window.open(
-      `https://twitter.com/intent/tweet?${params.toString()}`,
-      "_blank",
-    );
-  };
-
   return (
     <div className="min-h-screen bg-stone-50 text-stone-900 flex flex-col justify-between p-6 select-none">
       {/* ヘッダー & フィルター */}
@@ -168,45 +149,8 @@ export default function App() {
         ) : (
           /* 正常に問いが表示されるカード */
           <>
-            <div className="w-full bg-white border border-stone-200 rounded-2xl p-8 md:p-12 shadow-sm flex flex-col justify-between min-h-65 md:min-h-75 transition-all duration-300">
-              {/* カード上部：属性タグのバッジ表示 */}
-              <div className="flex items-center gap-1.5 mb-4">
-                <span className="text-[10px] font-medium bg-stone-100 text-stone-600 px-2 py-0.5 rounded-full">
-                  {SCENE_LABELS[currentQuestion.scene]}
-                </span>
-              </div>
-
-              <div className="my-auto">
-                <p
-                  className="text-xl md:text-2xl font-medium leading-relaxed text-stone-900 text-center"
-                  style={{ wordBreak: "auto-phrase" }}
-                >
-                  {currentQuestion.text}
-                </p>
-              </div>
-
-              <div className="pt-6 border-t border-stone-100 text-center">
-                <span
-                  className="text-xs text-stone-600 font-mono"
-                  title={currentQuestion.source.description}
-                >
-                  {currentQuestion.source.theory}
-                </span>
-              </div>
-            </div>
-
-            <button
-              type="button"
-              onClick={handleShareX}
-              className="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-stone-200 bg-white hover:bg-stone-900 hover:text-white hover:border-stone-900 text-stone-600 text-xs font-medium transition-all duration-200 shadow-2xs active:scale-95 cursor-pointer mt-6"
-              title="Xでこの問いをシェア"
-            >
-              <Icon
-                icon="ri:twitter-x-fill"
-                className="w-3.5 h-3.5 transition-transform duration-200 group-hover:scale-110"
-              />
-              <span className="font-mono tracking-tight">Share</span>
-            </button>
+            <QuestionCard question={currentQuestion} />
+            <ShareButton question={currentQuestion} />
           </>
         )}
 
