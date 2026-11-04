@@ -1,2904 +1,2869 @@
 import type { Question } from "../types";
 
 export const questions: Question[] = [
-  // ==========================================
-  // 1. checkin（場をほぐす・入る / 30問）
-  // ==========================================
   {
     id: 1,
     text: "今の自分のコンディションや気分を『お天気』に例えると何ですか？",
-    scene: "checkin",
+    depth: "light",
     source: {
       theory: "認知の焦点化・マインドフルネス",
       description:
-        "言語化しにくい疲労感や気分を直感的に共有し、お互いの状態を気遣う。",
+        "言語化しにくい疲労感や気分を直感的に捉え、自分の状態を客観視する。",
     },
   },
   {
     id: 2,
-    text: "今週の自分に『よくやった！』と言いたい小さな達成は何ですか？",
-    scene: "checkin",
+    text: "今、自分のエネルギー残量は100点満点中何点くらいですか？",
+    depth: "light",
     source: {
-      theory: "スモールウィン効果（Teresa Amabile）",
-      description: "小さな進捗に目を向け、自己効力感とモチベーションを高める。",
+      theory: "エナジー・マネジメント（Jim Loehr）",
+      description:
+        "自身のエネルギーレベルを数値で可視化し、適切なペース配分を意識する。",
     },
   },
   {
     id: 3,
-    text: "ここ最近で『思わずクスッと笑ったこと』や『ほっこりしたこと』は何ですか？",
-    scene: "checkin",
+    text: "今の自分のバッテリー状態は『充電中』『フル』『残りわずか』のどれに近いですか？",
+    depth: "light",
     source: {
-      theory: "拡張-形成理論（Barbara Fredrickson）",
-      description: "ポジティブ感情を喚起し、視野と創造性を広げる。",
+      theory: "自己調整理論（Self-Regulation Theory）",
+      description: "リソースの枯渇具合を意識し、休息の必要性を自己検知する。",
     },
   },
   {
     id: 4,
-    text: "最近新しく試してみたこと（食べたもの、行った場所、やり方の変更など）はありますか？",
-    scene: "checkin",
+    text: "今の頭のスッキリ感は、朝霧、晴天、曇りのどれに近いですか？",
+    depth: "light",
     source: {
-      theory: "経験学習モデル（David Kolb）",
-      description: "日常の小さな探求心を刺激し、学習モードに切り替える。",
+      theory: "メタ認知（Metacognition）",
+      description: "自分の認知資源（思考の鮮明さ）の現在地を把握する。",
     },
   },
   {
     id: 5,
-    text: "最近、チームや周囲の人に対して『ありがとう』『助かったな』と思った出来事は何ですか？",
-    scene: "checkin",
+    text: "今の自分の感覚は、アクセルとブレーキのどちらを踏んでいる感じですか？",
+    depth: "light",
     source: {
-      theory: "組織の成功循環モデル（Daniel Kim）",
-      description: "関係性の質を高め、チーム内のポジティブな相互作用を生む。",
+      theory: "ポリヴェーガル理論（Stephen Porges）",
+      description:
+        "交感神経（興奮・緊張）と副交感神経（ブレーキ）のバランスを認識する。",
     },
   },
   {
     id: 6,
-    text: "今週、自分を一番『元気にしてくれたもの（食べ物、音楽、人との会話など）』は何ですか？",
-    scene: "checkin",
+    text: "今日の自分を乗り物（新幹線、自転車、徒歩など）に例えると何ですか？",
+    depth: "light",
     source: {
-      theory: "セルフケア・ストレスコーピング",
-      description: "自分の活力源を意識し、エネルギー補給の手段を再認識する。",
+      theory: "メタファー思考",
+      description: "比喩を用いて現在のスピード感や負担感を客観的に捉える。",
     },
   },
   {
     id: 7,
-    text: "今、頭の片隅を占めている『ちょっと気になっていること』は何ですか？",
-    scene: "checkin",
+    text: "今の自分のエンジンはすぐに動かせそうでしょうか？それとも暖機運転が必要ですか？",
+    depth: "light",
     source: {
-      theory: "ワーキングメモリの解放・心理的安全性",
-      description:
-        "思考のノイズを吐き出させ、目の前の会話やタスクに集中できるようにする。",
+      theory: "準備性（Readiness）の評価",
+      description: "作業着手前の認知的なウォームアップの必要度を自覚する。",
     },
   },
   {
     id: 8,
-    text: "最近出会った『面白い言葉』や『新しい知見』はありますか？",
-    scene: "checkin",
+    text: "今日ここまでの自分のペースは『ハイペース』『マイペース』『スローペース』のどれですか？",
+    depth: "light",
     source: {
-      theory: "実践コミュニティ（Etienne Wenger）",
-      description: "お互いの関心事や新しい情報をカジュアルに共有し合う。",
+      theory: "ペースセッティング",
+      description: "自分の行動速度をモニタリングし、オーバーワークを防ぐ。",
     },
   },
   {
     id: 9,
-    text: "今の自分の『バッテリー残量』は何%くらいですか？その理由は？",
-    scene: "checkin",
+    text: "今、身体のどこかに『重さ』や『軽さ』を感じる部分はありますか？",
+    depth: "light",
     source: {
-      theory: "心理的エネルギーマネジメント",
-      description: "稼働状態をオープンにし、無理のないペース配分を行う。",
+      theory: "ソマティック・アウェアネス（身体感覚的気づき）",
+      description: "身体の部位ごとの感覚に注意を向け、体調の変化に気づく。",
     },
   },
   {
     id: 10,
-    text: "今日（または今週）一日を終えたとき、どんな気持ちになっていたいですか？",
-    scene: "checkin",
+    text: "今日の自分の状態をスマホのステータスアイコンで表すと何ですか？",
+    depth: "light",
     source: {
-      theory: "メンタルリハーサル・意図設定（Goal Setting）",
-      description: "ゴールイメージを持ち、主体的に一日をスタートさせる。",
-    },
-  },
-  {
-    id: 51,
-    text: "今、自分のからだで一番『力が入っている場所（肩、奥歯、お腹など）』はどこですか？",
-    scene: "checkin",
-    source: {
-      theory: "ソマティック・リフレクション",
+      theory: "視覚的シンボル化",
       description:
-        "頭に偏りがちな意識を身体に向け、無意識の緊張に気づいて脱力・リラックスを促す。",
+        "日常的なピクトグラムを用いて自分のコンディションを簡易表現する。",
     },
   },
-  {
-    id: 52,
-    text: "今の自分の気分を『色』に例えると何色ですか？",
-    scene: "checkin",
-    source: {
-      theory: "投影法・非言語表現の言語化",
-      description:
-        "言葉にしづらい感覚的な状態を簡潔に表現し、相互理解を深める。",
-    },
-  },
-  {
-    id: 53,
-    text: "今週、一番楽しみにしている『小さな予定や楽しみ』は何ですか？",
-    scene: "checkin",
-    source: {
-      theory: "予期的なポジティブ感情（Anticipatory Emotion）",
-      description:
-        "未来へのポジティブな期待感を生み出し、前向きなエネルギーを引き出す。",
-    },
-  },
-  {
-    id: 54,
-    text: "最近『心地よかった音・におい・手触り』など、五感で感じた快感は何ですか？",
-    scene: "checkin",
-    source: {
-      theory: "グラウンディング・マインドフルネス",
-      description:
-        "意識を「今、ここ」の身体感覚に引き戻し、心の静けさを取り戻す。",
-    },
-  },
-  {
-    id: 55,
-    text: "1年前の今日の自分に会えるとしたら、ひとこと何と言ってあげたいですか？",
-    scene: "checkin",
-    source: {
-      theory: "時間的自己比較（Temporal Self-Comparison）",
-      description: "過去からの成長や変化を実感し、ゆるやかな自己肯定感を得る。",
-    },
-  },
-  {
-    id: 56,
-    text: "今、自分の中でひそかに流行っている『小さなこだわりやブーム』は何ですか？",
-    scene: "checkin",
-    source: {
-      theory: "パーソナル・アイデンティティの開示",
-      description:
-        "業務外の個性を垣間見せることで、チーム内の心理的親密性を高める。",
-    },
-  },
-  {
-    id: 57,
-    text: "今、頭のなかのクリアさは10段階でいくつくらいですか？",
-    scene: "checkin",
-    source: {
-      theory: "認知負荷理論（Cognitive Load Theory）",
-      description:
-        "脳の疲労感やキャパシティを可視化し、ミーティングの密度や進め方を調整する。",
-    },
-  },
-  {
-    id: 58,
-    text: "最近読んで（あるいは観て）『刺激を受けたコンテンツ』は何ですか？",
-    scene: "checkin",
-    source: {
-      theory: "刺激の多様性と情報交換",
-      description: "個人の関心や知的探求心を共有し、対話のアイデアの種とする。",
-    },
-  },
-  {
-    id: 59,
-    text: "今いる場所（デスク周りや部屋）で、一番『お気に入りのもの』は何ですか？",
-    scene: "checkin",
-    source: {
-      theory: "環境心理学・プライベート領域の開示",
-      description: "リモート環境等でリラックスした雰囲気を作り、場を和ませる。",
-    },
-  },
-  {
-    id: 60,
-    text: "今日の自分に『キャッチコピー』をつけるとしたら何ですか？",
-    scene: "checkin",
-    source: {
-      theory: "メタ認知と要約力",
-      description: "自分の状態やスタンスをメタ視点で楽しみながら整理する。",
-    },
-  },
-
-  // ==========================================
-  // 2. self（自分と向き合う・整える / 35問）
-  // ==========================================
   {
     id: 11,
-    text: "ここ数日で最も『心が動いた（うれしかった、悔しかった、モヤっとしたなど）』瞬間はどこですか？",
-    scene: "self",
+    text: "今、一番身体の力が抜けていてリラックスしているパーツはどこですか？",
+    depth: "light",
     source: {
-      theory: "感情の粒度（Emotional Granularity）",
-      description:
-        "自分の感情の変化に気づき、その裏にあるニーズや価値観を探る。",
+      theory: "筋弛緩法（Progressive Muscle Relaxation）",
+      description: "弛緩している部位に意識を向け、安心感を身体全体へ広げる。",
     },
   },
   {
     id: 12,
-    text: "最近『少しエネルギーを吸い取られているな』と感じる作業や状況は何ですか？",
-    scene: "self",
+    text: "今、目の前のタスクに対する集中力は何分くらい続きそうな感覚ですか？",
+    depth: "light",
     source: {
-      theory: "Job Demands-Resourcesモデル（JD-Rモデル）",
-      description:
-        "ストレス要因（Demand）を特定し、対処法を考える手かがりとする。",
+      theory: "ポモドーロ・テクニック / 認知資源管理",
+      description: "持続可能な集中時間を予測し、適切な作業設計につなげる。",
     },
   },
   {
     id: 13,
-    text: "自分が仕事や生活の中で『これだけは譲れない』と大切にしている価値観は何ですか？",
-    scene: "self",
+    text: "今日の自分のバイオリズム（調子の波）は、上向き・下向き・平坦のどれですか？",
+    depth: "light",
     source: {
-      theory: "セルフ・デミネーション理論（Self-Determination Theory）",
-      description: "内発的動機づけ（自律性・有能感・関係性）の源泉を確認する。",
+      theory: "サーカディアンリズムの自己モニタリング",
+      description: "時間帯によるパフォーマンスの変化を受け入れる。",
     },
   },
   {
     id: 14,
-    text: "今感じているネガティブな出来事を、別の角度（学び・成長の機会）から捉え直すとしたら？",
-    scene: "self",
+    text: "今、自分の頭の中のBGMのテンポは速いですか？遅いですか？",
+    depth: "light",
     source: {
-      theory: "認知再評価（Cognitive Reappraisal）",
-      description: "出来事の解釈を変え、レジリエンス（回復力）を高める。",
+      theory: "内言（Inner Speech）の観察",
+      description: "思考の回転速度や焦りの度合いを間接的に把握する。",
     },
   },
   {
     id: 15,
-    text: "前に進むために、今『思い切って手放せるもの・やめられること』は何ですか？",
-    scene: "self",
+    text: "今、一番主張している身体の感覚（眠気、空腹、肩こりなど）は何ですか？",
+    depth: "light",
     source: {
-      theory: "アンラーニング（Unlearning / 学習棄却）",
-      description: "慣習や執着を捨て、新しい行動や思考の余白を作る。",
+      theory: "内受容感覚（Interoception）",
+      description: "身体内部からのシグナルを正しく察知し、生理的欲求に応える。",
     },
   },
   {
     id: 16,
-    text: "今悩んでいることのうち『自分でコントロールできること』と『できないこと』は何ですか？",
-    scene: "self",
+    text: "今日の自分の『省エネモード』度は何％ですか？",
+    depth: "light",
     source: {
-      theory: "統制の所在地（Locus of Control / ストア哲学）",
-      description: "自分で変えられる部分に注力し、無駄なストレスを減らす。",
+      theory: "セルフ・コンパッション",
+      description:
+        "完璧を目指さず、現状のエネルギーに応じた妥当な出力を許可する。",
     },
   },
   {
     id: 17,
-    text: "最近、自分の『得意なこと』や『強み』を活かせたと感じた瞬間はどこですか？",
-    scene: "self",
+    text: "今、自分のなかの『やる気スイッチ』はどのあたりにありそうでしょうか？",
+    depth: "light",
     source: {
-      theory: "強みアプローチ（VIA / StrengthsFinder）",
-      description: "自我同一性と自己効力感を高め、パフォーマンスを向上させる。",
+      theory: "作業興奮理論（Emil Kraepelin）",
+      description: "行動の引き金となるトリガーを意識化する。",
     },
   },
   {
     id: 18,
-    text: "今の作業ペースや生活リズムは、自分にとって持続可能（サステナブル）ですか？",
-    scene: "self",
+    text: "今の自分を動物に例えると、どんな姿勢で過ごしていますか？",
+    depth: "light",
     source: {
-      theory: "ワーク・エンゲイジメントとバーンアウト予防",
-      description: "中長期的な持続可能性を見直し、過酷な負荷を未然に防ぐ。",
+      theory: "投映法 / 象徴的思考",
+      description:
+        "動物の姿を借りて自身の無意識の警戒レベルや寛ぎ度を表現する。",
     },
   },
   {
     id: 19,
-    text: "自分が一番リラックスして自分らしくいられる場所や時間はどこですか？",
-    scene: "self",
+    text: "今日、自分の『心のキャパシティ』はどれくらい残っていますか？",
+    depth: "light",
     source: {
-      theory: "心理的居場所感（Sense of Belonging）",
-      description: "リカバリー（回復）のための資源を再確認する。",
+      theory: "自我消耗（Ego Depletion）モデル",
+      description:
+        "意志力や寛容さの残量を把握し、刺激の多い環境を避ける判断基準とする。",
     },
   },
   {
     id: 20,
-    text: "1年後の自分が今の自分を見たら、どんな声をかけてあげると思いますか？",
-    scene: "self",
+    text: "今、この場所での居心地の良さは10点満点中何点ですか？",
+    depth: "light",
     source: {
-      theory: "心理的距離化（Self-Distancing）",
-      description: "視点を長期に引き上げ、目の前の課題を客観的・冷静に捉える。",
+      theory: "環境心理学（Environmental Psychology）",
+      description: "周囲の環境が与える心理的影響をチェックする。",
     },
   },
-  {
-    id: 41,
-    text: "今の仕事に『ほんの少しだけ自分らしさや面白さ』を加えるとしたら、何を工夫しますか？",
-    scene: "self",
-    source: {
-      theory: "Job Crafting（Amy Wrzesniewski）",
-      description:
-        "与えられた仕事を受動的ではなく、主体的・魅力的に再定義する。",
-    },
-  },
-  {
-    id: 42,
-    text: "理想のゴールに向かって、明日から試せる『最も小さな1歩』は何ですか？",
-    scene: "self",
-    source: {
-      theory: "心理的資本 HEROモデル（Hope, Efficacy, Resilience, Optimism）",
-      description: "行動へのハードルを極限まで下げ、確実に動ける状態を作る。",
-    },
-  },
-  {
-    id: 43,
-    text: "最近の偶然の出会いや出来事の中で、今後のキャリアや目標に活かせそうなものはありますか？",
-    scene: "self",
-    source: {
-      theory: "計画的偶発性理論（John Krumboltz）",
-      description: "偶然の出来事をチャンスに変える柔軟性を育む。",
-    },
-  },
-  {
-    id: 44,
-    text: "何の制約（時間・予算・評価）もなかったら、今一番挑戦してみたいことは何ですか？",
-    scene: "self",
-    source: {
-      theory: "可能自他（Possible Selves）",
-      description: "制約を取り払い、真のやりたいことやワクワク感を引き出す。",
-    },
-  },
-  {
-    id: 45,
-    text: "次のステップに進むために、すでに持っている『自分の武器（経験・スキル・仲間）』は何ですか？",
-    scene: "self",
-    source: {
-      theory: "リソース・ベースド・ビュー（RBV）",
-      description:
-        "足りないものではなく、すでにあるリソースに目を向けて自信につなげる。",
-    },
-  },
-  {
-    id: 46,
-    text: "最近『少し背伸びをしたな』『居心地の悪さを感じた（学びがあった）』瞬間はどこですか？",
-    scene: "self",
-    source: {
-      theory: "コンフォートゾーン・ラーニングゾーン",
-      description: "適度な負荷（ラーニングゾーン）に身を置いているか確認する。",
-    },
-  },
-  {
-    id: 47,
-    text: "周囲からどんな存在として『頼りにされたい』ですか？",
-    scene: "self",
-    source: {
-      theory: "プロフェッショナル・アイデンティティ",
-      description: "目指す専門性や組織内での立ち位置を自覚する。",
-    },
-  },
-  {
-    id: 48,
-    text: "今後目標を進める中で『一番の障壁になりそうなこと』と、その対策は何ですか？",
-    scene: "self",
-    source: {
-      theory: "WOOPモデル（Gabriele Oettingen）",
-      description: "障害をあらかじめ想定し、実行確率を格段に高める。",
-    },
-  },
-  {
-    id: 49,
-    text: "最近『この人の働き方や考え方は素敵だな』と感じた人は誰ですか？どの部分に惹かれましたか？",
-    scene: "self",
-    source: {
-      theory: "モデリング理論（Albert Bandura）",
-      description: "他者の姿から自分の理想像や学習ターゲットを明確にする。",
-    },
-  },
-  {
-    id: 50,
-    text: "半年後に『最高の状態で振り返り』をしているとしたら、今どんな行動をとっていますか？",
-    scene: "self",
-    source: {
-      theory: "バックキャスティング（Backcasting）",
-      description: "未来の理想状態から逆算して、今とるべきアクションを決める。",
-    },
-  },
-  {
-    id: 61,
-    text: "今、うまくいっていないことに対して『親しい友人が同じ状況だったら』どんな優しい言葉をかけますか？",
-    scene: "self",
-    source: {
-      theory: "セルフ・コンパッション（Kristin Neff）",
-      description:
-        "過度な自己批判をやめ、自分自身に対しても思いやりのある態度をとる。",
-    },
-  },
-  {
-    id: 62,
-    text: "最近『イラッとした』または『モヤッとした』瞬間、自分のどんな価値観が刺激されていましたか？",
-    scene: "self",
-    source: {
-      theory: "感情の一次・二次評価モデル（Richard Lazarus）",
-      description:
-        "ネガティブ感情の背景にある、自分が大切にしている信念やルールを発見する。",
-    },
-  },
-  {
-    id: 63,
-    text: "今感じている不安や焦りは、『事実』ですか？それとも『思い込み・解釈』ですか？",
-    scene: "self",
-    source: {
-      theory: "認知行動療法（CBT / Fact-Interpretation Separation）",
-      description: "事実と解釈を分離し、不必要な破局的思考や焦りを和らげる。",
-    },
-  },
-  {
-    id: 64,
-    text: "今取り組んでいることのうち、『誰に言われなくてもやりたいこと』はどれですか？",
-    scene: "self",
-    source: {
-      theory: "自己決定理論（Self-Determination Theory）",
-      description:
-        "他者からの評価ではなく、純粋な興味や自律性に基づく行動を切り出す。",
-    },
-  },
-  {
-    id: 65,
-    text: "自分が本当に心からリフレッシュできる『休むためのアクティビティ』は何ですか？",
-    scene: "self",
-    source: {
-      theory: "リカバリー体験（Recovery Experience / Sabine Sonnentag）",
-      description: "心理的離脱を伴う質の高い休息を意識する。",
-    },
-  },
-  {
-    id: 66,
-    text: "他人の行動を見て『羨ましい』『モヤっとする』と感じたとき、自分の中に隠れている欲求は何ですか？",
-    scene: "self",
-    source: {
-      theory: "投映（Projection）と欲求の可視化",
-      description:
-        "他人への嫉妬や不快感を、自分が真に求めている欲求へのサインとして捉え直す。",
-    },
-  },
-  {
-    id: 67,
-    text: "ストレスが高まったとき、自分の『身体』にはどんなサインが出ますか？",
-    scene: "self",
-    source: {
-      theory: "ストレス反応の自己モニタリング",
-      description:
-        "自分のストレスシグナルを早期に察知し、バーンアウトを未然に防ぐ。",
-    },
-  },
-  {
-    id: 68,
-    text: "自分のスケジュールのうち『100%自分でコントロールできている時間』はどれくらいありますか？",
-    scene: "self",
-    source: {
-      theory: "知覚された統制感（Perceived Control）",
-      description: "自分の人生や時間を自分で動かしているという感覚を取り戻す。",
-    },
-  },
-  {
-    id: 69,
-    text: "頭のどこかで『やらなきゃ…』と放置されてストレスになっている『小さな未完了』は何ですか？",
-    scene: "self",
-    source: {
-      theory: "ツァイガルニク効果（Zeigarnik Effect）",
-      description:
-        "未完了のタスクをリストアップして言語化・処理し、脳の作業メモリを解放する。",
-    },
-  },
-  {
-    id: 70,
-    text: "最近の自分は、自分の『本音』と『行動』が一致していますか？",
-    scene: "self",
-    source: {
-      theory: "心理的誠実さ・自己一致（Carl Rogers）",
-      description:
-        "無理に演じる自分から離れ、自分らしくいられているかを確かめる。",
-    },
-  },
-  {
-    id: 91,
-    text: "環境の変化に応じて、自分のどんな『スキルや柔軟性』をアップデートしたいですか？",
-    scene: "self",
-    source: {
-      theory: "プロティアン・キャリア（Douglas Hall）",
-      description:
-        "組織主導ではなく、変化に適応しながら主体的にキャリアを築く視点を持つ。",
-    },
-  },
-  {
-    id: 92,
-    text: "自分が働くうえで絶対に譲れない『軸（専門性、安定、自由、挑戦など）』は何ですか？",
-    scene: "self",
-    source: {
-      theory: "キャリア・アンカー（Edgar Schein）",
-      description:
-        "キャリア選択における絶対的な価値基準（動機・欲求）を再確認する。",
-    },
-  },
-  {
-    id: 93,
-    text: "目標達成に向けて『自分の中にある最大の妨げ（怠け心、不安など）』にどう対処しますか？",
-    scene: "self",
-    source: {
-      theory: "WOOPモデル（Gabriele Oettingen）",
-      description:
-        "障害に対する具体的行動ルール（If-Thenプランニング）をあらかじめ作る。",
-    },
-  },
-  {
-    id: 94,
-    text: "今後1ヶ月で、自分のキャリアのために試せる『小さな実験（1時間の勉強、人に話を聞く等）』は何ですか？",
-    scene: "self",
-    source: {
-      theory: "キャリア実験・ライフキャリア創造",
-      description:
-        "大きな決断ではなく、リスクの少ない小さな試行錯誤からキャリアを広げる。",
-    },
-  },
-  {
-    id: 95,
-    text: "これまでの人生で『厳しい状況を乗り越えた経験』から、今の自分に活かせる強みは何ですか？",
-    scene: "self",
-    source: {
-      theory: "代理体験・成功体験（Albert Bandura）",
-      description: "過去の困難克服体験から自信（自己効力感）を再構築する。",
-    },
-  },
-
-  // ==========================================
-  // 3. team（チームで振り返る・深める / 35問）
-  // ==========================================
   {
     id: 21,
-    text: "この1週間で『実は少し不安だったこと』や『声を大にして言いにくかったこと』は何ですか？",
-    scene: "team",
+    text: "今、自分の気分を一色で表すとしたら何色ですか？",
+    depth: "light",
     source: {
-      theory: "心理的安全性（Amy Edmondson）",
-      description: "弱みや疑問を口にできる文化を育む。",
+      theory: "カラー心理学・感情表現",
+      description: "言語化が難しい非定型な感情を色彩で表現する。",
     },
   },
   {
     id: 22,
-    text: "チームメンバーの『ここがすごい！』『尊敬している』と感じる部分はどこですか？",
-    scene: "team",
+    text: "今、心の中に一番近くに居座っている感情は何ですか？",
+    depth: "light",
     source: {
-      theory: "相互認知的アプローチ・相互尊重",
-      description: "お互いの強みを認識し合い、個尊重の意識を高める。",
+      theory: "感情の粒度（Emotional Granularity）",
+      description:
+        "モヤモヤした気分の正体を特定し、名前をつけることで鎮静化する。",
     },
   },
   {
     id: 23,
-    text: "今、チームに対して『助けてほしいこと』や『相談したいこと』はありますか？",
-    scene: "team",
+    text: "今の気分を『香り』に例えるとどんな感じですか？",
+    depth: "light",
     source: {
-      theory: "援助要請行動（Help-Seeking Behavior）",
-      description: "溜め込まず早めにSOSを出せる関係性を作る。",
+      theory: "クロスモーダル知覚",
+      description: "五感の繋がりを利用して感情のニュアンスを繊細に捉える。",
     },
   },
   {
     id: 24,
-    text: "お互いの役割や進捗について、『認識のズレ』を感じている部分はありますか？",
-    scene: "team",
+    text: "今の自分の心模様を風景にするなら、どんな景色が広がっていますか？",
+    depth: "light",
     source: {
-      theory: "役割明確性（Role Clarity）",
-      description: "期待値と認識のギャップを早期に埋め、摩擦を防ぐ。",
+      theory: "イメージ心理療法",
+      description: "内面の状態を風景として可視化し、客観的な観測者となる。",
     },
   },
   {
     id: 25,
-    text: "最近の『うまくいかなかったこと』から、チーム全体で得られた学びは何ですか？",
-    scene: "team",
+    text: "今、一番自分の心に優しくしてあげたいポイントはどこですか？",
+    depth: "light",
     source: {
-      theory: "失敗学・スマート・フェイラー（Smart Failure）",
-      description: "失敗を責めるのではなく、学習の機会へ変換する。",
+      theory: "セルフ・コンパッション（Kristin Neff）",
+      description: "自己批判をやめ、自分自身に対する慈しみの態度を養う。",
     },
   },
   {
     id: 26,
-    text: "私たちが今、一番大事にしたい『共通の目標・価値』は何でしょうか？",
-    scene: "team",
+    text: "今、ワクワク・ホッとする・モヤモヤのうち、どれが最も近いですか？",
+    depth: "light",
     source: {
-      theory: "チーム・ゴール・コミットメント",
-      description: "チーム全体の目線とベクトルを整える。",
+      theory: "感情の2軸モデル（Core Affect）",
+      description: "快・不快と覚醒度の2軸から感情の基本位置を分類する。",
     },
   },
   {
     id: 27,
-    text: "私たちの最近のミーティングやコミュニケーションで『もっと良くできること』は何ですか？",
-    scene: "team",
+    text: "今の自分の気分を『音楽のジャンル』に例えると何ですか？",
+    depth: "light",
     source: {
-      theory: "メタコミュニケーション",
-      description: "コミュニケーションそのものを振り返り、改善する。",
+      theory: "リズムと感情の同調",
+      description:
+        "内面のグルーヴや混乱具合を音楽ジャンルに置き換えて把握する。",
     },
   },
   {
     id: 28,
-    text: "自分と仲間で『考え方や仕事のスタイルが違うな』と感じて面白かった瞬間はどこですか？",
-    scene: "team",
+    text: "今、心の水面に波風は立っていますか？それとも穏やかですか？",
+    depth: "light",
     source: {
-      theory: "ダイバーシティ＆インクルージョン",
-      description: "異質性を排除せず、強みとして受け入れる態度を育てる。",
+      theory: "マインドフルネス / 感情の波",
+      description:
+        "感情の揺れを外部の出来事と切り離し、単なる『波』として観察する。",
     },
   },
   {
     id: 29,
-    text: "チーム内で『お互いの時間や集中を尊重できている』と感じますか？",
-    scene: "team",
+    text: "今、自分自身の『ご機嫌度』を点数にすると何点ですか？",
+    depth: "light",
     source: {
-      theory: "境界マネジメント（Boundary Management）",
-      description: "過度な割り込みを防ぎ、集中と協働のバランスをとる。",
+      theory: "主観的ウェルビーイング（Subjective Well-being）",
+      description: "自己の即時的な充足感を自己点検する。",
     },
   },
   {
     id: 30,
-    text: "最近、チームで一緒に喜びたい『小さな勝利や変化』は何ですか？",
-    scene: "team",
+    text: "今、胸や頭のあたりはどんな温度感（あたたかい・ひんやりなど）ですか？",
+    depth: "light",
     source: {
-      theory: "ポジティブ・フィードバック",
-      description: "達成感を分かち合い、チームの結束力を強化する。",
+      theory: "身体的感情マッピング（Embodied Emotion）",
+      description: "感情に伴う身体の局所的な体温変化に意識を向ける。",
     },
   },
   {
     id: 31,
-    text: "最近の経験から『次に同じ状況になったら使える法則や教訓』を1つ作るなら？",
-    scene: "team",
+    text: "今、一番自分をホッとさせてくれる言葉は何ですか？",
+    depth: "light",
     source: {
-      theory: "経験学習モデル・持論化（David Kolb）",
-      description: "個別の体験を抽象化し、再現可能な知恵（持論）にする。",
+      theory: "アファメーション / セルフコープ",
+      description: "自己肯定感を回復させる安らぎの言葉を見出す。",
     },
   },
   {
     id: 32,
-    text: "今回のプロジェクト/期間で『絶対に次も続けたいこと』は何ですか？",
-    scene: "team",
+    text: "ここ最近で『思わずクスッと笑ったこと』や『ほっこりしたこと』は何ですか？",
+    depth: "light",
     source: {
-      theory: "アジャイル/スクラム・Retrospective",
-      description: "成功パターン（Keep）を確実に捉えて言語化する。",
+      theory: "拡張-形成理論（Barbara Fredrickson）",
+      description: "ポジティブ感情を喚起し、思考と行動の枠組みを広げる。",
     },
   },
   {
     id: 33,
-    text: "成果だけでなく『進め方（プロセス）』において、一番工夫できた点はどこですか？",
-    scene: "team",
+    text: "今、ちょっとだけ『面倒だな』『億劫だな』と感じていることは何ですか？",
+    depth: "light",
     source: {
-      theory: "プロセス思考・ダブルループ学習",
-      description: "結果オーライで終わらせず、再現性のあるプロセスに着目する。",
+      theory: "抵抗感の受容（Acceptance）",
+      description: "ネガティブな感情を否定せず、そのまま認知する。",
     },
   },
   {
     id: 34,
-    text: "想定外のことが起きたおかげで『思わぬ良い結果』につながった出来事はありますか？",
-    scene: "team",
+    text: "今、頑張っている自分に対して一言だけ労いをかけるなら何ですか？",
+    depth: "light",
     source: {
-      theory: "セレンディピティ・計画的偶発性理論（John Krumboltz）",
-      description: "変化や不確実性をチャンスとしてポジティブに捉える。",
+      theory: "自己認知的アプローチ",
+      description: "他者に求める慰めを自ら自分自身に提供する能力を高める。",
     },
   },
   {
     id: 35,
-    text: "全体を通して、一番時間や労力がかかっていた『隠れた滞留ポイント』はどこでしたか？",
-    scene: "team",
+    text: "今、心の中に『余白』は残っていますか？それとも詰まっていますか？",
+    depth: "light",
     source: {
-      theory: "制約理論（Theory of Constraints: TOC）",
-      description: "根本的なボトルネックを見つけ、次の改善につなげる。",
+      theory: "ワーキングメモリ論",
+      description: "思考の空き容量を自覚し、情報過多を防ぐ。",
     },
   },
   {
     id: 36,
-    text: "そもそも『前提としているルールや目的』自体を見直すとしたら、どこを変えますか？",
-    scene: "team",
+    text: "今日の自分の気分にぴったりの飲み物を選ぶなら何ですか？",
+    depth: "light",
     source: {
-      theory: "ダブルループ学習（Chris Argyris）",
-      description: "手順の修正にとどまらず、前提条件や戦略そのものを疑う。",
+      theory: "感覚的セルフケア",
+      description:
+        "求める味覚や質感から、今必要としている刺激や癒やしを察知する。",
     },
   },
   {
     id: 37,
-    text: "最近行った『重要な決断』の理由と、その後の影響を振り返るとどうですか？",
-    scene: "team",
+    text: "今、心が『YES（前向き）』と感じている対象は何ですか？",
+    depth: "light",
     source: {
-      theory: "意思決定モニタリング",
-      description: "自分の判断軸の精度を上げ、納得感を深める。",
+      theory: "アプローチ動機づけ（Approach Motivation）",
+      description: "自分の本心が惹かれている方向性を確認する。",
     },
   },
   {
     id: 38,
-    text: "自分が『本当に使うべきだった重要業務』にどれくらい時間を使えましたか？",
-    scene: "team",
+    text: "今、ふと感じている小さな違和感や引っかかりはありますか？",
+    depth: "light",
     source: {
-      theory: "アイゼンハワーマトリクス（重要度と緊急度）",
-      description: "緊急度に振り回されず、長期的な重要タスクへリソースを割く。",
+      theory: "フェルティング・センス（Eugene Gendlin / フォーカシング）",
+      description: "まだ言葉にならないモヤモヤとした感覚に注意を寄せる。",
     },
   },
   {
     id: 39,
-    text: "今回の経験で、他の誰かに『これだけは伝えておきたいコツ』は何ですか？",
-    scene: "team",
+    text: "今、誰かに打ち明けたい小さなつぶやきはありますか？",
+    depth: "light",
     source: {
-      theory: "暗黙知から形式知への変換（SECIモデル）",
-      description: "個人の中に閉じ閉じがちなノウハウをチームの知識に変える。",
+      theory: "カタルシス効果（心理的排泄）",
+      description: "内的言語を外に吐き出すことで精神的負担を軽減する。",
     },
   },
   {
     id: 40,
-    text: "今回の取り組みに対して、自分自身で10点満点中何点をつけますか？あと1点上げるには何が必要でしたか？",
-    scene: "team",
+    text: "今日、自分の心を少しだけ躍らせたものは何でしたか？",
+    depth: "light",
     source: {
-      theory:
-        "スケーリング・クエスチョン（ソリューション・フォーカストアプローチ）",
-      description: "数値化を通じて現状を把握し、具体的な改善策を導き出す。",
+      theory: "マイクロ・ジョイ（Micro-joys）",
+      description: "日常に潜む極小の喜びに目を向ける訓練。",
+    },
+  },
+  {
+    id: 41,
+    text: "無意識に肩や首に力が入っていませんか？一度落としてみましょう。",
+    depth: "light",
+    source: {
+      theory: "ソマティック・リフレクション",
+      description: "身体的緊張の自動応答をリセットする。",
+    },
+  },
+  {
+    id: 42,
+    text: "今、自分の呼吸は浅いですか？それとも深く吸えていますか？",
+    depth: "light",
+    source: {
+      theory: "マインドフル・ブリージング",
+      description: "呼吸の観察を通じて自律神経のモードを意識化する。",
+    },
+  },
+  {
+    id: 43,
+    text: "今、座っている（立っている）姿勢で、一番楽だと感じる形はどんな姿勢ですか？",
+    depth: "light",
+    source: {
+      theory: "人間工学 / 自在性（Affordance）",
+      description: "身体への負荷が少ない姿勢へ自発的に再調整する。",
+    },
+  },
+  {
+    id: 44,
+    text: "今、両足の裏がしっかり地面に着いている感覚（グラウンディング）はありますか？",
+    depth: "light",
+    source: {
+      theory: "グラウンディング技法",
+      description:
+        "足裏の触覚に意識を集中させ、思考の空回り（頭の緊張）を鎮める。",
+    },
+  },
+  {
+    id: 45,
+    text: "今、眉間や奥歯に力が入っていませんか？軽く緩めてみましょう。",
+    depth: "light",
+    source: {
+      theory: "バイオフィードバック的自己認識",
+      description:
+        "顔面筋の緊張を緩め、フェイシャルフィードバック効果で気分を和らげる。",
+    },
+  },
+  {
+    id: 46,
+    text: "今、手のひらや指先の温度はあたたかいですか？冷たいですか？",
+    depth: "light",
+    source: {
+      theory: "自律訓練法（Autogenic Training）",
+      description: "末梢血管の拡張状態（リラックス度）を温度覚で確かめる。",
+    },
+  },
+  {
+    id: 47,
+    text: "今、お腹のあたりはリラックスしていますか？それとも緊張していますか？",
+    depth: "light",
+    source: {
+      theory: "腸脳相関（Gut-Brain Axis）の意識化",
+      description: "腹部の違和感や緊迫感をストレスシグナルとして受信する。",
+    },
+  },
+  {
+    id: 48,
+    text: "今、目の疲れ具合を10点満点（10が限界）で表すと何点ですか？",
+    depth: "light",
+    source: {
+      theory: "VDT作業ストレス管理",
+      description:
+        "視覚的疲労を自覚し、目を閉じる・遠くを見るなどの休憩を促す。",
+    },
+  },
+  {
+    id: 49,
+    text: "最後にゆっくり息を吐き切ったのはいつですか？今一度、ため息をついてみましょう。",
+    depth: "light",
+    source: {
+      theory: "サイクリック・サイイング（Cyclic Sighing）",
+      description:
+        "呼気を長くする溜め息運動により、副交感神経を急速に優位にする。",
+    },
+  },
+  {
+    id: 50,
+    text: "今、体のどこかにコリや違和感を覚える場所はありますか？",
+    depth: "light",
+    source: {
+      theory: "ボディスキャン（Body Scan）",
+      description: "頭頂から足先まで頭の中でスキャンし、体の痛みの声を聴く。",
+    },
+  },
+  {
+    id: 51,
+    text: "今、背もたれや椅子に体重を完全に預けられていますか？",
+    depth: "light",
+    source: {
+      theory: "支持面への定位",
+      description: "身体を委ねる感覚（Surrender）を得て安心感を育む。",
+    },
+  },
+  {
+    id: 52,
+    text: "今、手先や脚をちょっとだけブラブラとゆすってみて、どう感じますか？",
+    depth: "light",
+    source: {
+      theory: "微細運動による緊張解放",
+      description: "小刻みな振動によって固定化した筋肉のハリをほぐす。",
+    },
+  },
+  {
+    id: 53,
+    text: "今、自分の一番疲れている身体の部位に「お疲れ様」と言うならどこですか？",
+    depth: "light",
+    source: {
+      theory: "身体的セルフ・コンパッション",
+      description: "酷使している身体部位への感謝を通じて自己愛を高める。",
+    },
+  },
+  {
+    id: 54,
+    text: "今、周囲の温度（寒さ・暑さ）は自分にとって快適ですか？",
+    depth: "light",
+    source: {
+      theory: "快適性の自己調整",
+      description: "熱的快適性（Thermal Comfort）を整える行動を促す。",
+    },
+  },
+  {
+    id: 55,
+    text: "今、耳に入ってくる音の中で、一番心地よく聞こえる音は何ですか？",
+    depth: "light",
+    source: {
+      theory: "サウンドスケープ意識",
+      description:
+        "環境音への注意の配分を変えることで、意識を今ここに集中させる。",
+    },
+  },
+  {
+    id: 56,
+    text: "今、喉の乾きや水分不足を感じていませんか？",
+    depth: "light",
+    source: {
+      theory: "基本欲求モニタリング",
+      description: "脱水による認知機能低下や不快感を未然に防止する。",
+    },
+  },
+  {
+    id: 57,
+    text: "今、五感（視・聴・嗅・味・触）の中で一番休ませたい感覚は何ですか？",
+    depth: "light",
+    source: {
+      theory: "感覚過多（Sensory Overload）の防止",
+      description: "疲弊している感覚器官を特定し、デジタルデトックス等を促す。",
+    },
+  },
+  {
+    id: 58,
+    text: "今、全身が『ゆるんでいる』としたら何％くらいでしょうか？",
+    depth: "light",
+    source: {
+      theory: "リラクゼーション尺度の自己評価",
+      description: "弛緩度合いを意識化することで、さらなる脱力を誘導する。",
+    },
+  },
+  {
+    id: 59,
+    text: "今、外の光や室内の明るさは自分にとってちょうど良いですか？",
+    depth: "light",
+    source: {
+      theory: "光刺激の管理",
+      description: "視覚刺激の強さを調整し、脳の疲労を和らげる。",
+    },
+  },
+  {
+    id: 60,
+    text: "今、ゆっくりと深呼吸を1回したとき、身体のどこが膨らみましたか？",
+    depth: "light",
+    source: {
+      theory: "胸式/腹式呼吸の自己検知",
+      description:
+        "呼吸時の身体の動きにアテンションを向け、覚醒レベルを抑える。",
+    },
+  },
+  {
+    id: 61,
+    text: "今日、自分のために用意したい『小さな楽しみ・ご褒美』は何ですか？",
+    depth: "light",
+    source: {
+      theory: "報酬系（Dopamine System）の活性化",
+      description: "身近なワクワクを先回りして設定し、日常の意欲を補給する。",
+    },
+  },
+  {
+    id: 62,
+    text: "今日、これだけは守りたい『自分のペース』や『機嫌』は何ですか？",
+    depth: "light",
+    source: {
+      theory: "バウンダリー（境界線）の設定",
+      description: "他者や忙しさに流されない独自の軸をあらかじめ宣言する。",
+    },
+  },
+  {
+    id: 63,
+    text: "今日、あえて『やらないこと』を1つ決めるとしたら何ですか？",
+    depth: "light",
+    source: {
+      theory: "Not-To-Do リスト / 認知資源の節約",
+      description: "やることを減らす意思決定により、エネルギーの散逸を防ぐ。",
+    },
+  },
+  {
+    id: 64,
+    text: "今、このあと最初の一歩としてサクッと終わらせたい小さなことは何ですか？",
+    depth: "light",
+    source: {
+      theory: "2分ルール（GTD法 / David Allen）",
+      description:
+        "極小の作業に着手することで、作業興奮を引き出して着手を容易にする。",
+    },
+  },
+  {
+    id: 65,
+    text: "今日、自分のために選んでみたいお供（お茶、お菓子、音楽など）は何ですか？",
+    depth: "light",
+    source: {
+      theory: "マイクロ・セルフケア",
+      description: "小さな選択権を行使し、自分を大切にしている実感を育む。",
+    },
+  },
+  {
+    id: 66,
+    text: "今日、自分に唱えてあげたい『お守りの言葉（合言葉）』は何ですか？",
+    depth: "light",
+    source: {
+      theory: "セルフ・トーク（Self-Talk）",
+      description: "前向きな内的対話を用いて、プレッシャーや不安を和らげる。",
+    },
+  },
+  {
+    id: 67,
+    text: "今、デスク周りや手元を1点だけ整えるとしたら、どこを動かしますか？",
+    depth: "light",
+    source: {
+      theory: "環境のアフォーダンス・エンハンスメント",
+      description: "わずかな環境整備を通じてコントロール感を取り戻す。",
+    },
+  },
+  {
+    id: 68,
+    text: "今日、一番エネルギーを注ぎたい『一瞬』はどの時間帯ですか？",
+    depth: "light",
+    source: {
+      theory: "選択と集中（Intentionality）",
+      description: "重点を置く時間帯を明確にし、メリハリのある1日を作る。",
+    },
+  },
+  {
+    id: 69,
+    text: "今、姿勢を変えたり窓の外を見たりして、気分をリフレッシュしてみませんか？",
+    depth: "light",
+    source: {
+      theory: "ステート・シフト（状態変容）",
+      description:
+        "物理的な視点や身体状態を変えることで、思考のループを断ち切る。",
+    },
+  },
+  {
+    id: 70,
+    text: "今日、小さな達成感を味わうためにクリアしたい『超ミニ目標』は何ですか？",
+    depth: "light",
+    source: {
+      theory: "スモールウィン効果（Teresa Amabile）",
+      description: "確実に達成可能な極小の目標を定め、自己効力感を補強する。",
     },
   },
   {
     id: 71,
-    text: "最近、チームのために自分が『提供できた貢献（ギブ）』は何ですか？",
-    scene: "team",
+    text: "今日、誰かにちょっとした『感謝』や『挨拶』を伝えるなら誰にしますか？",
+    depth: "light",
     source: {
-      theory: "組織的市民行動（OCB）",
-      description:
-        "役割外の自発的な支援行動に目を向け、相互貢献の意識を高める。",
+      theory: "向社会的行動（Prosocial Behavior）",
+      description: "他者への肯定的なアプローチを通じて自らの幸福度を高める。",
     },
   },
   {
     id: 72,
-    text: "メンバーの『仕事以外の面や背景』について、もっと知ってみたい・興味があることは何ですか？",
-    scene: "team",
+    text: "今、自分の肩の荷を少し軽くするために『手放せる思い込み』はありますか？",
+    depth: "light",
     source: {
-      theory: "相互認知的理解（Social Cognitive Understanding）",
-      description:
-        "単なる業務上の関係を超えた「人間としての相互理解」を深める。",
+      theory: "認知の再評価（Cognitive Reappraisal）",
+      description: "「〜しなければならない」という拘束的な思考を緩める。",
     },
   },
   {
     id: 73,
-    text: "自分が『集中したい時間』や『踏み込んでほしくない領域』をチームに上手く伝えられていますか？",
-    scene: "team",
+    text: "今日、自分の「ご機嫌スイッチ」を入れるためにできる最も簡単なことは？",
+    depth: "light",
     source: {
-      theory: "アサーティブ・コミュニケーション",
+      theory: "行動活性化（Behavioral Activation）",
       description:
-        "互いの境界線（バウンダリー）を尊重し合える健全な関係性を作る。",
+        "気分が変わるのを待つのではなく、小さな行動によって気分を誘発する。",
     },
   },
   {
     id: 74,
-    text: "最近受け取ったフィードバックの中で、一番『ハッとしたこと』や『学びになったこと』は何ですか？",
-    scene: "team",
+    text: "今、一番楽しみにできる『次の休み』や『一息つける時間』はいつですか？",
+    depth: "light",
     source: {
-      theory: "フィードバック指向（Feedback Orientation）",
+      theory: "予期的喜び（Anticipatory Pleasure）",
       description:
-        "フィードバックを攻撃ではなく「成長の機会」として受け止めるマインドセットを育む。",
+        "未来の楽しみを思い描くことで、現在のストレスに対する耐性を高める。",
     },
   },
   {
     id: 75,
-    text: "チーム内で話すとき、『最後まで相手の話を遮らずに聞く』ことができていますか？",
-    scene: "team",
+    text: "今日、自分の機嫌を損ねそうな要素があれば、どう回避しますか？",
+    depth: "light",
     source: {
-      theory: "積極的傾聴（Active Listening）",
-      description:
-        "対話の姿勢を振り返り、安心感のあるコミュニケーション空間を作る。",
+      theory: "先行選択（Pre-commitment）",
+      description: "不快な刺激を予防・回避するための事前の工夫を凝らす。",
     },
   },
   {
     id: 76,
-    text: "意見が分かれたとき、私たちは『論破』ではなく『第三の案の探索』ができていますか？",
-    scene: "team",
+    text: "今、この瞬間に『完了』させてスッキリできるものは何ですか？",
+    depth: "light",
     source: {
-      theory: "建設的葛藤（Constructive Conflict）",
-      description: "異論や対立をチームの創造性・質の向上につなげる文化を作る。",
+      theory: "ツァイガルニク効果の解消",
+      description:
+        "未完了のタスクを1つ終わらせ、脳の不要なバックグラウンド処理を止める。",
     },
   },
   {
     id: 77,
-    text: "今、チームの中で『少し落ち込んでいる・疲れているように見える人』に何ができますか？",
-    scene: "team",
+    text: "今日、自分のペースを乱されそうになったら、どんなアクションでリセットしますか？",
+    depth: "light",
     source: {
-      theory: "ソーシャル・サポート理論",
-      description: "チーム内の相互ケアと共感のネットワークを強化する。",
+      theory: "If-Thenプランニング",
+      description:
+        "「もし〜となったら〜する」というリセットルールを事前に決めておく。",
     },
   },
   {
     id: 78,
-    text: "私たちが当たり前だと思っているルールで、『実は明文化したほうがいいこと』は何ですか？",
-    scene: "team",
+    text: "今、少しだけ立ち止まって自分に『今、何がしたい？』と訊くとしたら？",
+    depth: "light",
     source: {
-      theory: "共有メンタルモデル（Shared Mental Model）",
-      description:
-        "「言わなくてもわかるはず」という前提を排し、認知のズレを解消する。",
+      theory: "内発的動機づけの確認",
+      description: "他者主導の行動から、自分の意志主導の意識へ切り替える。",
     },
   },
   {
     id: 79,
-    text: "このチームで働いていて『一番誇らしかった瞬間』はいつですか？",
-    scene: "team",
+    text: "今日、自分の身の回りで『心地よさ』を増やすために工夫できることは？",
+    depth: "light",
     source: {
-      theory: "アプレシエイティブ・インクワイアリー（AI）",
-      description:
-        "過去の成功事例や肯定的な体験に焦点を当て、チームのアイデンティティを強める。",
+      theory: "環境へのアクティブ・アダプテーション",
+      description: "身の回りの微調整を通じて、主体的な快適性を獲得する。",
     },
   },
   {
     id: 80,
-    text: "今、この場で『自分のミスや疑問』を打ち明けることに対する抵抗感は10点満点中何点ですか？",
-    scene: "team",
+    text: "今日、自分を褒めてあげたい『小さな選択』はすでにありましたか？",
+    depth: "light",
     source: {
-      theory: "心理的安全性（Amy Edmondson）のリアルタイム測定",
-      description: "場の空気感や警戒度を直接数値化し、対話の安全性を担保する。",
+      theory: "自己承認（Self-Acknowledgment）",
+      description: "自分の下した日常の正しい決断に自ら光をあてる。",
     },
   },
   {
     id: 81,
-    text: "過去の成功体験や古いやり方で、今『そろそろ捨てたほうがいい慣習』は何ですか？",
-    scene: "team",
+    text: "今、視界に入る中で一番『お気に入り』のモノは何ですか？",
+    depth: "light",
     source: {
-      theory: "アンラーニング（Unlearning）",
-      description: "変化に対応するために、意図的に古い知識や手順を手放す。",
+      theory: "視覚的マインドフルネス",
+      description:
+        "身近なポジティブな対象にアテンションを向け、アンカリングする。",
     },
   },
   {
     id: 82,
-    text: "今回うまくいった（あるいは失敗した）一番の『根本的な要因』は何だと思いますか？",
-    scene: "team",
+    text: "今日これまでにあった『ささやかなラッキー』や良いことは何ですか？",
+    depth: "light",
     source: {
-      theory: "なぜなぜ分析・根本原因分析（RCA）",
-      description:
-        "表面的な出来事に惑わされず、仕組みや構造の問題に目を向ける。",
+      theory: "スリー・グッド・シングス（Three Good Things）",
+      description: "良い出来事に意識を向ける思考習慣（ワン・グッド・シング）。",
     },
   },
   {
     id: 83,
-    text: "作業がスムーズに進んだとき、その直前にどんな『良いきっかけ（トリガー）』がありましたか？",
-    scene: "team",
+    text: "今、身の回りの人で『ありがたいな』とふと思い浮かぶ人は誰ですか？",
+    depth: "light",
     source: {
-      theory: "行動分析学（ABC分析）",
-      description: "望ましい行動を引き起こす環境や条件を特定・再現する。",
+      theory: "感謝（Gratitude）の喚起",
+      description: "他者の支えを思い出して心理的安全性と繋がりを感じる。",
     },
   },
   {
     id: 84,
-    text: "言われたこと以外で、自分が『先回りして行った工夫や準備』は何ですか？",
-    scene: "team",
+    text: "今、自分がいる空間の温度や空気感は心地よいですか？",
+    depth: "light",
     source: {
-      theory: "プロアクティブ行動（Proactive Behavior）",
-      description: "主体的な働きかけを承認し、自発性を評価・促進する。",
+      theory: "環境認知",
+      description: "現時点での身体的安心感を確認する。",
     },
   },
   {
     id: 85,
-    text: "今回のプロジェクトで、時間や資金などの『リソースの使い方』で改善できる点はどこですか？",
-    scene: "team",
+    text: "今日、誰かの言葉や行動に『ホッとした』瞬間はありましたか？",
+    depth: "light",
     source: {
-      theory: "アセット・マネジメント / 資源効率化",
-      description:
-        "限られた資源を最もインパクトのある領域へ集中させる意識を養う。",
+      theory: "社会的一体感 / 共感の認識",
+      description: "対人関係から得た安心・安心感の記憶を反芻する。",
     },
   },
   {
     id: 86,
-    text: "もし他社や他チームの人が私たちのやり方を見たら、どんな『疑問』を持つと思いますか？",
-    scene: "team",
+    text: "今、身に着けている服やアクセサリーで落ち着くものはどれですか？",
+    depth: "light",
     source: {
-      theory: "客観的視点（Third-Party Perspective）",
-      description:
-        "当事者バイアスを外し、第三者の客観的な目線で改善点を発見する。",
+      theory: "触覚のセーフティ・オブジェクト",
+      description: "身に着けているものの肌触りや質感を安心の拠点とする。",
     },
   },
   {
     id: 87,
-    text: "スタート時に予想していたことと、実際に起きたことの一番の『ギャップ』は何でしたか？",
-    scene: "team",
+    text: "今日一口食べた（飲んだ）もので『美味しかったな』と思うものは何ですか？",
+    depth: "light",
     source: {
-      theory: "予期ギャップ分析（Expectation-Reality Gap）",
-      description: "見通しの精度を上げ、次回の計画策定に活かす。",
+      theory: "マインドフル・イーティング",
+      description: "味覚の喜びを再体験し、日常の充足感を高める。",
     },
   },
   {
     id: 88,
-    text: "得られた知識やノウハウを、明日から『別のどこ（誰・プロジェクト）』に応用できますか？",
-    scene: "team",
+    text: "今、光の差し込み方や風の感じなど、自然を感じるポイントはありますか？",
+    depth: "light",
     source: {
-      theory: "学習の転移（Transfer of Learning）",
-      description: "局所的な学びを汎用化し、組織全体の力に変える。",
+      theory: "バイオフィリア（Biophilia）仮説",
+      description: "自然要素への認知を通じてストレスホルモンを低減させる。",
     },
   },
   {
     id: 89,
-    text: "完璧を目指す前に『早く小さく試すこと』ができた部分はどこでしたか？",
-    scene: "team",
+    text: "今、自分の周りにあるもので『当たり前にあるけど役立っている相棒』は何ですか？",
+    depth: "light",
     source: {
-      theory: "アジャイル思考・リーンスタートアップ",
-      description:
-        "失敗のコストを下げ、素早いフィードバックサイクルを回す意識を育む。",
+      theory: "日常的道具への再評価",
+      description: "生活を支えるツールへの肯定的な意識を育む。",
     },
   },
   {
     id: 90,
-    text: "今日のふりかえり（対話）を通じて、私たちの『学びの深さ』はどうでしたか？",
-    scene: "team",
+    text: "今日、自分のために働いてくれた道具（PC、靴、ペンなど）を1つ労うなら？",
+    depth: "light",
     source: {
-      theory: "メタ学習（Meta-Learning）",
-      description: "ふりかえりという行為そのものを改善し、学習効率を高める。",
+      theory: "アニミズム的アプローチ / 感謝の実践",
+      description:
+        "道具への配慮を通じて、自分の置かれた環境全体への愛着を育む。",
+    },
+  },
+  {
+    id: 91,
+    text: "今、自分のいる場所で一番『静けさ』や『安心』を感じられるスポットはどこですか？",
+    depth: "light",
+    source: {
+      theory: "心理的セーフ・スペースの確保",
+      description: "環境内の安全地帯を特定しておく。",
+    },
+  },
+  {
+    id: 92,
+    text: "今日、誰かと交わした挨拶や会話の中で、少し温かくなったものはありますか？",
+    depth: "light",
+    source: {
+      theory: "マイクロ・モーメントの共有（Barbara Fredrickson）",
+      description: "短時間の温かい交流をポジティブなリソースとして記録する。",
+    },
+  },
+  {
+    id: 93,
+    text: "今、身の回りにある『色』の中で、一番心が落ち着くものはどれですか？",
+    depth: "light",
+    source: {
+      theory: "視覚的リラクゼーション",
+      description: "特定の落ち着く色に焦点を当て、脳の興奮を落ち着かせる。",
+    },
+  },
+  {
+    id: 94,
+    text: "今日、無事にここまで過ごせたことに一言声をかけるなら？",
+    depth: "light",
+    source: {
+      theory: "生存への肯定（Existential Acceptance）",
+      description:
+        "特別な成果がなくても、無事に過ごしている事実そのものを肯定する。",
+    },
+  },
+  {
+    id: 95,
+    text: "今、自分を支えてくれている椅子や床に意識を向けたとき、どう感じますか？",
+    depth: "light",
+    source: {
+      theory: "体感型グラウンディング",
+      description: "物理的なサポート感を身体で感じ取り、安心感を得る。",
     },
   },
   {
     id: 96,
-    text: "3年後、どんな問いやテーマについて夢中で考えていたいですか？",
-    scene: "team",
+    text: "今日、誰かが自分のためにしてくれた『小さな配慮』に気づきましたか？",
+    depth: "light",
     source: {
-      theory: "未来思考・アイデンティティ探求",
-      description:
-        "抽象的な肩書や役職ではなく、「探求したいテーマ」から未来を描く。",
+      theory: "感謝の感度（Gratitude Sensitivity）",
+      description: "見落としがちな他者からの配慮を捉え直す。",
     },
   },
   {
     id: 97,
-    text: "自分の仕事や学びが、巡り巡って『誰のどんな役に立っている』と実感できますか？",
-    scene: "team",
+    text: "今、窓の外の風景を見たとき、季節の変化を感じるものはありますか？",
+    depth: "light",
     source: {
-      theory: "仕事の意味づけ（Meaningful Work）",
+      theory: "時間感覚の拡大",
       description:
-        "自分の存在や仕事の社会的価値を感じ、高いモチベーションを得る。",
+        "目の前の課題から一旦離れ、大きな季節のサイクルに意識を移す。",
     },
   },
   {
     id: 98,
-    text: "誰かの期待に応えるためではなく、『自分が心から選んだ』と言える決断は何ですか？",
-    scene: "team",
+    text: "今日、自分の身の回りで『スムーズにうまくいったこと』は何ですか？",
+    depth: "light",
     source: {
-      theory: "自律性と自己決定権",
-      description: "他者軸から自分軸へ意思決定の主導権を戻す。",
+      theory: "フロー体験（Flow State）の種",
+      description: "滞りなく進んだ行動を自覚し、自己の滑らかな動作を認識する。",
     },
   },
   {
     id: 99,
-    text: "自分の視野を広げたり後押ししてくれたりする『社外・コミュニティのつながり』はどこですか？",
-    scene: "team",
+    text: "今、自分の周りにある音の中で『生活の営み』を感じる音は何ですか？",
+    depth: "light",
     source: {
-      theory: "ソーシャル・キャピタル（社会関係資本）",
-      description: "孤立を防ぎ、多様なネットワークを活用して成長を加速させる。",
+      theory: "マインドフル・リスニング",
+      description: "音のテクスチャをありのままに捉え、世界との繋がりを感じる。",
     },
   },
   {
     id: 100,
-    text: "今の自分やチームに向けて、今一番『投げかけるべき問い』は何だと思いますか？",
-    scene: "team",
+    text: "今、この瞬間に『ここに戻ってこられた』ことに対して一言伝えるなら？",
+    depth: "light",
     source: {
-      theory: "質問力・メタリフレクション",
-      description:
-        "自分自身で良い問いを生み出す主体性（問いのオーナーシップ）を育てる。",
+      theory: "マインドフル・プレゼンス（今ここへの着地）",
+      description: "思考の迷走を止め、今この瞬間の自分に優しく着地する。",
     },
   },
-  // --- checkin 追加分 (80問) ---
   {
     id: 101,
-    text: "今の自分の心拍数や呼吸の深さをあえて意識してみると、どんな状態ですか？",
-    scene: "checkin",
+    text: "今日、一番エネルギーが動いた（高まった・消耗した）瞬間はいつでしたか？",
+    depth: "medium",
     source: {
-      theory: "ソマティック・アウェアネス（身体的気づき）",
-      description:
-        "思考から身体感覚へと意識を向け、現在の緊張やリラックス度合いを直感的に把握する。",
+      theory: "経験学習モデル（David Kolb）",
+      description: "日々の具体的経験から感情の動きを捉え、内省の起点とする。",
     },
   },
   {
     id: 102,
-    text: "今週、誰かに「ありがとう」と心から伝えた（または伝えてもらった）瞬間はいつですか？",
-    scene: "checkin",
+    text: "今日の中で、想定外だったことや「おっ」と驚いた出来事は何ですか？",
+    depth: "medium",
     source: {
-      theory: "感謝の循環（Gratefulness & Prosocial Behavior）",
+      theory: "予測誤差学習（Prediction Error Learning）",
       description:
-        "ポジティブな相互作用の記憶を呼び起こし、場の関係性の質を高める。",
+        "期待と現実のズレに気づくことで、新しい学びや認知のアップデートを促す。",
     },
   },
   {
     id: 103,
-    text: "今、頭のなかの状態を空模様に例えるとしたら、どんな空が広がっていますか？",
-    scene: "checkin",
+    text: "今日の振り返りから、明日以降の自分に活かせる小さな学びは何ですか？",
+    depth: "medium",
     source: {
-      theory: "メタファー思考と感情の投影",
+      theory: "アクション・リサーチ（Action Research）",
       description:
-        "言葉にしにくいメンタルの状態を視覚的な比喩で表現し、客観視する。",
+        "実践と省察を高速で循環させ、次の行動の質を継続的に改善する。",
     },
   },
   {
     id: 104,
-    text: "最近、思わず時間を忘れて没頭してしまった「小さな好奇心」は何ですか？",
-    scene: "checkin",
+    text: "今日、自分のなかで「うまくいったな」と感じる行動の要因は何でしたか？",
+    depth: "medium",
     source: {
-      theory: "内発的動機づけ（Intrinsic Motivation）",
+      theory: "成功要因の明示化（Success Factor Analysis）",
       description:
-        "日常のなかで純粋な関心が向いた瞬間を共有し、知的エネルギーを活性化させる。",
+        "偶発的な成功を構造化し、再現可能なスキルや知恵に昇華させる。",
     },
   },
   {
     id: 105,
-    text: "今日のミーティングや対話が終わったとき、「こうなってたら最高だな」という小さな着地点はどこですか？",
-    scene: "checkin",
+    text: "今日、もし時間を巻き戻せるならやり直したい選択は何ですか？",
+    depth: "medium",
     source: {
-      theory: "意図設定（Intention Setting）",
-      description: "場に臨む目的意識を明確にし、主体的な参加スタンスを作る。",
+      theory: "反事実的思考（Counterfactual Thinking）",
+      description:
+        "別の選択肢をシミュレーションすることで、意思決定の精度を高める。",
     },
   },
   {
     id: 106,
-    text: "最近、周囲の人のちょっとした優しさや配慮に救われた出来事はありますか？",
-    scene: "checkin",
+    text: "直近のプロジェクトやタスクで、自分が一番貢献できたと感じる部分はどこですか？",
+    depth: "medium",
     source: {
-      theory: "ピア・サポートの認知",
+      theory: "ストレングス・ベースド・アプローチ",
       description:
-        "日常のささやかな心理的サポートに気づき、温かい空気を醸成する。",
+        "自身の強みやバリューが発揮されたポイントを確認し、自己効力感を高める。",
     },
   },
   {
     id: 107,
-    text: "今の自分の集中力を10段階で表すといくつくらいですか？",
-    scene: "checkin",
+    text: "今週の自分の行動パターンを振り返って、特徴的だったことは何ですか？",
+    depth: "medium",
     source: {
-      theory: "認知的キャパシティの自己評価",
-      description:
-        "現在のエネルギーや集中度をフラットに共有し、無理のない対話のペースを作る。",
+      theory: "行動パターン認識（Behavioral Pattern Recognition）",
+      description: "短期的視点から中期的視点へ引き上げ、習慣や偏りに気づく。",
     },
   },
   {
     id: 108,
-    text: "最近、五感（視覚・聴覚・触覚・味覚・嗅覚）の中で一番心地よい刺激を受けたのは何ですか？",
-    scene: "checkin",
+    text: "今日、直感で動いて正解だったこと、あるいは失敗したことはありますか？",
+    depth: "medium",
     source: {
-      theory: "グラウンディングと感覚の活性化",
+      theory: "直感的判断の検証（Intuition Verification）",
       description:
-        "身体感覚を呼び覚ますことで、頭でっかちになりがちな思考をリセットする。",
+        "熟練に基づく直感の的中率を振り返り、意思決定の引き出しを増やす。",
     },
   },
   {
     id: 109,
-    text: "今週の自分を乗り物（車、新幹線、自転車、ロケットなど）に例えるとしたら何ですか？",
-    scene: "checkin",
+    text: "今日得た新しい情報や気づきの中で、一番印象に残っているものは何ですか？",
+    depth: "medium",
     source: {
-      theory: "自己概念のメタファー表現",
-      description: "現在のスピード感や稼働状態をユーモラスに表現し共有する。",
+      theory: "情報の定着化（Information Consolidation）",
+      description:
+        "インプットされた情報の中から重要な知見を短期記憶から長期記憶へ移行する。",
     },
   },
   {
     id: 110,
-    text: "今、ここ（この空間）にいるメンバーに対して、ひそかに期待している「良い雰囲気」は何ですか？",
-    scene: "checkin",
+    text: "今日、自分のなかで「当たり前」をちょっとだけ疑ってみた瞬間はありましたか？",
+    depth: "medium",
     source: {
-      theory: "場のデザインと心理的安全性",
-      description: "参加者全員でどのような空間を作りたいかの期待値を揃える。",
+      theory: "批判的思考（Critical Thinking）",
+      description:
+        "暗黙の前提に疑問を投げかけ、固定観念から脱却するトレーニングを行う。",
     },
   },
   {
     id: 111,
-    text: "今、自分の胸のあたりにある感覚を色や温度に例えると何ですか？",
-    scene: "checkin",
+    text: "今日、想定通りにいかなかったとき、どうやって気持ちを切り替えましたか？",
+    depth: "medium",
     source: {
-      theory: "フォーカシング（Gendlin's Focusing）",
+      theory: "コーピング戦略（Coping Strategies）",
       description:
-        "言語化する前の「感じ（フェルト・センス）」にアクセスし、今の内面状態に触れる。",
+        "ストレスフルな状況に対する自身の対処メカニズムを客観視する。",
     },
   },
   {
     id: 112,
-    text: "ここ最近で一番「おいしい！」と感動した食べ物や飲み物は何ですか？",
-    scene: "checkin",
+    text: "今日の出来事を映画のワンシーンに例えるなら、どんな場面になりそうですか？",
+    depth: "medium",
     source: {
-      theory: "日常のポジティブ感情の喚起",
+      theory: "ナラティブ・アプローチ（Narrative Approach）",
       description:
-        "食という普遍的なテーマを通じて、緊張をほぐし笑顔を引き出す。",
+        "自分の体験を物語として再構成し、客観的な視点（ディスタンシング）を得る。",
     },
   },
   {
     id: 113,
-    text: "今日ここに来るまでに、一番印象に残った景色や出来事は何ですか？",
-    scene: "checkin",
+    text: "最近の自分の行動の中で、「これは続けてよかった」と思える習慣は何ですか？",
+    depth: "medium",
     source: {
-      theory: "「今、ここ」へのトランジション",
+      theory: "ポジティブ・レインフォースメント（正の強化）",
       description:
-        "移動や直前のタスクの意識を切り離し、現在の場に意識を移行させる。",
+        "良好な習慣の継続を自己承認し、行動の定着をさらに強固にする。",
     },
   },
   {
     id: 114,
-    text: "今、自分の頭のなかで鳴り響いているお気に入りの音楽やフレーズはありますか？",
-    scene: "checkin",
+    text: "最近、避けて通りたかったけれど、向き合って正解だったことはありますか？",
+    depth: "medium",
     source: {
-      theory: "オーディオ・リフレクション",
-      description: "パーソナルな感性や今の気分をカジュアルに覗き見る。",
+      theory: "エクスポージャー（暴露）療法・直面化",
+      description:
+        "回避傾向に打ち勝った経験を振り返り、心理的レジリエンスを強化する。",
     },
   },
   {
     id: 115,
-    text: "最近、ちょっとしたラッキーや「ツイてたな」と感じた瞬間は何ですか？",
-    scene: "checkin",
+    text: "今日、自分のなかで最も集中が高まっていた「ゾーン」の時間帯はいつでしたか？",
+    depth: "medium",
     source: {
-      theory: "幸運の認知バイアス（ポジティブ・フォーカス）",
-      description:
-        "日常のささやかな良い出来事に焦点を当て、場のトーンを明るくする。",
+      theory: "フロー理論（Mihaly Csikszentmihalyi）",
+      description: "高い没頭感が得られた条件や環境の共通項を探る。",
     },
   },
   {
     id: 116,
-    text: "今の自分のスタンスを動物に例えるとしたら、どんな動物の気分ですか？",
-    scene: "checkin",
+    text: "今日、他の人から受け取ったフィードバックや言動で、ハッとしたことは何ですか？",
+    depth: "medium",
     source: {
-      theory: "動物メタファーによる自己表現",
-      description: "直感的なイメージで現在のエネルギーやモードを表現する。",
+      theory: "ジョハリの窓の拡張（自己と他者の認知のギャップ）",
+      description: "他者視点をミラーとして活用し、盲点のエリアを狭める。",
     },
   },
   {
     id: 117,
-    text: "今週、自分の心と体を休ませるために意識してやったことは何ですか？",
-    scene: "checkin",
+    text: "今日の自分の判断の中で、一番納得感が高かった決定は何ですか？",
+    depth: "medium",
     source: {
-      theory: "リカバリー行動の意識化",
-      description:
-        "セルフケアの工夫をお互いに共有し、休息の大切さをリマインドする。",
+      theory: "価値観整合的選択（Value-Aligned Choice）",
+      description: "自分のコアバリューと選択が合致していた瞬間を確認する。",
     },
   },
   {
     id: 118,
-    text: "今の自分にとって、一番エネルギーを与えてくれる「推し」や「存在」は何ですか？",
-    scene: "checkin",
+    text: "最近、自分のなかの「思い込み」が外れた瞬間や、視野が広がった感覚はありましたか？",
+    depth: "medium",
     source: {
-      theory: "情熱の源泉の共有",
-      description: "パーソナルな情熱の対象をオープンにし、親密性を高める。",
+      theory: "パースペクティブ・テイキング（視点取得）",
+      description: "認知の枠組み（フレーム）が拡張されたダイナミクスを捉える。",
     },
   },
   {
     id: 119,
-    text: "最近、誰かの行動や言葉に「おっ、これ面白いな」と知的好奇心を刺激されたことは何ですか？",
-    scene: "checkin",
+    text: "今日行ったことで、未来の自分のために「種まき」になったことは何ですか？",
+    depth: "medium",
     source: {
-      theory: "知好奇心の共有",
+      theory: "中長期視点の計画行動理論",
       description:
-        "他者の視点や新しい発見をカジュアルに持ち寄り、場を活性化する。",
+        "目先の成果だけでなく、未来に効く先行投資的な行動を意識化する。",
     },
   },
   {
     id: 120,
-    text: "今、この場に「持ち込みたい自分の気分や姿勢」を1つだけ選ぶとしたら何ですか？",
-    scene: "checkin",
+    text: "今日、自分のなかの「引き出し」が一つ増えたと感じる出来事はありましたか？",
+    depth: "medium",
     source: {
-      theory: "セルフ・プライミング（自己活性化）",
+      theory: "スキーマの形成と拡張",
       description:
-        "自ら望む心理状態やスタンスを意図的に選択し、場に浸透させる。",
+        "新たな知識や対応方法が自分の認知構造に統合された瞬間を捉える。",
     },
   },
   {
     id: 121,
-    text: "今の自分の思考のスピードを例えるなら、新幹線、特急、各駅停車、どれに近いですか？",
-    scene: "checkin",
+    text: "最近、同じようなことでモヤモヤしたり躓いたりしていませんか？その共通点は何ですか？",
+    depth: "medium",
     source: {
-      theory: "認知スピードの可視化",
+      theory: "反復的認知バイアス・失敗パターンの分析",
       description:
-        "現在の頭の回転や切替のスピードを自覚し、会話のテンポを合わせる。",
+        "無意識に繰り返している思考や行動のループ（悪循環）を断ち切る。",
     },
   },
   {
     id: 122,
-    text: "今日、ここまで辿り着いた自分に心の中で「お疲れ様」と言ってあげるとしたら、どんな声かけをしますか？",
-    scene: "checkin",
+    text: "自分のなかに、無意識に発動している「マイルール」や「こだわり」はありますか？",
+    depth: "medium",
     source: {
-      theory: "事前セルフ・コンパッション",
-      description: "対話の前に自分自身をねぎらい、安心感をベースに置く。",
+      theory: "不合理な信念（Irrational Beliefs / 認知行動療法）",
+      description: "自分を縛っている硬直したルールに気づき、柔軟性を高める。",
     },
   },
   {
     id: 123,
-    text: "最近、日常の中で「あ、春（または夏・秋・冬）の匂いがするな」と季節を感じた瞬間はありましたか？",
-    scene: "checkin",
+    text: "今日、自分の機嫌が急に良くなったり悪くなったりしたトリガーは何でしたか？",
+    depth: "medium",
     source: {
-      theory: "環境同調とマインドフルネス",
-      description: "日々の忙しさから離れ、季節や自然の変化に感覚を開く。",
+      theory: "感情のトリガー分析",
+      description:
+        "外的刺激と情緒反応の因果関係を解明し、感情のコントロール力を高める。",
     },
   },
   {
     id: 124,
-    text: "今、自分の肩書や役割を一度すべて外したとしたら、どんな一人の人間としてここに座っていますか？",
-    scene: "checkin",
+    text: "最近の自分の思考のクセ（悲観的になりやすい、完璧主義になりすぎる等）に気づく瞬間はありますか？",
+    depth: "medium",
     source: {
-      theory: "ロール・フリー・アイデンティティ",
-      description:
-        "組織の役職や立場を離れ、生身の個人としての存在感を思い出す。",
+      theory: "自動思考のキャッチ（Cognitive Distortion）",
+      description: "無意識の認知の歪みをメタ認知によって客観的に観測する。",
     },
   },
   {
     id: 125,
-    text: "最近、誰かのためにちょっとしたお節介や親切をして、自分も嬉しくなったことはありますか？",
-    scene: "checkin",
+    text: "自分が「これをやるとエネルギーを消耗する」という定番のパターンは何ですか？",
+    depth: "medium",
     source: {
-      theory: "利他行動の報酬系（Helper's High）",
-      description: "他者貢献による心地よい充足感を共有し、優しい空気を広げる。",
+      theory: "エナジー・ドレイン要因の特定",
+      description:
+        "エネルギーを奪う状況や人間関係を特定し、事前の防衛策を立てる。",
     },
   },
   {
     id: 126,
-    text: "今の自分のコンディションを天気予報に例えるとしたら、「のち〇〇」の後半はどうなりそうですか？",
-    scene: "checkin",
+    text: "自分が「これがあると調子よく動ける」という自分のトリガー（お気に入り条件）は何ですか？",
+    depth: "medium",
     source: {
-      theory: "予測的自己認知",
-      description:
-        "これからの時間（ミーティングや一日）の自分の変化に意識を向ける。",
+      theory: "パフォーマンス・アンカリング",
+      description: "最高の状態を引き出すための環境的・心理的条件を自覚する。",
     },
   },
   {
     id: 127,
-    text: "今週、自分のなかの「小さなこだわり」を貫いてみて満足したことは何ですか？",
-    scene: "checkin",
+    text: "今日の自分の意思決定を振り返って、何がその判断を左右しましたか？",
+    depth: "medium",
     source: {
-      theory: "クラフトマンシップの承認",
-      description: "些細なこだわりや職人魂を肯定し合い、個性を尊重する。",
+      theory: "意思決定プロセスの監査",
+      description:
+        "直感、損得、他者への配慮など、意思決定のウエイトを検証する。",
     },
   },
   {
     id: 128,
-    text: "今、目の前にある景色や空間の中で、一番デザインや色合いが好きなものは何ですか？",
-    scene: "checkin",
+    text: "最近、頭の中でグルグルと考えてしまった「終わったこと」は何ですか？",
+    depth: "medium",
     source: {
-      theory: "美的感性の共有",
+      theory: "反芻思考（Rumination）の特定",
       description:
-        "身の回りの美しさやデザインに目を向け、感性のチューニングを行う。",
+        "解決しない過去への執着に気づき、注意を現在へリダイレクトする。",
     },
   },
   {
     id: 129,
-    text: "最近、不意に思い出して懐かしくなった「子供の頃の記憶や味」は何ですか？",
-    scene: "checkin",
+    text: "自分のなかで「本当はやりたくないのに、引き受けてしまっていること」はありますか？",
+    depth: "medium",
     source: {
-      theory: "エピソード記憶の活性化",
+      theory: "自己一致（Congruence / カール・ロジャーズ）",
       description:
-        "遠い記憶の扉を開くことで、防衛心を解きほぐし素の自分に近づく。",
+        "内面の欲求と外面の行動の乖離（不一致）に気づき、境界線を見直す。",
     },
   },
   {
     id: 130,
-    text: "今、この瞬間に深呼吸を1回するとしたら、胸のなかの空気がどう入れ替わる感覚がしますか？",
-    scene: "checkin",
+    text: "自分の感情の波が起きやすい「時間帯」や「状況」の傾向はありますか？",
+    depth: "medium",
     source: {
-      theory: "呼吸による自律神経の調律",
-      description:
-        "意識的な深呼吸を通じて、その場の全員の呼吸とマインドを同期させる。",
+      theory: "文脈的メタ認知（Contextual Metacognition）",
+      description: "コンディションが低下しやすい環境的リスクを予測・管理する。",
     },
   },
   {
     id: 131,
-    text: "今の自分のこころのモードを家電に例えるなら、急速充電中、通常運転、省電力モードのどれですか？",
-    scene: "checkin",
+    text: "今日、自分が「あ、今ちょっと焦ったな」と自覚した瞬間はどこでしたか？",
+    depth: "medium",
     source: {
-      theory: "エネルギー状態の比喩的把握",
-      description: "現在のエネルギー消費や充電状態を簡潔にオープンにする。",
+      theory: "アローストレッチ（覚醒度の自己モニタリング）",
+      description: "軽いプレッシャーで覚醒が昂った瞬間を早期にキャッチする。",
     },
   },
   {
     id: 132,
-    text: "最近、ネットや街で思わずスクロールする手を止めて見入ってしまったものは何ですか？",
-    scene: "checkin",
+    text: "自分のなかの「アクセル」と「ブレーキ」を同時に踏んでいる感覚はどこにありますか？",
+    depth: "medium",
     source: {
-      theory: "偶発的アテンションの共有",
-      description: "個人の興味のフックをカジュアルに覗き合い、親近感を生む。",
+      theory: "心理的葛藤（Approach-Avoidance Conflict）",
+      description:
+        "相反する欲求の綱引き構造を客観的に観察し、ジュークを解きほぐす。",
     },
   },
   {
     id: 133,
-    text: "今日、ここまで来る途中で見かけた人で、印象に残っている人はどんな人でしたか？",
-    scene: "checkin",
+    text: "最近、他人の言動にイラッとしたとき、自分のどんなツボが押されましたか？",
+    depth: "medium",
     source: {
-      theory: "観察眼とカジュアル・シェア",
+      theory: "投影（Projection）と心理的防衛",
       description:
-        "日常の些細な一コマを切り口に、リラックスした雑談の口火を切る。",
+        "他者への不快感を通じて、自分自身の未解決なテーマや価値観を発見する。",
     },
   },
   {
     id: 134,
-    text: "今、自分の頭のなかに散らばっているタスクや思考を片付けるとしたら、何から手をつ付けたいですか？",
-    scene: "checkin",
+    text: "自分の思考が「過去」と「未来」のどちらに引っ張られがちになっていますか？",
+    depth: "medium",
     source: {
-      theory: "認知的プライオリティの整理",
-      description: "抱えているノイズを一度テーブルの上に並べて可視化する。",
+      theory: "時間的展望（Time Perspective）の偏り",
+      description: "後悔（過去）や不安（未来）への過度な意識の傾きを修正する。",
     },
   },
   {
     id: 135,
-    text: "最近、自分が「これだけは譲れない」と守り抜いた小さなマイルールは何ですか？",
-    scene: "checkin",
+    text: "今日、自分のなかの「優先順位」は正しく機能していましたか？",
+    depth: "medium",
     source: {
-      theory: "パーソナル・バウンダリーの確認",
-      description: "自分の小さなこだわりや防衛線を笑顔でオープンにする。",
+      theory: "アイゼンハワー・マトリクス的自己検証",
+      description: "緊急度と重要度のバランスが適切だったかを振り返る。",
     },
   },
   {
     id: 136,
-    text: "今、自分のこころのなかに架かっている橋の向こう側に、何が見えたら嬉しいですか？",
-    scene: "checkin",
+    text: "最近、気づかぬうちに溜め込んでいた小さな我慢は何ですか？",
+    depth: "medium",
     source: {
-      theory: "希望と投影のプロジェクション",
-      description: "未来への淡い期待やワクワク感を詩的な問いを通じて引き出す。",
+      theory: "マイクロ・アグレッションドレインの検知",
+      description: "言語化されない日常の小さな不満の蓄積を早期にすくい上げる。",
     },
   },
   {
     id: 137,
-    text: "今日の自分の声のトーンやテンポを自分で評価するなら、何点満点ですか？",
-    scene: "checkin",
+    text: "自分の行動を外側から俯瞰したとき、今の自分はどんな風に見えそうですか？",
+    depth: "medium",
     source: {
-      theory: "音声表現のメタ認知",
-      description:
-        "自分の発信状態に意識を向け、対話のウォーミングアップを行う。",
+      theory: "客観的自己意識（Objective Self-Awareness）",
+      description: "自己像と客観的行動のギャップを調整する。",
     },
   },
   {
     id: 138,
-    text: "最近、思わず「へぇ〜！」と声に出して感心した新しい発見や知識は何ですか？",
-    scene: "checkin",
+    text: "今日、自分の直感と論理が矛盾した瞬間はありましたか？どちらに従いましたか？",
+    depth: "medium",
     source: {
-      theory: "驚きと知的好奇心の共有",
-      description: "知的なインプットの喜びを分かち合い、場の知性を刺激する。",
+      theory: "二重プロセス理論（System 1 / System 2 の統合）",
+      description:
+        "直感（システム1）と論理（システム2）のせめぎ合いを検証する。",
     },
   },
   {
     id: 139,
-    text: "今、自分のまわりにあるもので、一番「歴史を感じる（使い込まれた）」お気に入りは何ですか？",
-    scene: "checkin",
+    text: "自分のなかで「これだけは譲れない価値観」が試された場面はありましたか？",
+    depth: "medium",
     source: {
-      theory: "愛着とエージングの認知",
+      theory: "コア・バリューの検証",
       description:
-        "物に宿る時間やストーリーを通じて、パーソナリティを表現する。",
+        "倫理的選択やプレッシャーの中で、自分の核がどう反応したか確かめる。",
     },
   },
   {
     id: 140,
-    text: "今日という一日のなかに、自分へのご褒美を一つ用意するとしたら何をしますか？",
-    scene: "checkin",
+    text: "最近、自分のなかで価値観や興味の向き先が変わってきたと感じる部分はありますか？",
+    depth: "medium",
     source: {
-      theory: "予期的自己報酬のデザイン",
-      description:
-        "一日の終わりに向けた楽しみに焦点を当て、モチベーションを整える。",
+      theory: "アイデンティティの移行期（成人発達理論）",
+      description: "内発的な関心の変化や成熟のプロセスを捉える。",
     },
   },
   {
     id: 141,
-    text: "今の自分のコンディションを植物に例えるとしたら、芽が出たばかり、満開、冬眠中、どれに近いですか？",
-    scene: "checkin",
+    text: "今日、誰かとのやり取りの中で「すれ違い」や「もどかしさ」を感じた瞬間はありましたか？",
+    depth: "medium",
     source: {
-      theory: "バイオロジカル・メタファー",
-      description:
-        "自然のサイクルのなかに自分の状態を重ね、無理のない自己受容を促す。",
+      theory: "対人コミュニケーションギャップの分析",
+      description: "メッセージの伝達ロスが起きた構造を客観的に見つめ直す。",
     },
   },
   {
     id: 142,
-    text: "最近、誰かの笑顔や一言に救われて「心がフッと軽くなった」瞬間はありましたか？",
-    scene: "checkin",
+    text: "今日、チームや周囲の人に対して「もっとこうだったら良かったのに」と思ったことは何ですか？",
+    depth: "medium",
     source: {
-      theory: "エモーショナル・レゾナンス（感情の共鳴）",
-      description: "他者から受け取った温かなエネルギーの記憶を呼び起こす。",
+      theory: "他者への期待値の再確認",
+      description: "周囲に対する自分の要望や期待の妥当性を振り返る。",
     },
   },
   {
     id: 143,
-    text: "今、頭のなかにある「保留にしておきたいこと」を、そっと引き出しにしまうとしたら何ですか？",
-    scene: "checkin",
+    text: "最近、誰かの意見や視点に触れて「自分も取り入れたい」と感じたことは何ですか？",
+    depth: "medium",
     source: {
-      theory: "コンパートメンタリゼーション（区画化）",
-      description:
-        "今の対話に集中するために、他の懸念事項を一時的に安全にしまう。",
+      theory: "社会的学習（Social Learning）",
+      description: "周囲の優れたロールモデルの行動や視点を積極的に内面化する。",
     },
   },
   {
     id: 144,
-    text: "最近、自分のなかで「ちょっと成長したな（アップデートされたな）」と感じる小さな変化は何ですか？",
-    scene: "checkin",
+    text: "今日、誰かに感謝を伝えたいけれど伝えられなかった言葉はありますか？",
+    depth: "medium",
     source: {
-      theory: "マイクロ・グロースの認知",
-      description: "日常の微細な成長に気づき、ポジティブな自己概念を確認する。",
+      theory: "未完了のコミュニケーション（Unfinished Business）",
+      description: "心残りになっている感謝の言葉を再確認し、必要なら表現する。",
     },
   },
   {
     id: 145,
-    text: "今、この空間のなかで一番居心地の良いポジションや姿勢はどこですか？",
-    scene: "checkin",
+    text: "最近、誰かのサポートに回って「役に立てたな」と感じたエピソードは何ですか？",
+    depth: "medium",
     source: {
-      theory: "物理的快適性とリラックス",
-      description: "身体の緊張を解きほぐし、最も自然体でいられる状態を整える。",
+      theory: "向社会的効用（Prosocial Impact）",
+      description: "他者貢献がもたらす自己肯定感と充実感を味わう。",
     },
   },
   {
     id: 146,
-    text: "今日、他のメンバーに「これだけはシェアしておきたい自分の近況」を一つ挙げるなら何ですか？",
-    scene: "checkin",
+    text: "今日、自分の意見を主張するのと、相手の意見を聞くバランスはどうでしたか？",
+    depth: "medium",
     source: {
-      theory: "自己開示のイニシアチブ",
-      description:
-        "自発的なトピックの持ち寄りを通じて、フラットな対話の口火を切る。",
+      theory: "自己主張と傾聴のバランス（Assertiveness）",
+      description: "自己表現（アサーション）の適切さを振り返る。",
     },
   },
   {
     id: 147,
-    text: "最近、時間を忘れて眺めてしまったもの（空、火、水面、動物など）は何ですか？",
-    scene: "checkin",
+    text: "最近、苦手なタイプの人や状況に出会ったとき、どんなスタンスで接しましたか？",
+    depth: "medium",
     source: {
-      theory: "注意力回復理論（Attention Restoration Theory）",
-      description:
-        "自然な注意の向け方を通じて、脳の疲労を和らげ静けさを取り戻す。",
+      theory: "対人適応メカニズム",
+      description: "心理的安全性や防衛的態度がどう働いたかを検証する。",
     },
   },
   {
     id: 148,
-    text: "今の自分の気分を天気図の「前線」に例えると、停滞前線、温暖前線、寒冷前線のどれですか？",
-    scene: "checkin",
+    text: "今日、誰かの言葉の裏にある「本当の意図や感情」に気づけた瞬間はありましたか？",
+    depth: "medium",
     source: {
-      theory: "気象メタファーによる心理状態の把握",
-      description: "情緒のグラデーションをユーモラスに言語化する。",
+      theory: "心の理論（Theory of Mind）と共感性",
+      description: "他者の視点に立ち、表面的ではない背景のニーズを推察する。",
     },
   },
   {
     id: 149,
-    text: "今週、自分が発信した言葉の中で「我ながらナイスだったな」と思うものは何ですか？",
-    scene: "checkin",
+    text: "自分のチームやコミュニティの中で、今一番不足していると感じる空気感は何ですか？",
+    depth: "medium",
     source: {
-      theory: "自己承認とセルフ・パット",
-      description:
-        "自分の貢献やナイスアイデアを自分で認めてポジティブな気分を高める。",
+      theory: "組織風土の診断（Organizational Climate）",
+      description: "集団の心理的安全性やダイナミクスを俯瞰する。",
     },
   },
   {
     id: 150,
-    text: "今、自分の呼吸を数えてみたとき、1分間に何回くらいのスピード感で呼吸していますか？",
-    scene: "checkin",
+    text: "最近、誰かに頼ったりヘルプを求めたりすることに抵抗を感じた場面はありましたか？",
+    depth: "medium",
     source: {
-      theory: "マインドフル・ブリージング",
-      description:
-        "呼吸のカウントを通じて、雑念を払い「今、ここ」に完全に着地する。",
+      theory: "脆弱性の受容（Vulnerability / ブレネー・ブラウン）",
+      description: "助けを求めることへの心理的障壁や過剰な自立心を見つめ直す。",
     },
   },
   {
     id: 151,
-    text: "最近、思いがけないところから「良いアイデアや閃き」降ってきた瞬間はありますか？",
-    scene: "checkin",
+    text: "今日、自分の発言が誰かにどんな影響を与えたか想像してみるとどうですか？",
+    depth: "medium",
     source: {
-      theory: "インキュベーション効果（熟成効果）",
+      theory: "社会的インパクトの認識",
       description:
-        "リラックスした状態で生まれるセレンディピティの体験をシェアする。",
+        "言葉の持つ影響力を自覚し、責任あるコミュニケーションを意識する。",
     },
   },
   {
     id: 152,
-    text: "今の自分の足の裏が、床や地面を捉えている感覚を意識するとどう感じますか？",
-    scene: "checkin",
+    text: "最近、誰かとの会話の中で「一番心に残った一言」は何でしたか？",
+    depth: "medium",
     source: {
-      theory: "ソマティック・グラウンディング",
-      description: "身体の最下部に意識を向け、地に足がついた安定感を取り戻す。",
+      theory: "印象的な言葉のインプリント",
+      description: "対話から得た重要なインサイトや感情の揺らぎを固定化する。",
     },
   },
   {
     id: 153,
-    text: "今週、自分のために丁寧に入れてあげた（または買った）お茶やコーヒーは何ですか？",
-    scene: "checkin",
+    text: "チームのメンバーに対して、今一番気にかけてあげたい・サポートしたい人は誰ですか？",
+    depth: "medium",
     source: {
-      theory: "スローライフ・マインドフルネス",
-      description: "日常の小さな贅沢や丁寧なプロセスの記憶に意識を向ける。",
+      theory: "サーバントリーダーシップの萌芽",
+      description: "周囲への利他的な関心を自覚し、関係性の質を主体的に高める。",
     },
   },
   {
     id: 154,
-    text: "今日の対話を通じて、メンバーの誰からどんな新しい視点を得られたら楽しそうですか？",
-    scene: "checkin",
+    text: "今日、自分のなかの「正しさ」を相手に押し付けてしまっていませんでしたか？",
+    depth: "medium",
     source: {
-      theory: "他者期待とピア・ラーニングの期待",
-      description: "お互いからの学び合いに対するポジティブな期待値を設定する。",
+      theory: "認知の偏狭性（Dogmatism）のチェック",
+      description: "多様な視点や価値観の受け入れ度合いを省みる。",
     },
   },
   {
     id: 155,
-    text: "今の自分のコンディションを海の深さに例えるなら、波打ち際、浅瀬、深海のどこですか？",
-    scene: "checkin",
+    text: "最近、オープンに話せなくて心の中に閉じ込めてしまった意見やアイデアはありますか？",
+    depth: "medium",
     source: {
-      theory: "意識の深層メタファー",
-      description:
-        "表層的な忙しさと、内面の静けさのどちらに自分がいるかを自覚する。",
+      theory: "サイレント・ボイスの自己受容",
+      description: "言えなかった本音の正体を明らかにし、適切な表現方法を探る。",
     },
   },
   {
     id: 156,
-    text: "最近、ふと口ずさんだり頭の中でリピートしていた曲は何ですか？",
-    scene: "checkin",
+    text: "今日、誰かと一緒に成し遂げたことや、共有できた小さな喜びは何ですか？",
+    depth: "medium",
     source: {
-      theory: "イヤーワーム（脳内音楽）の自己分析",
-      description: "無意識に脳がキャッチしている気分や感情の断片を紐解く。",
+      theory: "共同効力感（Collective Efficacy）",
+      description: "チームや他者との協働によるポジティブな成果を確かめる。",
     },
   },
   {
     id: 157,
-    text: "今、自分のなかに眠っている「ちょっとした遊び心」を形にするとしたら何をしますか？",
-    scene: "checkin",
+    text: "自分が周囲の人に与えている影響力（プラスもマイナスも）をどう感じますか？",
+    depth: "medium",
     source: {
-      theory: "プレイフルネス（Playfulness）の喚起",
-      description:
-        "真面目なモードから一歩離れ、柔軟でクリエイティブな感性を呼び覚ます。",
+      theory: "パーソナル・プレゼンスの自覚",
+      description: "自身の存在が周囲のエネルギーに与える波及効果を客観視する。",
     },
   },
   {
     id: 158,
-    text: "今日、これからの時間を共にするメンバーに、一言リクエストするとしたら何をお願いしますか？",
-    scene: "checkin",
+    text: "最近、誰かの強みや才能に気づいて「すごいな」とリスペクトした瞬間はありましたか？",
+    depth: "medium",
     source: {
-      theory: "アサーティブ・リクエスト",
-      description: "自分が心地よく過ごすためのサポートをオープンに表明する。",
+      theory: "称賛の心理学（Appreciative Inquiry）",
+      description:
+        "他者のリソースに対する感度を高め、ポジティブな関係性を築く。",
     },
   },
   {
     id: 159,
-    text: "最近、自分のなかの「思い込みの枠」が外れてスッキリした瞬間はありましたか？",
-    scene: "checkin",
+    text: "組織や人間関係の中で、自分が今引き受けている役割に満足していますか？",
+    depth: "medium",
     source: {
-      theory: "認知の開放とパラダイムシフト",
-      description: "小さな気づきや固定観念からの解放感を共有し合う。",
+      theory: "ロール・アイデンティティの適合性",
+      description:
+        "期待されている役割と、自分のやりたいこと・適性の整合性を確かめる。",
     },
   },
   {
     id: 160,
-    text: "今、自分の背筋をスッと伸ばしたとき、こころの姿勢もどう変わりますか？",
-    scene: "checkin",
+    text: "今日、誰かの笑顔や優しさに救われた、あるいは救いたいと思った瞬間はありましたか？",
+    depth: "medium",
     source: {
-      theory: "姿勢フィードバック効果（Embodied Cognition）",
-      description:
-        "身体の姿勢を変えることで、メンタルの状態や意欲を前向きに切り替える。",
+      theory: "共感の循環（Empathy Loop）",
+      description: "人間関係における温かな相互作用の記憶を定着させる。",
     },
   },
   {
     id: 161,
-    text: "今の自分の気分を味覚（甘口、辛口、ほろ苦いなど）に例えると何ですか？",
-    scene: "checkin",
+    text: "今日、胸のつかえになっていることや、やり残して引っかかってことは何ですか？",
+    depth: "medium",
     source: {
-      theory: "感覚的クロスモーダル表現",
+      theory: "ツァイガルニク効果（未完了タスクの認知負荷）",
       description:
-        "味覚の比喩を用いて、今の人生やプロジェクトの味わいを表現する。",
+        "頭のなかに残り続けている未解決の件をリストアップして外に追い出す。",
     },
   },
   {
     id: 162,
-    text: "最近、日常のなかで「あ、これ今の自分にぴったりだ」としっくりきた言葉は何ですか？",
-    scene: "checkin",
+    text: "最近、自分のなかで「言いたいけれど飲み込んでしまった言葉」は何ですか？",
+    depth: "medium",
     source: {
-      theory: "レゾナント・ワーズ（共鳴する言葉）",
-      description: "今の自分の波長に合うキーワードや名言を共有する。",
+      theory: "抑圧された感情の表出化",
+      description:
+        "飲み込んだ不満や意見のエネルギーを解放し、内面の重圧を軽減する。",
     },
   },
   {
     id: 163,
-    text: "今、自分のなかに流れている時間のスピードを1から10で表すといくつですか？",
-    scene: "checkin",
+    text: "今日、自分のなかで処理しきれずに残っている感情のゴミは何ですか？",
+    depth: "medium",
     source: {
-      theory: "主観的時間の可視化",
+      theory: "感情のデトックス（Emotional Cleansing）",
       description:
-        "自分の体感速度を把握し、メンバー間でタイム感覚のズレを調整する。",
+        "その日に発生したネガティブな残余エネルギーを翌日に持ち越さない。",
     },
   },
   {
     id: 164,
-    text: "今日、この場に「最もリラックスした自分」で参加するために、何を緩めると良いですか？",
-    scene: "checkin",
+    text: "最近、プレッシャーや不安を感じて、つい避けてしまっている課題はありますか？",
+    depth: "medium",
     source: {
-      theory: "脱力のトリガー設定",
+      theory: "回避行動の認知（Experiential Avoidance）",
       description:
-        "無意識に入っている力（肩、奥歯、眉間など）に気づき、意図的に手放す。",
+        "不安から目を背けている現実のテーマを特定し、小さな一歩を検討する。",
     },
   },
   {
     id: 165,
-    text: "最近、誰かの何気ない一言に「勇気をもらったな」と感じた瞬間は何ですか？",
-    scene: "checkin",
+    text: "今日、自分のなかの「期待」と「現実」のギャップで少し落ち込んだことはありましたか？",
+    depth: "medium",
     source: {
-      theory: "ソーシャル・エンパワーメント",
-      description: "他者の言葉がもたらすポジティブな影響力を再確認する。",
+      theory: "期待値管理の不整合（Disconfirmation Theory）",
+      description: "過度な期待が引き起こしたギャップの構造をフラットに捉える。",
     },
   },
   {
     id: 166,
-    text: "今、自分の頭のなかのモヤが晴れていくとしたら、どんな景色が見えてきますか？",
-    scene: "checkin",
+    text: "心の奥底で「本当はもっとこうしたい」と叫んでいる本音は何ですか？",
+    depth: "medium",
     source: {
-      theory: "クリアリング・ザ・スペース",
+      theory: "真の自己（True Self / ドナルド・ウィニコット）",
       description:
-        "メンタルのノイズが消えた後の理想的なクリアな状態をイメージする。",
+        "社会的ペルソナの下に隠された、生々しい個人的欲求にアクセスする。",
     },
   },
   {
     id: 167,
-    text: "今週、自分のなかの「小さな冒険や挑戦」として試してみたことは何ですか？",
-    scene: "checkin",
+    text: "最近、過去の失敗や後悔の記憶がふと頭をよぎった瞬間はありましたか？",
+    depth: "medium",
     source: {
-      theory: "マイクロ・アドベンチャー",
-      description:
-        "日常のなかの小さな新しい試みを肯定し、挑戦のハードルを下げる。",
+      theory: "過去の認知再構成（Cognitive Rebuttal）",
+      description: "過去のトラウマや失敗に対する現在の解釈をアップデートする。",
     },
   },
   {
     id: 168,
-    text: "今の自分のコンディションをスマホのバッテリー残量以外のアイコンで表すとしたら何ですか？",
-    scene: "checkin",
+    text: "今日、誰かに気を使いすぎて自分のエネルギーが削られた場面はありましたか？",
+    depth: "medium",
     source: {
-      theory: "マルチ・インディケーター自己認知",
-      description: "様々な比喩を用いて、多角的に自分のコンディションを捉える。",
+      theory: "過剰適応（Hyper-adaptation）の自覚",
+      description:
+        "他者配慮のしすぎによるエネルギー消耗を検知し、自愛に切り替える。",
     },
   },
   {
     id: 169,
-    text: "最近、自分のなかの「子供っぽい純粋な部分」が顔を出した瞬間はいつですか？",
-    scene: "checkin",
+    text: "自分のなかで「いつか片付けなきゃ」と先送りし続けているメンタルの負債は何ですか？",
+    depth: "medium",
     source: {
-      theory: "内なる子供（インナーチャイルド）の受容",
-      description: "遊び心や無邪気な感性をオープンにし、心理的安全性を高める。",
+      theory: "心理的負債の棚卸し（Psychological Debt）",
+      description:
+        "放置されている未解決の問題が精神に与えている負荷を評価する。",
     },
   },
   {
     id: 170,
-    text: "今、自分の周りにある空気の温度や手触りを感じてみると、どんな心地がしますか？",
-    scene: "checkin",
+    text: "今日、ちょっとしたプライドや見栄が邪魔をして素直になれなかったことはありましたか？",
+    depth: "medium",
     source: {
-      theory: "環境へのマインドフルネス",
+      theory: "エゴの防衛機制（Ego Defense Mechanisms）",
       description:
-        "今いる物理的環境に注意を向け、五感を通じて心身を落ち着かせる。",
+        "プライドを守ろうとする防衛反応に自ら気づき、素直さを取り戻す。",
     },
   },
   {
     id: 171,
-    text: "最近、思いがけず誰かと心が通じ合ったと感じた「瞬間やエピソード」は何ですか？",
-    scene: "checkin",
+    text: "最近、自分の限界を超えて頑張りすぎていたサインはありましたか？",
+    depth: "medium",
     source: {
-      theory: "インポータント・コネクション",
-      description: "他者との深い共鳴体験を思い出し、つながりの実感を深める。",
+      theory: "バーンアウト（燃え尽き）予防シグナル",
+      description: "心身が発していた過負荷の警告サインを振り返る。",
     },
   },
   {
     id: 172,
-    text: "今の自分の頭のなかを本棚に例えるなら、どんなジャンルの本がたくさん並んでいますか？",
-    scene: "checkin",
+    text: "今日、自分の感情をコントロールしようとして、逆に疲れてしまったことはありますか？",
+    depth: "medium",
     source: {
-      theory: "認知のカタログ化",
+      theory: "感情の過剰抑制（Suppression Fatigue）",
       description:
-        "現在自分が何に関心を持ち、どんな情報に囚われているかをメタ認知する。",
+        "無理に感情を抑え込むことのコストに気づき、自然な受容を試みる。",
     },
   },
   {
     id: 173,
-    text: "今日、この対話が終わる頃に「心がこうなっていたら嬉しいな」という変化は何ですか？",
-    scene: "checkin",
+    text: "最近、自分のなかで「許せないこと」や「許容できないライン」が変わりましたか？",
+    depth: "medium",
     source: {
-      theory: "トランスフォーメーション・期待値",
-      description: "対話のプロセスを通じて得たい心理的リターンを明確にする。",
+      theory: "境界線（バウンダリー）のシフト",
+      description:
+        "自分の中の許容閾値の変化を通じて、価値観の移行期を把握する。",
     },
   },
   {
     id: 174,
-    text: "最近、自分のなかで「これだけは絶対に曲げたくない美学」が発動した場面はどこですか？",
-    scene: "checkin",
+    text: "今日、心の奥のほうで感じていた孤独感や心細さはどんなものでしたか？",
+    depth: "medium",
     source: {
-      theory: "パーソナル・エシックスの自覚",
-      description: "自分の行動規範や大切にしているプライドのありかを確認する。",
+      theory: "存在論的安全性の揺らぎ",
+      description: "人間が抱える普遍的な孤独感を否定せず、優しく包み込む。",
     },
   },
   {
     id: 175,
-    text: "今、自分の手のひらをじっと見たとき、今日ここまで何を支えてきた手のひらだと感じますか？",
-    scene: "checkin",
+    text: "自分のなかで「これ以上背負えない」と感じる荷物は何ですか？",
+    depth: "medium",
     source: {
-      theory: "身体的自己ねぎらい（ソマティック・ネギライ）",
-      description:
-        "自分の身体器官（手など）に焦点を当てて、日々の労苦を慈しむ。",
+      theory: "認知負荷・責任のオーバーロード",
+      description: "過剰に背負い込んでいる役割やプレッシャーを明確にする。",
     },
   },
   {
     id: 176,
-    text: "今の自分の気分を映画のジャンルに例えるなら、ドキュメンタリー、コメディ、SFのどれですか？",
-    scene: "checkin",
+    text: "最近、自分の感情にフタをして「大丈夫」と言い聞かせた瞬間はありましたか？",
+    depth: "medium",
     source: {
-      theory: "ナラティブ・フレーミング",
-      description:
-        "現在の状況や気分を別のストーリーの枠組みでユーモラスに捉える。",
+      theory: "感情の封印（Emotional Shielding）",
+      description: "一時的にやり過ごした本音を安全な空間で掘り起こしてあげる。",
     },
   },
   {
     id: 177,
-    text: "最近、誰かの「こだわりや熱量」を聞いて、思わず引き込まれてしまった体験は何ですか？",
-    scene: "checkin",
+    text: "今日、不意に湧き上がってきた怒りや嫉妬のエネルギーの出どころはどこですか？",
+    depth: "medium",
     source: {
-      theory: "パッション・インフェクション（情熱の感染）",
-      description: "他者の熱量に触れたときのワクワク感を共有し、場を温める。",
+      theory: "シャドウ（影 / ユング心理学）の統合",
+      description:
+        "否定しがちなダークな感情の中に眠る、自分の本当の欲求を見つける。",
     },
   },
   {
     id: 178,
-    text: "今、自分の頭のなかにある「未解決だけど、まぁいっか」と保留にしている可愛い悩みは何ですか？",
-    scene: "checkin",
+    text: "心のなかで「もう手放してもいいのに、握りしめている過去のこだわり」は何ですか？",
+    depth: "medium",
     source: {
-      theory: "受容的アンフィニッシュメント",
+      theory: "執着の手放し（Letting Go）",
       description:
-        "完璧に解決していなくても、そのまま受け入れるおおらかさを共有する。",
+        "成果や過去の成功体験、あるいは古いアイデンティティを手放す準備をする。",
     },
   },
   {
     id: 179,
-    text: "今日、ここに集まったメンバーの顔ぶれを見たとき、どんな心強さや安心感を感じますか？",
-    scene: "checkin",
+    text: "今日、自分のコンディション不良の本当の原因（根本的な要因）は何でしたか？",
+    depth: "medium",
     source: {
-      theory: "チーム・コレクティブ・エフィカシー",
+      theory: "根本原因分析（Root Cause Analysis）",
       description:
-        "メンバーの存在そのものがもたらす心理的安全性の土台を確認する。",
+        "表面的な不調の裏にある、睡眠不足や人間関係などの真因を特定する。",
     },
   },
   {
     id: 180,
-    text: "今、この瞬間に深呼吸をひとつして、心構えが整った合図としてどんな表情を浮かべますか？",
-    scene: "checkin",
+    text: "今日一日を終えて、自分の心と体に「本当にお疲れ様」と声を大にして言えますか？",
+    depth: "medium",
     source: {
-      theory: "アンカリングとトランジションの完了",
+      theory: "セルフ・コンパッションの統合",
       description:
-        "ウォーミングアップの締めくくりとして、全員の意識をすっきりと本番へ移行させる。",
+        "一日の終わりに自分全肯定の儀式を行い、受容のなかで眠りにつく。",
     },
   },
-  // --- self 追加分 (60問) ---
   {
     id: 181,
-    text: "今、心の中で「本当は嫌だな」「乗り気じゃないな」と囁いている小さな声は何ですか？",
-    scene: "self",
+    text: "今日一日の経験を踏まえて、明日最初にやりたい・変えたいことは何ですか？",
+    depth: "medium",
     source: {
-      theory: "感情の抑圧とシャドウの認知",
-      description:
-        "無意識に無視しようとしている拒絶感や嫌悪感を安全にすくい上げる。",
+      theory: "フィードバック・ループの完結",
+      description: "一日の学びを翌日の具体的な行動変容へ直結させる。",
     },
   },
   {
     id: 182,
-    text: "自分の理想の姿と、今の現実の自分とのギャップに対して、過剰に自分を責めていませんか？",
-    scene: "self",
+    text: "今日見つけた自分の「武器」や「強み」を、明日どう活かしますか？",
+    depth: "medium",
     source: {
-      theory: "自我理想と現実自己（Ideal vs Real Self）",
+      theory: "ストレングス・トランスファー",
       description:
-        "理想と現実の乖離による自己批判に気づき、今のありのままを一度受け入れる。",
+        "発見した強みを翌日のシチュエーションに適用する計画を立てる。",
     },
   },
   {
     id: 183,
-    text: "最近「これは自分の本心か、それとも他人の期待に応えようとしているだけか」迷った場面はどこですか？",
-    scene: "self",
+    text: "明日、今日よりも少しだけラクに、ご機嫌に過ごすための工夫は何ですか？",
+    depth: "medium",
     source: {
-      theory: "他者化された欲求（Introjected Regulation）",
+      theory: "プロアクティブ・コーピング（予防的対処）",
       description:
-        "他人の基準（~すべき）と、自分の内発的欲求（~したい）を切り分ける。",
+        "明日のストレスを事前に予測し、回避・緩和のための仕掛けを用意する。",
     },
   },
   {
     id: 184,
-    text: "今、自分が「どうしても許せない」と感じていることの裏には、どんな大切な美学や価値観がありますか？",
-    scene: "self",
+    text: "今日うまくいかなかったことを、明日はどういうアプローチで試しますか？",
+    depth: "medium",
     source: {
-      theory: "怒りとシャドウの統合",
+      theory: "アジャイル・イテレーション（素早い改善）",
       description:
-        "怒りや不快感の背後に隠れている、自分が心から尊重したい価値基準を特定する。",
+        "失敗を「失敗」ではなく「テスト結果」と捉えて次の仮説を立てる。",
     },
   },
   {
     id: 185,
-    text: "もしあと1ヶ月で今の仕事やプロジェクトを離れるとしたら、何を引き継ぎ、何を捨てていきますか？",
-    scene: "self",
+    text: "次に同じような壁にぶつかったとき、自分は最初に何をするべきですか？",
+    depth: "medium",
     source: {
-      theory:
-        "限定的時間枠による優先順位化（Socioemotional Selectivity Theory）",
+      theory: "メタ・プロトコル（手順の一般化）",
       description:
-        "時間の有限性を前提に置くことで、真に重要な課題と手放すべきものを浮き彫りにする。",
+        "成功・失敗パターンから、汎用的な対処プロトコル（型）を抽出する。",
     },
   },
   {
     id: 186,
-    text: "今抱えている悩みについて、5年前の自分が聞いたら「贅沢な悩みだな」と笑ってくれる部分はどこですか？",
-    scene: "self",
+    text: "今日得た知見や気づきを、誰かにシェアするとしたらどんな言葉にしますか？",
+    depth: "medium",
     source: {
-      theory: "長期時間軸での自己比較",
+      theory: "ファインマン・テクニック（教えることによる定着）",
       description:
-        "過去の自分から見た視点を導入し、現在の悩みを成長の証として肯定的に捉え直す。",
+        "得た学びを他者に伝わる形に言語化し、自分の知識として完全に定着させる。",
     },
   },
   {
     id: 187,
-    text: "自分が「満たされている」と感じるために必要な最小限のもの（ミニマム・リソース）は何ですか？",
-    scene: "self",
+    text: "明日、自分のエネルギーを集中させる「最重要の1点」は何にしますか？",
+    depth: "medium",
     source: {
-      theory: "心理的ミニマリズムと充足感",
-      description:
-        "外部の欲望に振り回されず、自分が真に満足できる最小条件を自覚する。",
+      theory: "ワン・シング原理（The One Thing）",
+      description: "複数のタスクから本質的な1点を選び、認知の分散を防ぐ。",
     },
   },
   {
     id: 188,
-    text: "最近、何かを判断するときに「損したくない（失いたくない）」という恐れが勝ちすぎていませんか？",
-    scene: "self",
+    text: "今日を乗り越えた自分に、明日プレゼントできる小さな楽しみは何ですか？",
+    depth: "medium",
     source: {
-      theory: "損失回避バイアス（Loss Aversion）",
+      theory: "プロスペクト・リワード（期待報酬の設定）",
       description:
-        "失うことへの恐れから生じる不合理な執着や守りの姿勢を客観視する。",
+        "未来の報酬を設定することで、行動へのモチベーションをデザインする。",
     },
   },
   {
     id: 189,
-    text: "今日一日の中で、自分の心が一番「軽やかだった瞬間」と「重かった瞬間」の差は何でしたか？",
-    scene: "self",
+    text: "今後のために、自分のスケジュールやタスクから「削るべきもの」は何ですか？",
+    depth: "medium",
     source: {
-      theory: "感情の振れ幅モニタリング",
+      theory: "エッセンシャル思考（Essentialism）",
       description:
-        "精神的な負荷が増減する条件や環境の差を自覚し、調整のヒントにする。",
+        "より重要で本質的なことに集中するため、引き算の意思決定を行う。",
     },
   },
   {
     id: 190,
-    text: "今、自分が無意識に避けている「本当に着手すべき一筋縄ではいかないタスク」は何ですか？",
-    scene: "self",
+    text: "今日、一歩前に進めたことで、見えてきた新しい景色や可能性は何ですか？",
+    depth: "medium",
     source: {
-      theory: "回避行動（Avoidance Behavior）の分析",
-      description:
-        "不安や抵抗感から先延ばしにしている本質的な課題に光を当てる。",
+      theory: "プログレス原則（進捗の力）",
+      description: "小さな前進が生み出すポジティブな視界の広がりを自覚する。",
     },
   },
   {
     id: 191,
-    text: "最近の自分の言葉遣いや思考の口癖で「ネガティブな枠組み（フレーム）」を作っているものは何ですか？",
-    scene: "self",
+    text: "明日、周囲の人と関わる上で意識したい自分のスタンスは何ですか？",
+    depth: "medium",
     source: {
-      theory: "言語的リフレーミング",
-      description:
-        "無意識に使っている「どうせ」「~できない」といった言葉の癖に気づき、修正する。",
+      theory: "対人インテンション（社会的意図の設定）",
+      description: "他者とどのように関わるかを事前にマインドセットする。",
     },
   },
   {
     id: 192,
-    text: "今感じている焦りは、「目標の遠さ」からきていますか？それとも「他人のスピード」からきていますか？",
-    scene: "self",
+    text: "今日完了できなかったタスクを、次にどう仕切り直しますか？",
+    depth: "medium",
     source: {
-      theory: "社会的比較（Social Comparison）の分離",
+      theory: "タスク・リプランニング",
       description:
-        "焦りの原因が自分自身のゴールではなく、他者との比較バイアスであることを解きほぐす。",
+        "未了のプレッシャーをリセットし、現実的なリスケジュールを行う。",
     },
   },
   {
     id: 193,
-    text: "自分が一番「失敗するのが怖い」と感じている領域はどこで、その最悪のシナリオは何ですか？",
-    scene: "self",
+    text: "明日、自分を心地よくスタートさせるための「前夜の仕込み」は何ができますか？",
+    depth: "medium",
     source: {
-      theory: "恐れの明視化（Fear Setting / Tim Ferriss）",
-      description:
-        "恐れている事態を具体的に書き出し、対応策を練ることで無形の恐怖を和らげる。",
+      theory: "プレ・コミットメント（意思決定の省力化）",
+      description: "明日の自分が迷わないための環境設計を寝る前に行う。",
     },
   },
   {
     id: 194,
-    text: "今の自分のモチベーションは、主に「苦痛から逃げるため」ですか？「快楽・望む未来に向かうため」ですか？",
-    scene: "self",
+    text: "今日気づいた自分の悪癖や課題に対して、明日から試せる小さな実験は何ですか？",
+    depth: "medium",
     source: {
-      theory: "回避動機 vs 接近動機（Avoidance vs Approach Motivation）",
+      theory: "行動実験（Behavioral Experiment / 認知行動療法）",
       description:
-        "行動のエネルギー源が恐怖（回避）か希望（接近）かを確認し、バランスを整える。",
+        "「もしこう変えたらどうなるか」という仮説検証を日常的小実験として行う。",
     },
   },
   {
     id: 195,
-    text: "誰にも見られない日記に書くとしたら、今一番吐き出したい「ドロドロした本音」は何ですか？",
-    scene: "self",
+    text: "これからの数日間で、自分のキャパシティを守るために張るべき「境界線」はどこですか？",
+    depth: "medium",
     source: {
-      theory: "筆記開示（Expressive Writing / James Pennebaker）",
-      description:
-        "評価や体裁を一切気にせず内面を書き吐き出すことで、感情の浄化（カタルシス）を得る。",
+      theory: "心理的バウンダリーの強化",
+      description: "過度な要求や刺激から身を守るためのガードラインを定める。",
     },
   },
   {
     id: 196,
-    text: "自分が「これをやっている時は時間を忘れて没頭できる」という情熱の源泉は何ですか？",
-    scene: "self",
+    text: "今日、新しく芽生えた好奇心や「もっと知りたいこと」は何ですか？",
+    depth: "medium",
     source: {
-      theory: "フロー体験（Flow State）の要素特定",
+      theory: "好奇心の持続（Curiosity Drive）",
       description:
-        "自分の関心・スキル・挑戦レベルが調和するフロー領域を再発見する。",
+        "内発的な探求心の芽を摘まず、知的好奇心の方向性をキャッチする。",
     },
   },
   {
     id: 197,
-    text: "最近、自分に「お疲れ様」や「よくやってるよ」と優しく声をかけたのはいつですか？",
-    scene: "self",
+    text: "明日、自分に対して一番期待したいこと、あるいは優しくしたいポイントは何ですか？",
+    depth: "medium",
     source: {
-      theory: "セルフ・コンパッションの習慣化",
+      theory: "セルフ・リーダーシップ",
       description:
-        "自分に対する内なる声（インナー・ボイス）のトーンを親切なものに変える。",
+        "自分自身の最高の内なるコーチとなり、健全なエンパワーメントを行う。",
     },
   },
   {
     id: 198,
-    text: "今の自分の生活の中で「意味があるかわからないけれど、心が潤う無駄な時間」はありますか？",
-    scene: "self",
+    text: "今日得た「失敗のデータ」を、未来の成功のためにどう翻訳しますか？",
+    depth: "medium",
     source: {
-      theory: "余白と遊び（Play & Leisure）の確保",
-      description:
-        "生産性や効率主義から離れ、精神の回復に必要な無目的で自由な時間を肯定する。",
+      theory: "リフレーミング（Reframing）",
+      description: "ネガティブな事実を、価値ある学習データとして再定義する。",
     },
   },
   {
     id: 199,
-    text: "今、自分が背負っている責任や荷物のうち、「実は自分が勝手に抱え込んだもの」は何ですか？",
-    scene: "self",
+    text: "次のステップに進むために、今の自分が心に留めておくべきマントラ（合言葉）は何ですか？",
+    depth: "medium",
     source: {
-      theory: "過剰責任感（Over-responsibility）の解放",
-      description: "自分がコントロールすべき範囲を超えた重荷を下ろす。",
+      theory: "内省の要約・アンカリング",
+      description: "長文の内省をひとつの短い言葉やフレーズに凝縮し、心に刻む。",
     },
   },
   {
     id: 200,
-    text: "人生の大きな決断をするとき、自分が一番「頼りにしている判断軸（直感・論理・他人の意見など）」は何ですか？",
-    scene: "self",
+    text: "今日一日のすべての経験にタイトルをつけるとしたら、何という名前にしますか？",
+    depth: "medium",
     source: {
-      theory: "意思決定スタイルのメタ認知",
+      theory: "体験の統合と意味づけ（Sensemaking）",
       description:
-        "自分が採用している意思決定の癖や直感の確からしさを吟味する。",
+        "一日の多様な出来事を一つのストーリーとして統合し、内省を締めくくる。",
     },
   },
   {
     id: 201,
-    text: "今、心の体力が落ちていると感じるとき、真っ先に遮断すべきインプットや情報は物何ですか？",
-    scene: "self",
+    text: "もし『絶対に失敗しない』としたら、本当はどんなことに挑戦したいですか？",
+    depth: "deep",
     source: {
-      theory: "デジタル・デトックスと刺激の制御",
+      theory: "変容的学習理論（Jack Mezirow）",
       description:
-        "精神的な疲弊を防ぐために、過剰な情報や刺激から距離を置く選択をする。",
+        "失敗への恐れという制約を取り払い、潜在的な願望や真の関心を浮き彫りにする。",
     },
   },
   {
     id: 202,
-    text: "自分が「嫉妬」を感じる相手のどんな要素（自由さ、成果、センスなど）に惹かれていますか？",
-    scene: "self",
+    text: "最近、自分が『当たり前』だと思い込んでいたけれど、実は手放したほうがいい前提は何ですか？",
+    depth: "deep",
     source: {
-      theory: "シャドウと未開発の可能性",
+      theory: "前提の省察（Premise Reflection）",
       description:
-        "他者への嫉妬を、自分が本来伸ばしたいと思っている秘められた望みのサインとして読む。",
+        "無意識に思考や行動を制約している根深いパラダイムに疑問を投げかける。",
     },
   },
   {
     id: 203,
-    text: "今取り組んでいることの目標を「半分」に減らしたとしたら、心にどんな余裕が生まれますか？",
-    scene: "self",
+    text: "今の自分の選択は、『こうしたい』という内発的動機と『こうすべき』という外圧のどちらに基づいていますか？",
+    depth: "deep",
     source: {
-      theory: "ハードルの引き下げと現実的設定",
+      theory: "自己決定理論（Deci & Ryan）",
       description:
-        "高すぎる目標設定による麻痺やストレスを和らげ、実行可能なペースを回復する。",
+        "自律性の度合いを測定し、他者主導の規範から自己決定による選択へ転換を図る。",
     },
   },
   {
     id: 204,
-    text: "自分が「これを認められたらすごく救われるのにな」と他人に期待している言葉は何ですか？",
-    scene: "self",
+    text: "今の自分の生き方や働き方を、10年後の自分が見たら何と声をかけると思いますか？",
+    depth: "deep",
     source: {
-      theory: "外部承認欲求の自覚と自己承認への転換",
+      theory: "時間的ディスタンシング（Temporal Distancing）",
       description:
-        "他人からの承認を待つのではなく、自分自身でその承認の言葉を自分に与える。",
+        "長期的な時間軸から現在を客観視し、真に重要な意思決定を見定める。",
     },
   },
   {
     id: 205,
-    text: "最近の自分の中で「変わりたい自分」と「変わりたくない自分」が引っ張り合っていませんか？",
-    scene: "self",
+    text: "『自分が我慢すれば丸く収まる』と考えて、後回しにし続けている本音は何ですか？",
+    depth: "deep",
     source: {
-      theory: "変化への抗体（Immunity to Change / Robert Kegan）",
+      theory: "過剰適応の解除",
       description:
-        "変化を阻んでいる隠れた裏の目標（自己防衛本能など）を見つけ出す。",
+        "自己犠牲的な調整行動を認識し、本来のニーズの優先度を引き上げる。",
     },
   },
   {
     id: 206,
-    text: "今、自分の心が一番求めているのは「刺激（挑戦）」ですか？それとも「安らぎ（安定）」ですか？",
-    scene: "self",
+    text: "自分の中にある『弱さ』や『認めたくない欠点』を、隠さずに言葉にするなら何ですか？",
+    depth: "deep",
     source: {
-      theory: "最適覚醒水準（Optimal Arousal Theory）",
+      theory: "脆弱性の開示（Brené Brown）",
       description:
-        "自分がいま興奮・挑戦を求めているのか、鎮静・休息を求めているのかを察知する。",
+        "自らの弱さを受け入れることで、偽りのない自己一致と心理的レジリエンスを獲得する。",
     },
   },
   {
     id: 207,
-    text: "自分が一番「無防備でいられる（鎧を脱げる）」時間や相手は、今確保できていますか？",
-    scene: "self",
+    text: "周囲の期待に答えようとするあまり、失われつつある『自分らしさ』は何ですか？",
+    depth: "deep",
     source: {
-      theory: "心理的居場所感（Psychological Safety in Personal Life）",
+      theory: "真の自己と偽りの自己（Donald Winnicott）",
       description:
-        "役割を演じ続ける日常から離れ、純粋な素になれる安全地帯を確認する。",
+        "社会的役割を果たすために適応したペルソナと、個性の核との乖離を特定する。",
     },
   },
   {
     id: 208,
-    text: "過去の自分が下した決断の中で「あの時は最善をつくした」と自分を許してあげられるものは何ですか？",
-    scene: "self",
+    text: "自分の人生において、繰り返し現れる『葛藤のテーマ』や『課題』は何ですか？",
+    depth: "deep",
     source: {
-      theory: "自己ゆるし（Self-Forgiveness）",
+      theory: "成人発達理論（Robert Kegan）",
       description:
-        "後悔や不全感を抱えている過去の決断に対し、当時の限界と努力を認め和解する。",
+        "自身の認知構造（意味形成メカニズム）の段階的変化と限界を自覚する。",
     },
   },
   {
     id: 209,
-    text: "今悩んでいる問題を「映画のスクリーンの遠くの映像」として見下ろすと、どんな印象に変わりますか？",
-    scene: "self",
+    text: "『これがないと自分価値がない』としがみついている肩書や実績、人間関係はありますか？",
+    depth: "deep",
     source: {
-      theory: "認知のデフュージョン（Cognitive Defusion）",
+      theory: "脱同一化（Disidentification）",
       description:
-        "思考や問題に没入せず、客観的な視点から離れて眺める練習をする。",
+        "外部の評価指標と自己価値を切り離し、内体的な自律性を高める。",
     },
   },
   {
     id: 210,
-    text: "自分が「他人にどう見られているか」を気にするあまり、犠牲にしている自分の心地よさは何ですか？",
-    scene: "self",
+    text: "人生の最後に『これだけは成し遂げた・大切にした』と納得したいことは何ですか？",
+    depth: "deep",
     source: {
-      theory: "スポットライト効果（Spotlight Effect）の解消",
+      theory: "存在論的リフレクション（Existential Reflection）",
       description:
-        "他人は自分が思うほど自分を見ていないという前提に立ち、評価の呪縛を解く。",
+        "死生観や限界状況の意識を通じて、有限な時間における最優先事項を再定義する。",
     },
   },
   {
     id: 211,
-    text: "今の自分のメンタル状態を1台の車に例えると、メンテナンスが必要なパーツはどこですか？",
-    scene: "self",
+    text: "今抱えている問題の中で、実は『自分が変わることを避けるために維持している』側面はありますか？",
+    depth: "deep",
     source: {
-      theory: "自己機能のメタファー点検",
+      theory: "免疫機能としての変化抵抗（Immunity to Change）",
       description:
-        "エンジン（意欲）、ブレーキ（調整）、タイヤ（行動力）など、不調な箇所を見立てる。",
+        "表向きの目標を阻害している裏の裏にある「隠れた固定目標」を暴露する。",
     },
   },
   {
     id: 212,
-    text: "今週、自分のために「NO（断る）」と言えた場面、あるいは言うべきだった場面はどこですか？",
-    scene: "self",
+    text: "今の自分の生き方は、子どもの頃に描いていた『なりたい大人』の姿とどう響き合っていますか？",
+    depth: "deep",
     source: {
-      theory: "バウンダリー（限界線）の自己主張",
+      theory: "ナラティブ・アイデンティティ（Dan McAdams）",
       description:
-        "他人の都合に振り回されず、自分の領域を守るための拒否権を再認識する。",
+        "過去のライフストーリーと現在の生き方の連続性を検証し、統合感を深める。",
     },
   },
   {
     id: 213,
-    text: "自分が「本当に好きなこと」をするとき、どこかで罪悪感を抱いていませんか？",
-    scene: "self",
+    text: "自分の人生の中で、もっとも大きな『転機』となった選択は何で、そこから何を学びましたか？",
+    depth: "deep",
     source: {
-      theory: "快楽に対する罪悪感（Guilt of Enjoyment）の解凍",
+      theory: "意味生成理論（Sensemaking）",
       description:
-        "生産的でなければならないというプレッシャーから離れ、純粋な歓びを許可する。",
+        "過去の決定的な出来事を再解釈し、現在の価値観の根拠として意味づける。",
     },
   },
   {
     id: 214,
-    text: "今感じているイライラやモヤモヤは、実は「お腹が空いている」「睡眠不足」など身体のSOSではありませんか？",
-    scene: "self",
+    text: "もし他人の目や世間の評価を100%気にしなくていいなら、明日から何を変えますか？",
+    depth: "deep",
     source: {
-      theory: "HALTモデル（Hungry, Angry, Lonely, Tired）",
-      description:
-        "感情の乱れが単なる身体的ニーズの不足から生じていないかをチェックする。",
+      theory: "評価懸念の排除（Social Desirability Bias Removal）",
+      description: "社会的望ましさのバイアスを排除し、純粋な願望を捉える。",
     },
   },
   {
     id: 215,
-    text: "自分の人生の中で「もう一度あんな情熱を燃やしてみたい」と思える黄金体験は何ですか？",
-    scene: "self",
+    text: "自分が『絶対に受け入れられない』と感じる他人の行動や価値観の裏にある、自分の信念は何ですか？",
+    depth: "deep",
     source: {
-      theory: "ピーク・エクスペリエンス（Maslow）の再現",
+      theory: "シャドウの投影（Carl Jung）",
       description:
-        "過去の最高のエネルギー状態を振り返り、今の活力のヒントにする。",
+        "抑圧された不快感から、自分自身が強く縛られている暗黙の倫理規範を炙り出す。",
     },
   },
   {
     id: 216,
-    text: "今、自分を悩ませている人間関係において、「自分がコントロールできる相手の行動」はゼロだと認めてみたらどう感じますか？",
-    scene: "self",
+    text: "これまで経験した中で最も深い『挫折』や『痛み』は、今の自分にどんな贈り物を残しましたか？",
+    depth: "deep",
     source: {
-      theory: "アドラー心理学（課題の分離）",
-      description: "他者の感情や行動を変えようとする無駄なエネルギーを手放す。",
+      theory: "PTG（外傷後成長：Post-Traumatic Growth）",
+      description:
+        "逆境や精神的苦痛を乗り越えたプロセスを再肯定し、新たな意味を見出す。",
     },
   },
   {
     id: 217,
-    text: "自分の中にある「弱さや不完全さ」を、誰かの前でさらけ出しても大丈夫と思える度合いはどれくらいですか？",
-    scene: "self",
+    text: "自分が最もエネルギーと情熱を注げる対象（テーマ）は、どんな個人的体験から生まれていますか？",
+    depth: "deep",
     source: {
-      theory: "ヴァルネラビリティ（Vulnerability / Brené Brown）",
+      theory: "原体験の探求（Core Experience）",
       description:
-        "脆弱性を隠さず認めることが、本当の強さと自己受容につながることを実感する。",
+        "情熱やキャリアの源泉となる過去の強烈な体験・原体験を掘り起こす。",
     },
   },
   {
     id: 218,
-    text: "今週、自分が一番「自分の味方でいられた場面」はどこでしたか？",
-    scene: "self",
+    text: "今の仕事や生き方は、自分が大切にしたい『美学』や『倫理観』と一致していますか？",
+    depth: "deep",
     source: {
-      theory: "インナー・アライ（自己内同盟）",
+      theory: "コア・リフレクション（Fred Korthagen）",
       description:
-        "自分が自分の一番の理解者・味方として振る舞えたことを承認する。",
+        "行動・能力・信念の層を超えて、アイデンティティや使命（コア）の層と照合する。",
     },
   },
   {
     id: 219,
-    text: "もし自分の心の中に「幼い頃の自分」がいるとしたら、今どんな表情でこちらを見ていますか？",
-    scene: "self",
+    text: "自分が何かを決断するとき、無意識に恐れている『最悪のシナリオ』は何ですか？",
+    depth: "deep",
     source: {
-      theory: "インナーチャイルドとの対話",
-      description: "内なる幼い自己の感情に焦点を当て、優しく安心感を与える。",
+      theory: "破局的思考の直面化（Catastrophizing Analysis）",
+      description:
+        "破局化された恐れの正体を明確化し、現実的なリスクと心理的障壁を分離する。",
     },
   },
   {
     id: 220,
-    text: "今取り組んでいることの「結果」ではなく、「そこに至る姿勢やプロセス」で褒められるとしたらどこですか？",
-    scene: "self",
+    text: "これまでの人生で『決別して良かったもの』と『未だに引きずっているもの』は何ですか？",
+    depth: "deep",
     source: {
-      theory: "しなやかマインドセット（Growth Mindset / Carol Dweck）",
-      description: "成果主義から抜け出し、努力や姿勢そのものに価値を認める。",
+      theory: "境界設定と分断のプロセス",
+      description: "自律的な歩みを阻む依存や未完了の過去の清算度合いを測る。",
     },
   },
   {
     id: 221,
-    text: "自分が「これをやるとメンタルが回復する」と分かっているのに、やっていない習慣は何ですか？",
-    scene: "self",
+    text: "今の自分の『本気度』を100点満点とすると何点で、何が満点を阻んでいますか？",
+    depth: "deep",
     source: {
-      theory: "コーピング・リストの実行阻害要因分析",
-      description: "効果的なセルフケアを行動に移せない心理的障壁を取り除く。",
+      theory: "コミットメントの自己査定",
+      description:
+        "目標や取り組みに対する全心全身のコミットメント度合と阻害要因を解明する。",
     },
   },
   {
     id: 222,
-    text: "今、自分の人生のスピードは「速すぎる」「遅すぎる」「ちょうど良い」のどれですか？",
-    scene: "self",
+    text: "自分の人生において、お金や時間に関係なく『守り抜きたいもの』は何ですか？",
+    depth: "deep",
     source: {
-      theory: "主観的テンポとペースメイキング",
-      description:
-        "人生の推進スピードを意図的にコントロールし、自分に合ったテンポに整える。",
+      theory: "絶対的価値観（Ultimate Values）",
+      description: "損得勘定を超えた、人生の絶対的優先領域を明確化する。",
     },
   },
   {
     id: 223,
-    text: "周囲の雑音（他人の成果、世間の流行）を遮断したとき、残る「純粋な自分の関心」は何ですか？",
-    scene: "self",
+    text: "自分を突き動かすエネルギーの源泉は『怒り・危機感』と『憧れ・喜び』のどちらが大きいですか？",
+    depth: "deep",
     source: {
-      theory: "ノイズ・キャンセリング思考",
-      description: "流行や他人の動向というノイズを排除し、真の関心を抽出する。",
+      theory: "ペイン＆プレジャー・モチベーション",
+      description:
+        "自分の行動を駆動する根本的なドライバー（負のエネルギーか正のエネルギーか）を知る。",
     },
   },
   {
     id: 224,
-    text: "今感じている不満の中に、「自分が変わるための最大のヒント」が隠れているとしたら何だと思いますか？",
-    scene: "self",
+    text: "『自分が本当に求めているもの』と『他人が羨むもの』を混同していませんか？",
+    depth: "deep",
     source: {
-      theory: "不満のポジティブ転換（Reframing Dissatisfaction）",
+      theory: "欲望の模倣理論（René Girard）",
       description:
-        "現状への不満を行動を起こすための内部エネルギーとして再定義する。",
+        "他者の目を介した二次的欲求ではなく、内発的で純粋な欲求を区別する。",
     },
   },
   {
     id: 225,
-    text: "自分に対して「もっと成果を出さなきゃ価値がない」という条件付きの愛を向けていませんか？",
-    scene: "self",
+    text: "もし自分の生き方を一冊の本にするなら、今の章にはどんなタイトルをつけますか？",
+    depth: "deep",
     source: {
-      theory: "無条件の肯定性（Unconditional Positive Regard）",
+      theory: "ライフ・ストーリー理論",
       description:
-        "成果や条件に関係なく、存在するだけで自分には価値があると自認する。",
+        "現在の困難や停滞を「物語の途中の必要な章」として位置づけ直す。",
     },
   },
   {
     id: 226,
-    text: "今、自分の感情のブレーキを踏んでいる「常識」や「~しなきゃいけない」は何ですか？",
-    scene: "self",
+    text: "今の自分は『誰の人生』を生きていますか？親や上司、世間の期待になっていませんか？",
+    depth: "deep",
     source: {
-      theory: "イラショナル・ビリーフ（不合理な信念 / REBT）",
-      description: "自分を縛っている絶対的なルール（Must / Should）を緩める。",
+      theory: "分離個体化理論（Separation-Individuation）",
+      description:
+        "重要な他者からの精神的自立と、自己所有感（Sense of Ownership）を確かめる。",
     },
   },
   {
     id: 227,
-    text: "自分自身の長所について語るとき、どこか遠慮したり謙遜しすぎたりしていませんか？",
-    scene: "self",
+    text: "自分が『満たされない』と感じるとき、本当に欠けているものは何ですか？",
+    depth: "deep",
     source: {
-      theory: "自己好意的バイアスの健全な受容",
-      description: "過度な卑下をやめ、自分の持ち味や長所をまっすぐに認める。",
+      theory: "欲求段階説 / 根底にあるニーズの特定",
+      description:
+        "表層的な不満の根底にある心理的欲求（承認、親密さ、自己実現など）を突きとめる。",
     },
   },
   {
     id: 228,
-    text: "今、自分の心を守るために建てている「壁」は、自分を守っていますか？それとも孤立させていますか？",
-    scene: "self",
+    text: "自分が人生で一番『自分に嘘をついた』瞬間はいつで、なぜそうせざるを得ませんでしたか？",
+    depth: "deep",
     source: {
-      theory: "防衛機制の評価",
+      theory: "自己不一致の修正",
       description:
-        "自分を守るためのプロテクションが、かえって自分を締め付けていないか検証する。",
+        "過去の不誠実さを自責ではなく受容的に見つめ直し、自己への信頼を回復する。",
     },
   },
   {
     id: 229,
-    text: "人生の中で「あえて遠回りしたからこそ得られた宝物」は何ですか？",
-    scene: "self",
+    text: "自分が与える側（ギバー）であるとき、それは自分の豊かさから出ていますか、それとも承認欲求ですか？",
+    depth: "deep",
     source: {
-      theory: "セレンディピティと非効率の肯定",
-      description: "効率や最短距離だけにとらわれない、遠回りの価値を肯定する。",
+      theory: "Give & Take 理論 / 健全なギバー",
+      description:
+        "他者貢献の背後にある隠れたニーズ（嫌われたくない、認められたい）を点検する。",
     },
   },
   {
     id: 230,
-    text: "今、自分のエネルギーの何%が「過去への後悔」や「未来への不安」に使われていますか？",
-    scene: "self",
+    text: "『これのためなら傷ついても後悔しない』と思えるテーマや存在はありますか？",
+    depth: "deep",
     source: {
-      theory: "タイム・オリエンテーションのマインドフルネス",
-      description: "意識を「今、ここ」の現在地へ連れ戻す。",
+      theory: "意義深さ（Meaningfulness）の発見",
+      description: "苦痛を甘受してでも追及したい真の目的意識を明らかにする。",
     },
   },
   {
     id: 231,
-    text: "自分が「心地よい」と感じる人間関係の距離感（近さ・頻度）を言葉にするならどんな感じですか？",
-    scene: "self",
+    text: "自分が最も嫉妬を感じる相手は誰で、その嫉妬は自分のどんな未開発の可能性を示していますか？",
+    depth: "deep",
     source: {
-      theory: "パーソナル・スペースと対人距離",
-      description: "無理のない他者との距離感を理解し、自分の快適ゾーンを守る。",
+      theory: "嫉妬のシャドウ分析",
+      description:
+        "嫉妬を「自分が本当は手に入れたい欲望のシグナル」としてポジティブに読み替える。",
     },
   },
   {
     id: 232,
-    text: "最近の自分は、新しいインプットを求める時期ですか？それともアウトプットして整理する時期ですか？",
-    scene: "self",
+    text: "今の生活の中で、自分の魂や心が『枯渇している』と感じる部分はどこですか？",
+    depth: "deep",
     source: {
-      theory: "インプット/アウトプットの周期性",
+      theory: "スピリチュアル・ウェルビーイング",
       description:
-        "自分のインプット・アウトプットのリズムを自覚し、適切な行動をとる。",
+        "単なる肉体疲労を超えた、精神的・情動的な飢餓感に耳を傾ける。",
     },
   },
   {
     id: 233,
-    text: "今、一番自分を癒やしてくれる自然の要素（太陽の光、風、木々の緑、水の音など）は何ですか？",
-    scene: "self",
+    text: "自分の強みや才能を、社会や他者のためにどう役立てたいと考えていますか？",
+    depth: "deep",
     source: {
-      theory: "バイオフィリア（Biophilia Hypothesis）",
+      theory: "ジェネラティビティ（Generativity / Erikson）",
       description:
-        "自然とのつながりを通じて、本来持っている心身の自己回復力を高める。",
+        "自己完結を超えて、次世代や周囲へ還元・継承する意思を確認する。",
     },
   },
   {
     id: 234,
-    text: "自分が「誇り高く生きている」と感じられるのは、どんな行動をとっているときですか？",
-    scene: "self",
+    text: "自分の人生に『一貫して流れている軸（テーマ）』を言葉で表すと何ですか？",
+    depth: "deep",
     source: {
-      theory: "アイデンティティとプライドの受容",
-      description: "自分自身のプライドや自尊心が高まる行動パターンを理解する。",
+      theory: "キャリア・アンカー（Edgar Schein）",
+      description:
+        "ブレずに持ち続けている動機やコンピテンシー、価値観の核（アンカー）を特定する。",
     },
   },
   {
     id: 235,
-    text: "今直面している課題に対して「100点」ではなく「60点」で合格とするなら、何ができればOKですか？",
-    scene: "self",
+    text: "自分が一番『自分を許せていない』過去の出来事は何で、どうすれば手放せますか？",
+    depth: "deep",
     source: {
-      theory: "「十分満足（Satisficing）」の戦略",
+      theory: "セルフ・フォーギブネス（自己寛恕）",
       description:
-        "完璧主義（Maximizing）を手放し、十分なクオリティで完了させて前進する。",
+        "過去の自責の念を手放し、不完全な自分を許すプロセスの起点とする。",
     },
   },
   {
     id: 236,
-    text: "最近の自分の「決断のスピード」は、焦りから速くなっていますか？慎重すぎて遅くなっていますか？",
-    scene: "self",
+    text: "『成功』の定義を自分の言葉で書き直すとしたら、どんな条件になりますか？",
+    depth: "deep",
     source: {
-      theory: "意思決定テンポの客観視",
+      theory: "主観的キャリア成功基準の再構築",
       description:
-        "感情状態に左右されている意思決定のスピードをニュートラルに戻す。",
+        "他者の定義した社会的成功モデルから離脱し、独自の成功基準を築く。",
     },
   },
   {
     id: 237,
-    text: "自分が「心から満たされるために、実は他人の許可なんて不要だった」と気づける領域は何ですか？",
-    scene: "self",
+    text: "今の自分は、人生の『探求者』『守護者』『創造者』のどのモードにいますか？",
+    depth: "deep",
     source: {
-      theory: "内部統制型モチベーション（Internal Locus of Control）",
-      description: "自分の幸福や満足を決める主導権を自分に取り戻す。",
+      theory: "アーキタイプ（原型）心理学",
+      description: "現在のライフステージで演じている基本的役割の意識化を行う。",
     },
   },
   {
     id: 238,
-    text: "今、自分の内側にある「静けさ」を感じられる場所はどこにありますか？",
-    scene: "self",
+    text: "自分が感じる『孤独』や『孤立感』の根っこには、どんな心理的壁がありますか？",
+    depth: "deep",
     source: {
-      theory: "サイレント・リフレクション",
+      theory: "親密性の回避（Intimacy Avoidance）",
       description:
-        "忙しない日常の中に存在する、自分だけの内面の静寂にアクセスする。",
+        "傷つくことを恐れて他者と適切な距離を保とうとする防衛機制を見破る。",
     },
   },
   {
     id: 239,
-    text: "自分が一番「自分らしく生きている」と感じていた時の自分と、今の自分を繋ぐ共通点は何ですか？",
-    scene: "self",
+    text: "自分の人生で『もっと早く気づけばよかった』と思う最も大切な真理は何ですか？",
+    depth: "deep",
     source: {
-      theory: "自己一貫性（Self-Continuity）",
-      description:
-        "時代や環境が変わっても不変である自分の本質（コア）を確認する。",
+      theory: "ライフ・レフレクション / 智恵の統合",
+      description: "実体験を通じて得た教訓を自分の生き方の原則として抽出する。",
     },
   },
   {
     id: 240,
-    text: "今、この場所で大きく深呼吸をして、自分の全身に感謝の意を伝えるとしたらどこに声をかけますか？",
-    scene: "self",
+    text: "今のあなたを一番邪魔している『内なる批判者（インナー・クリティック）』の口癖は何ですか？",
+    depth: "deep",
     source: {
-      theory: "ソマティック・グラティチュード（身体への感謝）",
+      theory: "インナー・クリティックの擬人化と客観化",
       description:
-        "日々稼働してくれている自分の肉体や心に感謝し、一人の静かな対話を締めくくる。",
+        "自分を攻撃する内なる声を別個の存在として切り離し、コントロールを取り戻す。",
     },
   },
-  // --- team 追加分 (60問) ---
   {
     id: 241,
-    text: "このプロジェクト期間中、私たちが「一番楽しそうにコラボレーションしていた瞬間」はいつでしたか？",
-    scene: "team",
+    text: "『あの人のようには絶対になりたくない』と思う相手の中に、見たくない自分の姿はありませんか？",
+    depth: "deep",
     source: {
-      theory: "アプレシエイティブ・インクワイアリー（AI）",
+      theory: "鏡の法則 / 投影の引き戻し",
       description:
-        "チームのエネルギーが最高潮だった協働の記憶を特定し、強みを再現する。",
+        "他者への嫌悪感の中に潜む、自分自身が抑圧している側面（シャドウ）を統合する。",
     },
   },
   {
     id: 242,
-    text: "今、チームの中で「実はうっすら存在しているけれど誰も触れていない課題」は何ですか？",
-    scene: "team",
+    text: "過去の人間関係で壊れてしまった絆の中で、今でも修復したい、あるいは完了させたいものは？",
+    depth: "deep",
     source: {
-      theory: "部屋の中の象（Elephant in the room）",
+      theory: "関係性の未完了（Unfinished Relationship）",
       description:
-        "避けて通りがちな本質的な違和感や課題を安全に会話のテーブルに載せる。",
+        "わだかまりが残る対人関係に区切りをつけるか、向き合う意図を明確にする。",
     },
   },
   {
     id: 243,
-    text: "もし私たちが「明日から全く新しいチーム」として再スタートするなら、最初に導入するルールは何ですか？",
-    scene: "team",
+    text: "自分が『安全地帯（コンフォートゾーン）』に留まり続けるために使っている言い訳は何ですか？",
+    depth: "deep",
     source: {
-      theory: "ゼロベース思考とグランドルール再構築",
-      description:
-        "既存の制約や慣習を一度フラットにし、理想的なチームのルールを描く。",
+      theory: "コンフォートゾーンの突破",
+      description: "変化に伴う不安から逃れるための正当化ロジックを見破る。",
     },
   },
   {
     id: 244,
-    text: "最近のチームの意思決定で、「スピード」と「納得感（クオリティ）」のバランスはどうでしたか？",
-    scene: "team",
+    text: "自分が怒りを感じるとき、その感情の裏に隠れている『悲しみ』や『寂しさ』は何ですか？",
+    depth: "deep",
     source: {
-      theory: "意思決定のトレードオフ分析",
+      theory: "一次感情と二次感情の分離",
       description:
-        "合意形成のプロセスを見直し、速度と密度のバランスを調整する。",
+        "二次感情（怒り）の下にある一次感情（傷つき、寂しさ）にアクセスし、本質的なケアを行う。",
     },
   },
   {
     id: 245,
-    text: "チーム内で「お互いに感謝や承認を伝え合う頻度」は、今の私たちにとって十分ですか？",
-    scene: "team",
+    text: "自分が本当に欲しい『承認』や『愛』を、自分自身に与えられていない原因は何ですか？",
+    depth: "deep",
     source: {
-      theory: "ポジティブ・フィードバックの循環",
+      theory: "インナーチャイルドの癒やし",
       description:
-        "日常的な感謝や賞賛の量がチームのモチベーションに与える影響を確認する。",
+        "幼少期からの無条件の承認の不足を、成熟した自分自身で補うプロセスの探求。",
     },
   },
   {
     id: 246,
-    text: "今回の取り組みで、想定以上にうまくいった「嬉しい誤算」とその要因は何ですか？",
-    scene: "team",
+    text: "自分が『無価値だ』と感じそうになるのを防ぐために、過剰にやっている行動は何ですか？",
+    depth: "deep",
     source: {
-      theory: "セレンディピティの再現化",
+      theory: "補償行動（Compensation）",
       description:
-        "偶然の成功の裏にある隠れた工夫や好条件を発見し、知恵として共有する。",
+        "無価値感という恐怖を埋めるためのオーバーワークや過剰な他者配慮を特定する。",
     },
   },
   {
     id: 247,
-    text: "今、チームの中で「特定の誰かに情報や業務が集中しているポイント」はどこですか？",
-    scene: "team",
+    text: "自分の中にある『コントロール欲求』は、どんな不安から生まれていますか？",
+    depth: "deep",
     source: {
-      theory: "単一障害点（Bus Factor / SPOF）の解消",
+      theory: "不確実性耐性（Uncertainty Tolerance）",
       description:
-        "属人化している業務や情報を特定し、チーム全体での平準化を図る。",
+        "物事をコントロールしたい執着の裏にある、不確実性への恐れを認める。",
     },
   },
   {
     id: 248,
-    text: "新しくチームに入った人がいたとして、その人が一番「戸惑いそうな暗黙のルール」は何ですか？",
-    scene: "team",
+    text: "自分が自分に対して『条件付きの愛』しか与えていないポイントはどこですか？",
+    depth: "deep",
     source: {
-      theory: "オンボーディングとアンコンシャス・ルール",
+      theory: "無条件の肯定（Unconditional Positive Regard）",
       description:
-        "言語化されていないチームのローカルルールを明確にし、透明性を高める。",
+        "「成果を出した自分」しか愛せない条件付きの自己受容をゆるめる。",
     },
   },
   {
     id: 249,
-    text: "私たちが目指しているゴールのイメージは、メンバー全員で「同じ解像度」で見えていますか？",
-    scene: "team",
+    text: "これまで『損をした』『奪われた』と思っている経験から、得られた強さは何ですか？",
+    depth: "deep",
     source: {
-      theory: "共有メンタルモデル（Shared Mental Model）",
+      theory: "被害者意識（Victimhood）からの脱却",
       description:
-        "目標に対する認識や解釈のギャップを埋め、ベクトルを一致させる。",
+        "「受け身の被害者」の立場を卒業し、状況を生き抜いた「サバイバー」としての力を自覚する。",
     },
   },
   {
     id: 250,
-    text: "このチームで仕事をするとき、あなたが一番「自分らしく伸び伸びいられる」と感じる瞬間はいつですか？",
-    scene: "team",
+    text: "自分の人生に制限をかけている『呪いのような言葉（他者からの刷り込み）』は何ですか？",
+    depth: "deep",
     source: {
-      theory: "心理的安全性と自己効力感の開花",
+      theory: "スクリプト分析（交流分析 / 心理脚本）",
       description:
-        "メンバーが最もパフォーマンスを発揮できる環境条件を解き明かす。",
+        "親や指導者から無意識に植え付けられた人生脚本（呪縛）を脱構築する。",
     },
   },
   {
     id: 251,
-    text: "最近の議論で「異論や異なる視点」が出たとき、私たちはそれを歓迎できていましたか？",
-    scene: "team",
+    text: "自分が最も『感情的になりやすいテーマ』は何で、どのような傷が疼いていますか？",
+    depth: "deep",
     source: {
-      theory: "建設的衝突（Constructive Conflict）",
+      theory: "トラウマ・ボタンの特定",
       description:
-        "意見の相違を排除せず、質の高い意思決定のためのリソースとして活かす文化を作る。",
+        "過剰反応を引き起こす心理的傷跡（トリガー）を自覚し、客観化する。",
     },
   },
   {
     id: 252,
-    text: "今回のプロジェクトで「一番チャレンジングでリスクを取った決断」は何でしたか？",
-    scene: "team",
+    text: "自分の中の『子どもっぽい部分』や『わがまま』を、どれくらい許容できていますか？",
+    depth: "deep",
     source: {
-      theory: "リスク・タキングの称賛",
+      theory: "チャイルド（C）の統合（交流分析）",
       description:
-        "失敗を恐れずに挑戦した行動を価値あるプロセスとして肯定する。",
+        "抑圧された自由な感情や童心を健全な形で表現することを認める。",
     },
   },
   {
     id: 253,
-    text: "私たちが日常的に使っている言葉や用語で、「人によって解釈がズレていそうな言葉」は何ですか？",
-    scene: "team",
+    text: "『信じて裏切られること』への恐れから、深められていない関係性はありますか？",
+    depth: "deep",
     source: {
-      theory: "ユビキタス言語の整理",
-      description:
-        "チーム内の共通言語の定義を揃え、コミュニケーションエラーを防ぐ。",
+      theory: "対人不信の解除",
+      description: "傷つくリスクを冒してでも親密さを深める覚悟を点検する。",
     },
   },
   {
     id: 254,
-    text: "チームの今の「心理的エネルギー」を例えるなら、穏やかな湖、流れる川、荒波のどれですか？",
-    scene: "team",
+    text: "自分の努力や頑張りが『報われない』と感じたとき、どんな感情で満たされますか？",
+    depth: "deep",
     source: {
-      theory: "チーム・アフレクト（感情的気候）の把握",
+      theory: "報いへの執着と手放し",
       description:
-        "チーム全体の雰囲気をメタファーで表現し、集団のコンディションを捉える。",
+        "成果や見返りを求めるエゴと、プロセスそのものへの充足感を区別する。",
     },
   },
   {
     id: 255,
-    text: "もし過去の自分たちにアドバイスできるなら、「プロジェクト初期の自分たち」に何と言いたいですか？",
-    scene: "team",
+    text: "『悲しむこと』や『泣くこと』を自分に禁じていませんか？最後に素直に泣いたのはいつですか？",
+    depth: "deep",
     source: {
-      theory: "レトロスペクティブ・タイムトラベル",
-      description:
-        "立ち上げ期の反省点や課題を振り返り、次回プロジェクトの知見にする。",
+      theory: "グリーフケア（哀悼のプロセス）",
+      description: "喪失や痛みを悲しむプロセスを許可し、感情の滞りを流す。",
     },
   },
   {
     id: 256,
-    text: "私たちが「本当に集中すべきコアタスク」を阻害している「雑多な通知や手続き」は何ですか？",
-    scene: "team",
+    text: "自分が『自分を誇らしい』と心から思えた最後の瞬間は、何をしていたときですか？",
+    depth: "deep",
     source: {
-      theory: "認知摩擦（Cognitive Friction）の低減",
-      description: "集中力を削ぐ運用上のノイズを特定し、削減策を講じる。",
+      theory: "自己誇揚（Self-Enhancement）の記憶",
+      description:
+        "自己の尊厳が満たされたエピソードを再確認し、アイデンティティの柱とする。",
     },
   },
   {
     id: 257,
-    text: "今回の成果をチーム外（他部署や顧客）に発信するとしたら、一番アピールしたい「工夫」は何ですか？",
-    scene: "team",
+    text: "自分の中に『罪悪感』を植え付けている出来事や関係性は何ですか？",
+    depth: "deep",
     source: {
-      theory: "チーム・プライドと外向きの言語化",
+      theory: "不健康な罪悪感の解除",
       description:
-        "自分たちの取り組みの誇りや価値を整理し、自尊心と結束を高める。",
+        "他者の感情の責任まで背負い込んでいる不必要な罪悪感を特定して手放す。",
     },
   },
   {
     id: 258,
-    text: "チーム内で「助けを求めるSOS」を出したとき、周囲のレスポンスやサポートは適切でしたか？",
-    scene: "team",
+    text: "自分の人生の『シナリオの結末』を、自分は無意識にハッピーエンドとバッドエンドのどちらと考えていますか？",
+    depth: "deep",
     source: {
-      theory: "援助要求とサポートの応答性",
+      theory: "予言の自己成就（Self-Fulfilling Prophecy）",
       description:
-        "SOSを出しやすい環境と、それに対する相互扶助の仕組みを評価する。",
+        "自分の人生に対する根本的な楽観/悲観の前提を見直し、書き換える。",
     },
   },
   {
     id: 259,
-    text: "私たちが「止めるべきだったのに惰性で続けてしまった非効率なミーティングや作業」はありますか？",
-    scene: "team",
+    text: "自分が『自分の味方』であり続けるために、今日から辞めるべき自己批判は何ですか？",
+    depth: "deep",
     source: {
-      theory: "チーム・アンラーニング（組織的廃棄）",
+      theory: "セルフ・アライシップ（自己同盟）",
       description:
-        "無意味化した慣習や定期MTGを見直し、チームの時間を取り戻す。",
+        "自分を罰する暴君から、自分を守り支える最強の味方へと態度を改める。",
     },
   },
   {
     id: 260,
-    text: "今回の期間で、メンバーそれぞれの「意外な強みやスキル」を発見したエピソードはありますか？",
-    scene: "team",
+    text: "もし『すべての痛みが学びのためにあった』としたら、今の経験は何を教えていますか？",
+    depth: "deep",
     source: {
-      theory: "トランザクティブ・メモリ（誰が何を知っているか）",
+      theory: "リフレーミングと意味付け",
       description:
-        "お互いの得意分野や専門性のマップを更新し、チームの能力枠を広げる。",
+        "現在進行形の苦痛や試練に対して、成長のための建設的な意味を与える。",
     },
   },
   {
     id: 261,
-    text: "私たちのチームのコミュニケーションツール（Slack、Zoom等）の使い方は、みんなにとって快適ですか？",
-    scene: "team",
+    text: "人生の次のフェーズに進むために、今まさに捨て去るべき『古い自分』は何ですか？",
+    depth: "deep",
     source: {
-      theory: "メディア・リッチネス理論の最適化",
-      description: "非同期・同期コミュニケーションの使い分けやマナーを見直す。",
+      theory: "リミナル・スペース（境界空間）からの脱出",
+      description:
+        "移行期において、役割やアイデンティティの脱ぎ捨てを意識的に選択する。",
     },
   },
   {
     id: 262,
-    text: "今週、チームとして「一丸となって乗り越えた」と感じる手応えのあった瞬間はどこですか？",
-    scene: "team",
+    text: "明日から『本来の自分』として生きるために、一歩を踏み出すべき決断は何ですか？",
+    depth: "deep",
     source: {
-      theory: "コレクティブ・エフィカシー（集団的達成感）",
-      description: "共同で困難を克服した体験を可視化し、チームの絆を深める。",
+      theory: "実存的決断（Existential Choice）",
+      description:
+        "自分の人生の全責任を引き受け、真実の自分に従った行動を起こす。",
     },
   },
   {
     id: 263,
-    text: "私たちが目指す理想のチーム像を「スポーツのチーム」に例えるなら、どんな競技に近いですか？",
-    scene: "team",
+    text: "自分のエネルギーを最も低下させている環境や関係から離れる覚悟はありますか？",
+    depth: "deep",
     source: {
-      theory: "チーム・メタファー思考",
+      theory: "バウンダリーの断行",
       description:
-        "サッカー（流動的）、野球（役割分担）、リレー（パスワーク）などの比喩で理想の協働スタイルを議論する。",
+        "毒性の高い環境から撤退し、自らのウェルビーイングを守る勇気を持つ。",
     },
   },
   {
     id: 264,
-    text: "チーム内で生じた「小さなミス」を共有したとき、最初の反応は「責める」ではなく「助ける」でしたか？",
-    scene: "team",
+    text: "自分が『本気で取り組む』ことを阻んでいる一番の恐れは何で、どう乗り越えますか？",
+    depth: "deep",
     source: {
-      theory: "心理的安全性のカルチャーチェック",
-      description:
-        "ミスや失敗に対するチームの初期リアクションを振り返り、学習指向の文化を育む。",
+      theory: "恐れに向き合う勇気（Courage Under Fear）",
+      description: "恐れが存在したまま行動を起こす「勇気」の概念を適用する。",
     },
   },
   {
     id: 265,
-    text: "今回のプロジェクトで「一番コストパフォーマンス（投資対効果）が高かった仕組み」は何ですか？",
-    scene: "team",
+    text: "自分の大切な人に『自分が生きて見せたい後ろ姿』はどんな生き方ですか？",
+    depth: "deep",
     source: {
-      theory: "ハイ・レバレッジ・アクティビティの特定",
+      theory: "モデリングと影響力",
       description:
-        "少ない労力で大きな成果を生んだ仕組みやツールを特定し、継続する。",
+        "他者に求める模範を、まずは自らの生き方によって体現する決意を固める。",
     },
   },
   {
     id: 266,
-    text: "私たちが今「一番お互いにフィードバックし合いたいテーマ」は何ですか？",
-    scene: "team",
+    text: "自分の人生の舵（ステアリング）を、他人に渡してしまっていませんか？",
+    depth: "deep",
     source: {
-      theory: "ピア・フィードバックの意図設定",
+      theory: "統制の所在地（Locus of Control）の内在化",
       description:
-        "お互いの成長のために、どんな観点でフィードバックし合うかを事前に握り直す。",
+        "自分の人生の主導権を他者や環境から自分自身の手元へと取り戻す。",
     },
   },
   {
     id: 267,
-    text: "チームの「意思決定のプロセス」は、誰にとっても透明でわかりやすいものでしたか？",
-    scene: "team",
+    text: "自分の夢や理想を語るとき、どこか『自分には無理だ』と諦めている理由は？",
+    depth: "deep",
     source: {
-      theory: "手続的公平性（Procedural Justice）",
-      description:
-        "決定事項だけでなく、決定に至るプロセスの納得感や透明性を確認する。",
+      theory: "学習性無力感の解消",
+      description: "過去の失敗体験が作り出した学習性の限界意識を打ち破る。",
     },
   },
   {
     id: 268,
-    text: "私たちが「大事にしているチームの価値観」を、一言のキーワードで表すとしたら何ですか？",
-    scene: "team",
+    text: "『完璧になってから始める』のをやめて、不完全なまま踏み出すべき第一歩は？",
+    depth: "deep",
     source: {
-      theory: "コアバリューの言語化",
+      theory: "脱・完璧主義（Progress Over Perfection）",
       description:
-        "チームを象徴する共通の価値観やスローガンを自分たちの言葉で再確認する。",
+        "未完成のまま行動を起こすことで、フィードバックによる学習を開始する。",
     },
   },
   {
     id: 269,
-    text: "今回の業務の中で「本来は自動化したり仕組み化できたはずの単純作業」はどこでしたか？",
-    scene: "team",
+    text: "もし自分の命が『あと1年』だとしたら、現在の優先順位をどう組み替えますか？",
+    depth: "deep",
     source: {
-      theory: "プロセスの自動化と省力化",
+      theory: "死の認識（Memento Mori）",
       description:
-        "手作業による無駄やミスを減らし、クリエイティブな仕事に時間を割く改善案を出す。",
+        "人生の有限性を強く自覚し、日常の瑣末な悩みから真に重要な行動へシフトする。",
     },
   },
   {
     id: 270,
-    text: "チームの雰囲気が「少し重たいな」と感じたとき、場を和ませるために私たちができるアクションは何ですか？",
-    scene: "team",
+    text: "自分が『本当にやりたいこと』に対して、どれくらいリソース（時間・お金）を投資していますか？",
+    depth: "deep",
     source: {
-      theory: "ムード・マネジメント",
+      theory: "アロケーション（資源配分）の不整合",
       description:
-        "チームのテンションや雰囲気を意図的にリフレッシュする手立てを共有しておく。",
+        "価値観と言行不一致（時間やお金の実際の使い方の乖離）を正す。",
     },
   },
   {
     id: 271,
-    text: "私たちが掲げている目標は、メンバー全員にとって「ワクワクする挑戦」になっていますか？",
-    scene: "team",
+    text: "自分が変化しようとしたとき、足を引っ張ろうとする周囲の反応にどう対処しますか？",
+    depth: "deep",
     source: {
-      theory: "ゴールのアトラクティビティ（魅力的目標）",
+      theory: "系統的抵抗への対抗（Crab Mentality）",
       description:
-        "ノルマや義務感ではなく、内発的に挑戦したくなる目標になっているかチェックする。",
+        "周囲のホメオスタシス（恒常性維持機能）に屈せず、変革を貫く軸を保つ。",
     },
   },
   {
     id: 272,
-    text: "今回、他の部署や外部メンバーとの「連携・手戻り」で、改善できるポイントは何ですか？",
-    scene: "team",
+    text: "『自分が変わる』ことによって失うもの（慣れ親しんだ快適さや人間関係）を受け入れられますか？",
+    depth: "deep",
     source: {
-      theory: "バウンダリー・スパーニング（境界連結機能）",
+      theory: "変化に伴うトレードオフの受容",
       description:
-        "チーム境界を越えた外部とのコミュニケーションやステークホルダー管理を見直す。",
+        "前進には必ず何らかの手放しが伴うことを自覚し、その代償を受け入れる。",
     },
   },
   {
     id: 273,
-    text: "チーム内で「お互いの背景や個性を知る時間」は、業務を進める上で十分に取れていますか？",
-    scene: "team",
+    text: "自分の可能性を100%解き放つのを妨げている『内なる制約』は何ですか？",
+    depth: "deep",
     source: {
-      theory: "関係性の質とパフォーマンスの相関",
-      description:
-        "業務連絡だけでなく、人間的な相互理解の機会が担保されているか問いかける。",
+      theory: "自己限界（Self-Imposed Limits）の解放",
+      description: "自分自身で課した能力や器の枠組みを取り払う。",
     },
   },
   {
     id: 274,
-    text: "私たちが「一番満足度の高いアウトプット」を出せた時、チームにはどんな状態（条件）が揃っていましたか？",
-    scene: "team",
+    text: "今抱えている最大の疑問や迷いに対して、自分の中の『知恵者』は何と答えますか？",
+    depth: "deep",
     source: {
-      theory: "ハイパフォーマンスの再現条件",
+      theory: "内なる智恵へのアクセス（Inner Mentor）",
       description:
-        "最高の成果が出たときのコンディションを分析し、再現可能なフレームを作る。",
+        "すでに自分の中に備わっている直感や知恵の領域にアクセスして答えを引き出す。",
     },
   },
   {
     id: 275,
-    text: "今週、チームの誰かが行った「隠れた好プレー（誰も褒めていないけれど素晴らしい行動）」は何ですか？",
-    scene: "team",
+    text: "自分を動かすための『真の決意（Vow）』を一つだけ立てるなら、何ですか？",
+    depth: "deep",
     source: {
-      theory: "無名の貢献（Unsung Heroes）への光当て",
-      description:
-        "目立たないがチームを支えている小さな気配りや貢献を発掘し、感謝を伝える。",
+      theory: "意図の宣言（Declaration of Intent）",
+      description: "あやふやな希望ではなく、ブレない意志としての誓いを立てる。",
     },
   },
   {
     id: 276,
-    text: "私たちが仕事を進める上で「心理的な引っかかり（モヤモヤ）」を感じた出来事と、その解消法は何ですか？",
-    scene: "team",
+    text: "自分の成長のために『心地悪さ（ディスコンフォート）』をあえて選ぶ領域はどこですか？",
+    depth: "deep",
     source: {
-      theory: "摩擦のデトックス",
+      theory: "ストレッチゾーンの選択",
       description:
-        "仕事上の小さなストレスや不満を早期に言語化し、健全に対処する。",
+        "成長がコンフォートゾーンの外側でのみ起こることを知り、適度なストレス領域へ踏み出す。",
     },
   },
   {
     id: 277,
-    text: "もしチームの予算や時間が「1.5倍」になったとしたら、真っ先に投資したい改善は何ですか？",
-    scene: "team",
+    text: "自分が『自分の人生の作者である』と自覚したとき、次に描くシナリオは？",
+    depth: "deep",
     source: {
-      theory: "リソース拡張によるレバレッジ探求",
+      theory: "主体的著者性（Authorship）",
       description:
-        "制限を取り払うことで、ボトルネックの根本解決や新しい挑戦のアイデアを引き出す。",
+        "受動的な読者ではなく、人生の脚本を自ら書き進める著者としての意識を確立する。",
     },
   },
   {
     id: 278,
-    text: "私たちが過去に起きたトラブルから学んだことで、「今一番役に立っている教訓」は何ですか？",
-    scene: "team",
+    text: "これまで学んできた内省や気づきを、日常の『行動』に落とし込む具体的な習慣は？",
+    depth: "deep",
     source: {
-      theory: "組織学習のレジリエンス",
+      theory: "知行合一（Inquiry in Action）",
       description:
-        "過去の失敗や痛みが、現在のチームの強みや防衛策に変わっていることを実感する。",
+        "頭の中の気づきを、継続的で観測可能な現実の行動習慣へと落とし込む。",
     },
   },
   {
     id: 279,
-    text: "チームのメンバー間で「お互いに期待していること」のやり取りは、最近できていますか？",
-    scene: "team",
+    text: "自分が一番『生きている』『躍動している』と感じる瞬間に、共通している条件は？",
+    depth: "deep",
     source: {
-      theory: "期待値の調整（Role Expectation Negotiation）",
+      theory: "アライブネス（Aliveness）の条件",
       description:
-        "役割や期待の不一致から生じるすれ違いを防止し、適切な連携を生む。",
+        "生命力が最大化する条件を分析し、意図的にその環境を再現する。",
     },
   },
   {
     id: 280,
-    text: "私たちが「もっと早く判断して進められたはず」の意思決定があれば、何がブレーキになっていましたか？",
-    scene: "team",
+    text: "この深い問いに向き合った今の自分に、心からの敬意を込めて言葉をかけるなら？",
+    depth: "deep",
     source: {
-      theory: "意思決定阻害要因の分析",
+      theory: "自己超越と受容の統合",
       description:
-        "過度な慎重さや情報不足、承認プロセスの複雑さなど、停滞の原因を特定する。",
+        "深い内省を成し遂げた自身の勇気を称え、自己との連帯感を深めて問いを閉じる。",
     },
   },
   {
     id: 281,
-    text: "今回のスプリント/期間で、チームの「学びやノウハウ」を蓄積・ドキュメント化できましたか？",
-    scene: "team",
+    text: "今、自分の目の前にある道は、自分が本当に進みたい道ですか？それとも流されて着いた場所ですか？",
+    depth: "deep",
     source: {
-      theory: "ナレッジ・マネジメント（暗黙知の形式知化）",
+      theory: "自律的航路（Autonomous Navigation）",
       description:
-        "個人に留まっている知恵を書き残し、再利用可能なチームのアセットにする。",
+        "自覚的な選択によって現在地に到達しているか、惰性によるものかを見極める。",
     },
   },
   {
     id: 282,
-    text: "チーム全員が「自分の意見が尊重されている」と感じられる話し合いの場を作れていましたか？",
-    scene: "team",
+    text: "自分が人生で遺したい『レガシー（足跡・価値）』は何ですか？",
+    depth: "deep",
     source: {
-      theory: "インクルーシブ・ファシリテーション",
+      theory: "レガシー思考",
       description:
-        "声の大きい人の意見だけに偏らず、全員の視点が取り込まれているかを点検する。",
+        "自分の存在が世界や周囲に残す影響の質について、長期的な視点から考察する。",
     },
   },
   {
     id: 283,
-    text: "今のチームの働き方・ミーティング頻度は、「メンバー全員の体調やメンタル」に優しいですか？",
-    scene: "team",
+    text: "もし明日世界が終わるとしても、あなたが今日大切にしたい過ごし方は何ですか？",
+    depth: "deep",
     source: {
-      theory: "サステナブル・ワークプレイス",
+      theory: "本質的価値の先鋭化",
       description:
-        "燃え尽き（バーンアウト）を防ぎ、長期的・持続可能に走れるペースをチェックする。",
+        "極限状態を設定することで、装飾を取り払った本質的な欲求と愛の対象を浮き彫りにする。",
     },
   },
   {
     id: 284,
-    text: "私たちが「次のステップで挑戦してみたい、ちょっとワクワクする新しいアプローチ」は何ですか？",
-    scene: "team",
+    text: "今のあなたを『支えている確信』や『揺るぎない信念』は何ですか？",
+    depth: "deep",
     source: {
-      theory: "チームのアドベンチャー精神",
+      theory: "アンカー・インサイトの再確認",
       description:
-        "マンネリ防止のため、次のアサインやプロセスに新しい実験的要素を取り入れる。",
+        "試練や変化の中でもブレない精神的支柱となる確信を再確認する。",
     },
   },
   {
     id: 285,
-    text: "チームの中で「自分の役割が明確で、次に何をすべきか迷わない状態」を作れていましたか？",
-    scene: "team",
+    text: "自分の人生で『一番大切にすべき人間関係』に、十分な時間と情熱を注げていますか？",
+    depth: "deep",
     source: {
-      theory: "役割の明瞭性（Role Clarity）",
+      theory: "関係性の質とウェルビーイング",
       description:
-        "タスクの曖昧さを排除し、スムーズな実行力を生むためのクリアさを共有する。",
+        "幸福度の決定要素である重要な対人関係へのリソース配分を最適化する。",
     },
   },
   {
     id: 286,
-    text: "私たちが「お互いの得意・不得意」を理解し補い合えた具体例を挙げるならどこですか？",
-    scene: "team",
+    text: "自分の可能性を試すことを止めている『内なるブレーキ』を、今日ここで外すとしたら？",
+    depth: "deep",
     source: {
-      theory: "相互補完的チームワーク",
-      description:
-        "凸凹のある個性を組み合わせることで生まれるチームシナジーを実感する。",
+      theory: "意図的なブレイクスルー",
+      description: "自己制限のブレーキを外すメンタルな意図設定を行う。",
     },
   },
   {
     id: 287,
-    text: "今回の取り組みで「一番成果に直結したコミュニケーションの瞬間」はどこでしたか？",
-    scene: "team",
+    text: "自分が『自分の人生の100%の責任者』になると腹をくくったとき、何が変わりますか？",
+    depth: "deep",
     source: {
-      theory: "高インパクト・コミュニケーションの特定",
+      theory: "完全責任の原則（Radical Responsibility）",
       description:
-        "どんな言葉や対話が状況を好転させたかを発見し、再現性を高める。",
+        "環境や他者のせいにすることを完全に手放し、主体性を100%確立する。",
     },
   },
   {
     id: 288,
-    text: "私たちが目指すビジョンやゴールに対して、「全員の熱量」は一致していますか？",
-    scene: "team",
+    text: "これまで出会ってきたすべての人や出来事に、意味があったと思える自分になれていますか？",
+    depth: "deep",
     source: {
-      theory: "コミットメントのアラインメント",
+      theory: "全人生の受容（Life Integration）",
       description:
-        "チームの目標に対する温度感や思いのズレを正直に話し合い、すり合わせる。",
+        "光も影も含むすべての過去を自身の肯定的な一部として統合する。",
     },
   },
   {
     id: 289,
-    text: "チームの「振り返り（レトロスペクティブ）」自体を、もっと面白く・効果的にするためのアイデアはありますか？",
-    scene: "team",
+    text: "今、あなたの内側で新しく始まろうとしている『静かな変化の予感』は何ですか？",
+    depth: "deep",
     source: {
-      theory: "メタ・リフレクション（振り返りの振り返り）",
+      theory: "インナー・シフトの微細な感知",
       description:
-        "振り返りという対話の場のクオリティを上げ、学習の質を向上させる。",
+        "まだ明確な形をとっていない内面のパラダイムシフトの芽生えをキャッチする。",
     },
   },
   {
     id: 290,
-    text: "今回、私たちが「あきらめずに粘り強くやり抜いた」と言える成果は何ですか？",
-    scene: "team",
+    text: "自分自身のことを『心から愛し、誇りに思える』ようになるために、今不足しているものは何ですか？",
+    depth: "deep",
     source: {
-      theory: "チーム・グリット（Team Grit / チームのやり抜く力）",
+      theory: "自尊感情（Self-Esteem）の探求",
       description:
-        "粘り強さと粘勝体験をたたえ合い、強靭なチームスピリットを養う。",
+        "自己受容と自己誇りの間にある障壁を認識し、穴を埋めるアプローチを考える。",
     },
   },
   {
     id: 291,
-    text: "もしチームの「禁止事項（やってはいけないこと）」を1つ新しく決めるなら何にしますか？",
-    scene: "team",
+    text: "自分の『情熱』と『世の中のニーズ』と『自分の得意』が重なる場所はどこですか？",
+    depth: "deep",
     source: {
-      theory: "ネガティブ・グランドルールの設定",
+      theory: "生きがい（Ikigai）フレームワーク",
       description:
-        "「これだけは避ける」というアンチパターンを明確にしてチームの質を守る。",
+        "情熱・使命・職能・ニーズが交差する自分ならではの軸を導き出す。",
     },
   },
   {
     id: 292,
-    text: "私たちが仕事を進める上で「お互いのプライベートや個人都合」を気遣い合えていましたか？",
-    scene: "team",
+    text: "自分が過去の自分に『感謝』を伝えるとしたら、どの瞬間の決断に対してですか？",
+    depth: "deep",
     source: {
-      theory: "ワーク・ライフ・ハーモニーの尊重",
-      description: "個人の生活事情や制約を互いに配慮し合える関係性を確認する。",
+      theory: "時間軸を超えた自己感謝",
+      description:
+        "今の自分を形作ってくれた過去の挑戦や選択を振り返り、肯定する。",
     },
   },
   {
     id: 293,
-    text: "チームで生じた「予期せぬトラブル」に対して、落ち着いて柔軟に対応できましたか？",
-    scene: "team",
+    text: "今、一番『直感』が伝えてきているメッセージは何で、それを無視していませんか？",
+    depth: "deep",
     source: {
-      theory: "組織的適応力（Organizational Agility）",
+      theory: "体感知性（Somatic Intelligence）の尊重",
       description:
-        "アクシデントに対するチームのレジリエンスと対応スピードを評価する。",
+        "思考で打ち消しがちな体の直感やインスピレーションの声を聴く。",
     },
   },
   {
     id: 294,
-    text: "今回のプロジェクトで「一番成長した・たくましくなった」と感じるメンバーとその理由は？",
-    scene: "team",
+    text: "自分の人生に『余白』と『静寂』を取り戻すために、今すぐに手放せる執着は何ですか？",
+    depth: "deep",
     source: {
-      theory: "相互成長の観察と承認",
+      theory: "静寂と余白の心理学（Solitude & Space）",
       description:
-        "仲間の成長を称賛し合うことで、お互いを高め合うポジティブな刺激を生む。",
+        "多忙や情報のノイズから離れ、深い思考が生まれる静寂を意識的に確保する。",
     },
   },
   {
     id: 295,
-    text: "私たちが日常的に行っている「報連相（進捗共有）」で、もっとシンプルに削ぎ落とせる部分はどこですか？",
-    scene: "team",
+    text: "自分が目指す『最高の自分』は、どんな表情で、どんな言葉を使い、どんな姿勢で立っていますか？",
+    depth: "deep",
     source: {
-      theory: "コミュニケーションのリーン化",
+      theory: "理想の自己像のエンボディメント（Embodiment）",
       description:
-        "形式的になりがちな共有コストを削り、本質的な対話の時間を増やす。",
+        "理想像を身体的・言語的イメージとして具体化し、日常へ取り込む。",
     },
   },
   {
     id: 296,
-    text: "このチームで次の挑戦に向かうにあたり、一番「解消しておきたい懸念点」は何ですか？",
-    scene: "team",
+    text: "他者に対して『もっと心を開く』ために、あなたが越えるべき自分自身の壁は何ですか？",
+    depth: "deep",
     source: {
-      theory: "プリモーテム（事前検証）思考",
+      theory: "オープンネスの開放",
       description:
-        "未来の失敗要因や懸念を前もってクリアにし、次のスタートダッシュを切る。",
+        "心を開くことへの抵抗感を緩め、より深い人間関係へと足を踏み出す。",
     },
   },
   {
     id: 297,
-    text: "私たちが「アイデアをブレインストーミングしたとき」、否定せずに広げる空間が作れていましたか？",
-    scene: "team",
+    text: "自分の人生の中で、『まだ書かれていない素晴らしいページ』には何が書かれますか？",
+    depth: "deep",
     source: {
-      theory: "心理的安全性とアイディエーション（Yes, and）",
-      description: "発想を膨らませる段階での肯定的な受け止め方を振り返る。",
+      theory: "希望と開かれた未来（Open Future）",
+      description:
+        "過去の延長線上にない、新しくクリエイティブな未来の可能性に意識を開く。",
     },
   },
   {
     id: 298,
-    text: "チーム全体で「決めたことを最後まで遂行する達成率」は、自己評価で何%でしたか？",
-    scene: "team",
+    text: "今、この場所・この時代に自分が生きている意味や巡り合わせをどう感じますか？",
+    depth: "deep",
     source: {
-      theory: "アカウンタビリティ（責任の遂行）",
-      description:
-        "約束や決定事項に対するコミットメントの精度を冷静に振り返る。",
+      theory: "実存的コネクティビティ（Existential Connection）",
+      description: "自分と世界、時代との関わりの中に固有の役割を見出す。",
     },
   },
   {
     id: 299,
-    text: "このチームのメンバーと一緒に働くことで、あなた自身が得られた一番の「学び」は何ですか？",
-    scene: "team",
+    text: "自分が『真の自由』を手に入れるために、最後に解き放つべき内なる不自由は何ですか？",
+    depth: "deep",
     source: {
-      theory: "相互学習（Co-learning）の実感",
-      description: "協働を通じて個人の視点や知識がどう広がったかを言語化する。",
+      theory: "内解脱・精神的自由（Inner Freedom）",
+      description:
+        "外部の環境ではなく、自らの囚われ（こだわりや恐れ）から解放される。",
     },
   },
   {
     id: 300,
-    text: "次の期間を終えたとき、私たちが「最高だったね！」とハイタッチして祝うために一番必要なアクションは何ですか？",
-    scene: "team",
+    text: "これまでのすべての対話を終えて、今、あなたの心に残っているたったひとつの『真実』は何ですか？",
+    depth: "deep",
     source: {
-      theory: "未来の成功イメージと最優先アクションのコミット",
+      theory: "変容の統合と決着（Integration & Closure）",
       description:
-        "最高のゴールイメージを固定し、今から踏み出す最初で最大の重要行動を全員で握る。",
+        "全ての深い内省のプロセスを一つの澄み切った洞察に凝縮し、新たな歩みを開始する。",
     },
   },
 ];

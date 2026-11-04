@@ -1,10 +1,10 @@
-export type Scene = "checkin" | "self" | "team";
-export type SceneOption = Scene | "all";
+export type Depth = "light" | "medium" | "deep";
+export type DepthOption = Depth | "all";
 
 export interface Question {
   id: number;
   text: string;
-  scene: Scene;
+  depth: Depth;
   source: {
     theory: string;
     description: string;

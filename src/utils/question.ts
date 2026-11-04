@@ -1,9 +1,9 @@
 import { questions } from "../data/questions";
-import type { SceneOption } from "../types";
+import type { DepthOption } from "../types";
 
-export function getRandomFilteredQuestionId(scene: SceneOption): number | null {
+export function getRandomFilteredQuestionId(depth: DepthOption): number | null {
   const filtered = questions.filter((q) => {
-    return scene === "all" || q.scene === scene;
+    return depth === "all" || q.depth === depth;
   });
 
   if (filtered.length === 0) return null;
