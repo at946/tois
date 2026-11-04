@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { NextQuestionButton } from "./components/NextQuestionButton";
@@ -22,12 +22,10 @@ export default function App() {
   const [questionId, setQuestionId] = useState<number | null>(() => {
     const { qId, depth } = getUrlParams();
     if (qId !== null) return qId;
-    return getRandomFilteredQuestionId(depth);
+    const newQId = getRandomFilteredQuestionId(depth);
+    updateUrl(newQId, depth);
+    return newQId;
   });
-
-  useEffect(() => {
-    updateUrl(questionId, selectedDepth);
-  }, [questionId, selectedDepth]);
 
   const currentQuestion: Question | undefined = questions.find(
     (q) => q.id === questionId,
