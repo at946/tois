@@ -1,20 +1,20 @@
-import type { Scene, SceneOption } from "../types";
+import type { Depth, DepthOption } from "../types";
 
 export function getUrlParams() {
   const params = new URLSearchParams(window.location.search);
   const q = params.get("q");
-  const scene = (params.get("scene") as Scene) || "all";
+  const depth = (params.get("depth") as Depth) || "all";
 
   return {
     qId: q ? parseInt(q, 10) : null,
-    scene,
+    depth,
   };
 }
 
-export function updateUrl(qId: number | null, scene: SceneOption) {
+export function updateUrl(qId: number | null, depth: DepthOption) {
   const params = new URLSearchParams();
   if (qId !== null) params.set("q", qId.toString());
-  if (scene !== "all") params.set("scene", scene);
+  if (depth !== "all") params.set("depth", depth);
 
   const newSearch = params.toString();
   const newUrl = newSearch ? `/?${newSearch}` : "/";

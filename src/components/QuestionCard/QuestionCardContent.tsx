@@ -1,4 +1,4 @@
-import { SCENE_LABELS } from "../../constants";
+import { DEPTH_LABELS } from "../../constants";
 import type { Question } from "../../types";
 
 interface Props {
@@ -10,7 +10,7 @@ export function QuestionCardContent({ question }: Props) {
     <>
       <div className="flex items-center gap-1.5 mb-4">
         <span className="text-[10px] font-medium bg-stone-100 text-stone-600 px-2 py-0.5 rounded-full">
-          {SCENE_LABELS[question.scene]}
+          {DEPTH_LABELS[question.depth]}
         </span>
       </div>
 
