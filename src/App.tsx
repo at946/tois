@@ -47,7 +47,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-900 flex flex-col justify-between p-6 select-none">
+    <div className="min-h-screen bg-stone-50 text-stone-900 flex flex-col justify-between p-6">
       <Header selectedDepth={selectedDepth} onDepthChange={handleDepthChange} />
 
       <main className="max-w-xl mx-auto w-full my-auto flex flex-col items-center">
