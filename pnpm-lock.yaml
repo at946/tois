@@ -183,8 +183,8 @@ importers:
         specifier: 2.6.5
         version: 2.6.5
       '@cloudflare/workers-types':
-        specifier: 5.20261104.1
-        version: 5.20261104.1
+        specifier: 5.20261106.1
+        version: 5.20261106.1
       '@tailwindcss/vite':
         specifier: 4.3.4
         version: 4.3.4(vite@8.3.6(@types/node@26.6.6)(jiti@2.7.0))
@@ -293,8 +293,8 @@ packages:
   '@cloudflare/pages-plugin-vercel-og@0.1.2':
     resolution: {integrity: sha512-aWA2pHu1R2UbOJIcSASCuViyYVEhYkZ3tWTrTnr+yLosBfksOzjecHQkCkPv/jy75hGPrn1BbtsQR+oWVFkp1g==}
 
-  '@cloudflare/workers-types@5.20261104.1':
-    resolution: {integrity: sha512-XSPcK88JXnW/oC82wuXvaP7vgyk2myydugbgOd/RcLKwqkwW0cP09Ozp9ItACa4IAZ7uKtMIfxZpUTXajYVd1Q==}
+  '@cloudflare/workers-types@5.20261106.1':
+    resolution: {integrity: sha512-uQtZyYehF0hwImaFi0/z/BWeTC/DMKpEo+nCySs5WZwoMhnIqLnN3sVjS7GCBc222EWf+F6khsHPWIvPEaP6JA==}
 
   '@iconify/react@6.0.4':
     resolution: {integrity: sha512-7nKd1eF52E1QGIl46eDWfMNPuTQHUxsXoK2Evgtu5jr386jCWTuWFLHM9vfsTNbUcKp+uq6ao+3skNUalDhH/w==}
@@ -1019,7 +1019,7 @@ snapshots:
 
   '@cloudflare/pages-plugin-vercel-og@0.1.2': {}
 
-  '@cloudflare/workers-types@5.20261104.1': {}
+  '@cloudflare/workers-types@5.20261106.1': {}
 
   '@iconify/react@6.0.4(react@19.3.1)':
     dependencies:
